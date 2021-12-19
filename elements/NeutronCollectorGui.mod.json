@@ -1,0 +1,62 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 0,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #0",
+          "x": 204,
+          "y": 62
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Neutron Collector",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Neutron Collector",
+          "x": 177,
+          "y": 44
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<BNBT:number:process>%",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "<BNBT:number:process>%",
+          "x": 199,
+          "y": 83
+        }
+      }
+    ],
+    "onTick": {
+      "name": "NeutronCollectorGuiTick"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

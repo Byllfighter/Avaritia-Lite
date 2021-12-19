@@ -1,0 +1,33 @@
+{
+  "_fv": 24,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "layer_3",
+    "customModelName": "Normal",
+    "name": "§cSword of the Cosmos§r",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Avaritiatab"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 1,
+    "efficiency": 0.0,
+    "attackSpeed": 3.0,
+    "enchantability": 100,
+    "damageVsEntity": 99999.0,
+    "usageCount": 100,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onEntityHitWith": {
+      "name": "SwordoftheCosmosKill"
+    },
+    "onItemInUseTick": {
+      "name": "Mend"
+    }
+  }
+}

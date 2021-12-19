@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "avaritia:blocks/compressed",
+    "particle": "avaritia:blocks/compressed"
+  }
+}

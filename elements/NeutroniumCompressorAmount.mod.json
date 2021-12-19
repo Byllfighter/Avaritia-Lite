@@ -1,0 +1,12 @@
+{
+  "_fv": 24,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Number",
+    "displayName": "Neutronium Compressor Material Amount",
+    "description": "Number of resources for Neutronium Compressor",
+    "category": "MISC",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 1000
+  }
+}

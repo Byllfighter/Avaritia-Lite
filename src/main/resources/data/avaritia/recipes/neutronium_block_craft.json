@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "avaritia:neutronium_ingot"
+    },
+    {
+      "item": "avaritia:neutronium_ingot"
+    },
+    {
+      "item": "avaritia:neutronium_ingot"
+    },
+    {
+      "item": "avaritia:neutronium_ingot"
+    },
+    {
+      "item": "avaritia:neutronium_ingot"
+    },
+    {
+      "item": "avaritia:neutronium_ingot"
+    },
+    {
+      "item": "avaritia:neutronium_ingot"
+    },
+    {
+      "item": "avaritia:neutronium_ingot"
+    },
+    {
+      "item": "avaritia:neutronium_ingot"
+    }
+  ],
+  "result": {
+    "item": "avaritia:neutronium_block",
+    "count": 1
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "_fv": 24,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><xml xmlns=\"https://developers.google.com/blockly/xml\"><block deletable=\"false\" type=\"event_trigger\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"variables_set_number\"><field name=\"VAR\">global:neutroniumcollectorx</field><value name=\"VAL\"><block type=\"coord_x\"/></value><next><block type=\"variables_set_number\"><field name=\"VAR\">global:neutroniumcollectory</field><value name=\"VAL\"><block type=\"coord_y\"/></value><next><block type=\"variables_set_number\"><field name=\"VAR\">global:neutroniumcollectorz</field><value name=\"VAL\"><block type=\"coord_z\"/></value></block></next></block></next></block></next></block><block type=\"block_pos_x\" x=\"523\" y=\"68\"/><block type=\"block_pos_y\" x=\"551\" y=\"128\"/><block type=\"block_pos_z\" x=\"503\" y=\"154\"/></xml>"
+  }
+}

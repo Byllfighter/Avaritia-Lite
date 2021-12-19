@@ -1,0 +1,39 @@
+{
+  "_fv": 24,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "pickaxe",
+    "customModelName": "Normal",
+    "name": "§cWorld Breaker§r",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Avaritiatab"
+    },
+    "toolType": "Pickaxe",
+    "harvestLevel": 99999,
+    "efficiency": 99999.0,
+    "attackSpeed": 1.0,
+    "enchantability": 99999,
+    "damageVsEntity": 8.0,
+    "usageCount": 1000,
+    "blocksAffected": [],
+    "hasGlow": true,
+    "glowCondition": {
+      "name": "NeverGlow"
+    },
+    "repairItems": [],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onEntityHitWith": {
+      "name": "Mend"
+    },
+    "onItemInInventoryTick": {
+      "name": "WorldBreakerTick"
+    },
+    "onBlockDestroyedWithTool": {
+      "name": "Mend"
+    }
+  }
+}

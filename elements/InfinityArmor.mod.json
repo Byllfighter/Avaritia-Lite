@@ -1,0 +1,70 @@
+{
+  "_fv": 24,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "armor_1",
+    "enableBody": true,
+    "textureBody": "armor_2",
+    "enableLeggings": true,
+    "textureLeggings": "armor_0",
+    "enableBoots": true,
+    "textureBoots": "armor_3",
+    "onHelmetTick": {
+      "name": "Mend"
+    },
+    "onBodyTick": {
+      "name": "Mend"
+    },
+    "onLeggingsTick": {
+      "name": "Mend"
+    },
+    "onBootsTick": {
+      "name": "Mend"
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Avaritiatab"
+    },
+    "armorTextureFile": "infinity",
+    "helmetName": "§cInfinity Helmet§r",
+    "bodyName": "§cInfinity Breastplate§r",
+    "leggingsName": "§cInfinity Leggings§r",
+    "bootsName": "§cInfinity Boots§r",
+    "helmetSpecialInfo": [],
+    "bodySpecialInfo": [],
+    "leggingsSpecialInfo": [],
+    "bootsSpecialInfo": [],
+    "helmetModelName": "Default",
+    "helmetModelPart": "Helmet",
+    "helmetModelTexture": "From armor",
+    "bodyModelName": "Default",
+    "bodyModelPart": "Body",
+    "armsModelPartL": "Arms L",
+    "armsModelPartR": "Arms R",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "helmetImmuneToFire": false,
+    "bodyImmuneToFire": false,
+    "leggingsImmuneToFire": false,
+    "bootsImmuneToFire": false,
+    "maxDamage": 1024,
+    "damageValueHelmet": 1024,
+    "damageValueBody": 1024,
+    "damageValueLeggings": 1024,
+    "damageValueBoots": 1024,
+    "enchantability": 100,
+    "toughness": 5.0,
+    "knockbackResistance": 0.0,
+    "equipSound": {
+      "value": ""
+    },
+    "repairItems": []
+  }
+}

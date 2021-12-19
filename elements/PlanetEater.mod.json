@@ -1,0 +1,30 @@
+{
+  "_fv": 24,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "shovel",
+    "customModelName": "Normal",
+    "name": "§cPlanet Eater§r",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Avaritiatab"
+    },
+    "toolType": "Spade",
+    "harvestLevel": 1000,
+    "efficiency": 99999.0,
+    "attackSpeed": 1.0,
+    "enchantability": 100,
+    "damageVsEntity": 9.0,
+    "usageCount": 100,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onItemInUseTick": {
+      "name": "Mend"
+    }
+  }
+}

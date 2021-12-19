@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "avaritia:infinity_block"
+    }
+  ],
+  "result": {
+    "item": "avaritia:infinity_ingot",
+    "count": 9
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    }
+  ],
+  "result": {
+    "item": "avaritia:crystal_matrix",
+    "count": 1
+  }
+}

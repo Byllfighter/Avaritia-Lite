@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "avaritia:blocks/side",
+    "up": "avaritia:blocks/top",
+    "north": "avaritia:blocks/active",
+    "east": "avaritia:blocks/side",
+    "south": "avaritia:blocks/side",
+    "west": "avaritia:blocks/side",
+    "particle": "avaritia:blocks/side"
+  }
+}

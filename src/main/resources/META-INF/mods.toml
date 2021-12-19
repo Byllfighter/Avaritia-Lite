@@ -1,0 +1,23 @@
+modLoader="javafml"
+loaderVersion="[37,)"
+license="Not specified"
+
+[[mods]]
+modId="avaritia"
+version="1.4.4"
+displayName="Avaritia Lite"
+credits="Created using mod maker MCreator - https://mcreator.net/about"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/avaritia-lite"
+logoFile="logo.png"
+authors="Bullfighter, MCreator"
+
+[[dependencies.avaritia]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.17.1]"
+    ordering="NONE"
+    side="BOTH"
+
+
+
+
