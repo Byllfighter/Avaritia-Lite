@@ -11,39 +11,39 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.bullfighter.avaritia.world.inventory.ExtremeCraftingTableGuiMenu;
-import net.bullfighter.avaritia.procedures.ExtremeCraftingTableRecipesProcedure;
+import net.bullfighter.avaritia.world.inventory.NeutroniumCompressorGuiMenu;
+import net.bullfighter.avaritia.procedures.NeutroniumCompressorClearProcedure;
 import net.bullfighter.avaritia.AvaritiaMod;
 
 import java.util.function.Supplier;
 import java.util.HashMap;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class ExtremeCraftingTableGuiButtonMessage {
+public class NeutroniumCompressorGuiButtonMessage {
 	private final int buttonID, x, y, z;
 
-	public ExtremeCraftingTableGuiButtonMessage(FriendlyByteBuf buffer) {
+	public NeutroniumCompressorGuiButtonMessage(FriendlyByteBuf buffer) {
 		this.buttonID = buffer.readInt();
 		this.x = buffer.readInt();
 		this.y = buffer.readInt();
 		this.z = buffer.readInt();
 	}
 
-	public ExtremeCraftingTableGuiButtonMessage(int buttonID, int x, int y, int z) {
+	public NeutroniumCompressorGuiButtonMessage(int buttonID, int x, int y, int z) {
 		this.buttonID = buttonID;
 		this.x = x;
 		this.y = y;
 		this.z = z;
 	}
 
-	public static void buffer(ExtremeCraftingTableGuiButtonMessage message, FriendlyByteBuf buffer) {
+	public static void buffer(NeutroniumCompressorGuiButtonMessage message, FriendlyByteBuf buffer) {
 		buffer.writeInt(message.buttonID);
 		buffer.writeInt(message.x);
 		buffer.writeInt(message.y);
 		buffer.writeInt(message.z);
 	}
 
-	public static void handler(ExtremeCraftingTableGuiButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
+	public static void handler(NeutroniumCompressorGuiButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
 		NetworkEvent.Context context = contextSupplier.get();
 		context.enqueueWork(() -> {
 			Player entity = context.getSender();
@@ -58,18 +58,18 @@ public class ExtremeCraftingTableGuiButtonMessage {
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level();
-		HashMap guistate = ExtremeCraftingTableGuiMenu.guistate;
+		HashMap guistate = NeutroniumCompressorGuiMenu.guistate;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
 		if (buttonID == 0) {
 
-			ExtremeCraftingTableRecipesProcedure.execute(entity);
+			NeutroniumCompressorClearProcedure.execute(world, x, y, z);
 		}
 	}
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		AvaritiaMod.addNetworkMessage(ExtremeCraftingTableGuiButtonMessage.class, ExtremeCraftingTableGuiButtonMessage::buffer, ExtremeCraftingTableGuiButtonMessage::new, ExtremeCraftingTableGuiButtonMessage::handler);
+		AvaritiaMod.addNetworkMessage(NeutroniumCompressorGuiButtonMessage.class, NeutroniumCompressorGuiButtonMessage::buffer, NeutroniumCompressorGuiButtonMessage::new, NeutroniumCompressorGuiButtonMessage::handler);
 	}
 }

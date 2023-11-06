@@ -4,9 +4,6 @@ package net.bullfighter.avaritia.world.inventory;
 import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -22,14 +19,12 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.bullfighter.avaritia.procedures.NeutronCollectorGuiTickProcedure;
 import net.bullfighter.avaritia.init.AvaritiaModMenus;
 
 import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
 
-@Mod.EventBusSubscriber
 public class NeutronCollectorGuiMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
 	public final static HashMap<String, Object> guistate = new HashMap<>();
 	public final Level world;
@@ -46,7 +41,7 @@ public class NeutronCollectorGuiMenu extends AbstractContainerMenu implements Su
 	public NeutronCollectorGuiMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
 		super(AvaritiaModMenus.NEUTRON_COLLECTOR_GUI.get(), id);
 		this.entity = inv.player;
-		this.world = inv.player.level;
+		this.world = inv.player.level();
 		this.internal = new ItemStackHandler(1);
 		BlockPos pos = null;
 		if (extraData != null) {
@@ -236,17 +231,5 @@ public class NeutronCollectorGuiMenu extends AbstractContainerMenu implements Su
 
 	public Map<Integer, Slot> get() {
 		return customSlots;
-	}
-
-	@SubscribeEvent
-	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-		Player entity = event.player;
-		if (event.phase == TickEvent.Phase.END && entity.containerMenu instanceof NeutronCollectorGuiMenu) {
-			Level world = entity.level;
-			double x = entity.getX();
-			double y = entity.getY();
-			double z = entity.getZ();
-			NeutronCollectorGuiTickProcedure.execute(world, entity);
-		}
 	}
 }

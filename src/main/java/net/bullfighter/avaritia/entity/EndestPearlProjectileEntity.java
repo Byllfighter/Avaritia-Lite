@@ -67,13 +67,13 @@ public class EndestPearlProjectileEntity extends AbstractArrow implements ItemSu
 	@Override
 	public void onHitEntity(EntityHitResult entityHitResult) {
 		super.onHitEntity(entityHitResult);
-		BlackHoleSpawnProcedure.execute(this.level, this.getX(), this.getY(), this.getZ());
+		BlackHoleSpawnProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
 	}
 
 	@Override
 	public void onHitBlock(BlockHitResult blockHitResult) {
 		super.onHitBlock(blockHitResult);
-		BlackHoleSpawnProcedure.execute(this.level, blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(), blockHitResult.getBlockPos().getZ());
+		BlackHoleSpawnProcedure.execute(this.level(), blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(), blockHitResult.getBlockPos().getZ());
 	}
 
 	@Override
@@ -99,7 +99,7 @@ public class EndestPearlProjectileEntity extends AbstractArrow implements ItemSu
 	}
 
 	public static EndestPearlProjectileEntity shoot(LivingEntity entity, LivingEntity target) {
-		EndestPearlProjectileEntity entityarrow = new EndestPearlProjectileEntity(AvaritiaModEntities.ENDEST_PEARL_PROJECTILE.get(), entity, entity.level);
+		EndestPearlProjectileEntity entityarrow = new EndestPearlProjectileEntity(AvaritiaModEntities.ENDEST_PEARL_PROJECTILE.get(), entity, entity.level());
 		double dx = target.getX() - entity.getX();
 		double dy = target.getY() + target.getEyeHeight() - 1.1;
 		double dz = target.getZ() - entity.getZ();
@@ -108,7 +108,7 @@ public class EndestPearlProjectileEntity extends AbstractArrow implements ItemSu
 		entityarrow.setBaseDamage(0);
 		entityarrow.setKnockback(0);
 		entityarrow.setCritArrow(false);
-		entity.level.addFreshEntity(entityarrow);
+		entity.level().addFreshEntity(entityarrow);
 		return entityarrow;
 	}
 }

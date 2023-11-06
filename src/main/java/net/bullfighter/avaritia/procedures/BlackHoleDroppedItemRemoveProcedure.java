@@ -29,7 +29,7 @@ public class BlackHoleDroppedItemRemoveProcedure {
 			return;
 		if (entity instanceof ItemEntity) {
 			if ((entity instanceof ItemEntity _itemEnt ? _itemEnt.getItem() : ItemStack.EMPTY).getItem() == AvaritiaModItems.BLACK_HOLE_ITEM.get()) {
-				if (!entity.level.isClientSide())
+				if (!entity.level().isClientSide())
 					entity.discard();
 			}
 		}

@@ -6,14 +6,17 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.gui.GuiGraphics;
 
 import net.bullfighter.avaritia.world.inventory.NeutroniumCompressorGuiMenu;
 import net.bullfighter.avaritia.procedures.GetBNBTTextMaterialProcedure;
 import net.bullfighter.avaritia.procedures.GetBNBTNeutroniumCompressorProcedure;
+import net.bullfighter.avaritia.network.NeutroniumCompressorGuiButtonMessage;
+import net.bullfighter.avaritia.AvaritiaMod;
 
 import java.util.HashMap;
 
-import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class NeutroniumCompressorGuiScreen extends AbstractContainerScreen<NeutroniumCompressorGuiMenu> {
@@ -21,6 +24,7 @@ public class NeutroniumCompressorGuiScreen extends AbstractContainerScreen<Neutr
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	Button button_www;
 
 	public NeutroniumCompressorGuiScreen(NeutroniumCompressorGuiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -36,19 +40,18 @@ public class NeutroniumCompressorGuiScreen extends AbstractContainerScreen<Neutr
 	private static final ResourceLocation texture = new ResourceLocation("avaritia:textures/screens/neutronium_compressor_gui.png");
 
 	@Override
-	public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(ms);
-		super.render(ms, mouseX, mouseY, partialTicks);
-		this.renderTooltip(ms, mouseX, mouseY);
+	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
+		this.renderBackground(guiGraphics);
+		super.render(guiGraphics, mouseX, mouseY, partialTicks);
+		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
 	@Override
-	protected void renderBg(PoseStack ms, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		RenderSystem.setShaderTexture(0, texture);
-		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 		RenderSystem.disableBlend();
 	}
 
@@ -67,14 +70,14 @@ public class NeutroniumCompressorGuiScreen extends AbstractContainerScreen<Neutr
 	}
 
 	@Override
-	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, Component.translatable("gui.avaritia.neutronium_compressor_gui.label_neutronium_compressor"), 33, 7, -12829636);
-		this.font.draw(poseStack,
+	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
+		guiGraphics.drawString(this.font, Component.translatable("gui.avaritia.neutronium_compressor_gui.label_neutronium_compressor"), 33, 7, -12829636, false);
+		guiGraphics.drawString(this.font,
 
-				GetBNBTNeutroniumCompressorProcedure.execute(world, x, y, z), 60, 43, -12829636);
-		this.font.draw(poseStack,
+				GetBNBTNeutroniumCompressorProcedure.execute(world, x, y, z), 78, 52, -12829636, false);
+		guiGraphics.drawString(this.font,
 
-				GetBNBTTextMaterialProcedure.execute(world, x, y, z), 60, 52, -12829636);
+				GetBNBTTextMaterialProcedure.execute(world, x, y, z), 78, 61, -12829636, false);
 	}
 
 	@Override
@@ -85,5 +88,13 @@ public class NeutroniumCompressorGuiScreen extends AbstractContainerScreen<Neutr
 	@Override
 	public void init() {
 		super.init();
+		button_www = Button.builder(Component.translatable("gui.avaritia.neutronium_compressor_gui.button_www"), e -> {
+			if (true) {
+				AvaritiaMod.PACKET_HANDLER.sendToServer(new NeutroniumCompressorGuiButtonMessage(0, x, y, z));
+				NeutroniumCompressorGuiButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
+		}).bounds(this.leftPos + 24, this.topPos + 52, 40, 20).build();
+		guistate.put("button:button_www", button_www);
+		this.addRenderableWidget(button_www);
 	}
 }

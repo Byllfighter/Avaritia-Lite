@@ -19,6 +19,8 @@ import net.bullfighter.avaritia.procedures.MendProcedure;
 
 import java.util.List;
 
+import com.google.common.collect.Iterables;
+
 public abstract class InfinityArmorItem extends ArmorItem {
 	public InfinityArmorItem(ArmorItem.Type type, Item.Properties properties) {
 		super(new ArmorMaterial() {
@@ -80,8 +82,11 @@ public abstract class InfinityArmorItem extends ArmorItem {
 		}
 
 		@Override
-		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
-			MendProcedure.execute(itemstack);
+		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+			super.inventoryTick(itemstack, world, entity, slot, selected);
+			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
+				MendProcedure.execute(itemstack);
+			}
 		}
 	}
 
@@ -101,8 +106,11 @@ public abstract class InfinityArmorItem extends ArmorItem {
 		}
 
 		@Override
-		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
-			MendProcedure.execute(itemstack);
+		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+			super.inventoryTick(itemstack, world, entity, slot, selected);
+			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
+				MendProcedure.execute(itemstack);
+			}
 		}
 	}
 
@@ -122,8 +130,11 @@ public abstract class InfinityArmorItem extends ArmorItem {
 		}
 
 		@Override
-		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
-			MendProcedure.execute(itemstack);
+		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+			super.inventoryTick(itemstack, world, entity, slot, selected);
+			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
+				MendProcedure.execute(itemstack);
+			}
 		}
 	}
 
@@ -143,8 +154,11 @@ public abstract class InfinityArmorItem extends ArmorItem {
 		}
 
 		@Override
-		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
-			MendProcedure.execute(itemstack);
+		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+			super.inventoryTick(itemstack, world, entity, slot, selected);
+			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
+				MendProcedure.execute(itemstack);
+			}
 		}
 	}
 }

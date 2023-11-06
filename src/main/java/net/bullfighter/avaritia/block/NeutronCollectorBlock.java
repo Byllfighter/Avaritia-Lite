@@ -4,8 +4,8 @@ package net.bullfighter.avaritia.block;
 import net.minecraftforge.network.NetworkHooks;
 
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.level.storage.loot.LootContext;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.storage.loot.LootParams;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.BlockState;
@@ -38,7 +38,6 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import net.bullfighter.avaritia.world.inventory.NeutronCollectorGuiMenu;
-import net.bullfighter.avaritia.procedures.NeutroniumcollectoropenProcedure;
 import net.bullfighter.avaritia.procedures.NeutronCollectorGeneratorProcedure;
 import net.bullfighter.avaritia.block.entity.NeutronCollectorBlockEntity;
 
@@ -51,7 +50,7 @@ public class NeutronCollectorBlock extends Block implements EntityBlock {
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
 	public NeutronCollectorBlock() {
-		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.METAL).strength(1f, 10f));
+		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.METAL).strength(1f, 10f));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 
@@ -84,7 +83,7 @@ public class NeutronCollectorBlock extends Block implements EntityBlock {
 	}
 
 	@Override
-	public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
+	public List<ItemStack> getDrops(BlockState state, LootParams.Builder builder) {
 		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
@@ -123,14 +122,6 @@ public class NeutronCollectorBlock extends Block implements EntityBlock {
 				}
 			}, pos);
 		}
-		int x = pos.getX();
-		int y = pos.getY();
-		int z = pos.getZ();
-		double hitX = hit.getLocation().x;
-		double hitY = hit.getLocation().y;
-		double hitZ = hit.getLocation().z;
-		Direction direction = hit.getDirection();
-		NeutroniumcollectoropenProcedure.execute(world, x, y, z);
 		return InteractionResult.SUCCESS;
 	}
 

@@ -54,9 +54,6 @@
         }
       }
     ],
-    "onTick": {
-      "name": "NeutronCollectorGuiTick"
-    },
     "gridSettings": {
       "sx": 18,
       "sy": 18,

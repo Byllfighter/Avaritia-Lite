@@ -41,7 +41,7 @@ public class ExtremeCraftingTableGuiMenu extends AbstractContainerMenu implement
 	public ExtremeCraftingTableGuiMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
 		super(AvaritiaModMenus.EXTREME_CRAFTING_TABLE_GUI.get(), id);
 		this.entity = inv.player;
-		this.world = inv.player.level;
+		this.world = inv.player.level();
 		this.internal = new ItemStackHandler(82);
 		BlockPos pos = null;
 		if (extraData != null) {

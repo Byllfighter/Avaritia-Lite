@@ -29,7 +29,7 @@ public class InfinityArmorTickProcedure {
 	@SubscribeEvent
 	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
 		if (event.phase == TickEvent.Phase.END) {
-			execute(event, event.player.level, event.player);
+			execute(event, event.player.level(), event.player);
 		}
 	}
 
@@ -44,7 +44,7 @@ public class InfinityArmorTickProcedure {
 			public boolean checkGamemode(Entity _ent) {
 				if (_ent instanceof ServerPlayer _serverPlayer) {
 					return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-				} else if (_ent.level.isClientSide() && _ent instanceof Player _player) {
+				} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
 					return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null && Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
 				}
 				return false;
@@ -53,7 +53,7 @@ public class InfinityArmorTickProcedure {
 			public boolean checkGamemode(Entity _ent) {
 				if (_ent instanceof ServerPlayer _serverPlayer) {
 					return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.ADVENTURE;
-				} else if (_ent.level.isClientSide() && _ent instanceof Player _player) {
+				} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
 					return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null && Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.ADVENTURE;
 				}
 				return false;
@@ -206,7 +206,7 @@ public class InfinityArmorTickProcedure {
 					public boolean checkGamemode(Entity _ent) {
 						if (_ent instanceof ServerPlayer _serverPlayer) {
 							return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-						} else if (_ent.level.isClientSide() && _ent instanceof Player _player) {
+						} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
 							return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
 									&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
 						}
@@ -216,7 +216,7 @@ public class InfinityArmorTickProcedure {
 					public boolean checkGamemode(Entity _ent) {
 						if (_ent instanceof ServerPlayer _serverPlayer) {
 							return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.ADVENTURE;
-						} else if (_ent.level.isClientSide() && _ent instanceof Player _player) {
+						} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
 							return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
 									&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.ADVENTURE;
 						}
@@ -232,7 +232,7 @@ public class InfinityArmorTickProcedure {
 							public boolean checkGamemode(Entity _ent) {
 								if (_ent instanceof ServerPlayer _serverPlayer) {
 									return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-								} else if (_ent.level.isClientSide() && _ent instanceof Player _player) {
+								} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
 									return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
 											&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
 								}
@@ -242,7 +242,7 @@ public class InfinityArmorTickProcedure {
 							public boolean checkGamemode(Entity _ent) {
 								if (_ent instanceof ServerPlayer _serverPlayer) {
 									return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.ADVENTURE;
-								} else if (_ent.level.isClientSide() && _ent instanceof Player _player) {
+								} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
 									return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
 											&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.ADVENTURE;
 								}

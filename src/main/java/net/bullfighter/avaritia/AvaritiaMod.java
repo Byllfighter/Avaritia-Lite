@@ -29,6 +29,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.bullfighter.avaritia.init.AvaritiaModTabs;
 import net.bullfighter.avaritia.init.AvaritiaModMenus;
 import net.bullfighter.avaritia.init.AvaritiaModItems;
 import net.bullfighter.avaritia.init.AvaritiaModEntities;
@@ -54,12 +55,13 @@ public class AvaritiaMod {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
 		AvaritiaModBlocks.REGISTRY.register(bus);
+		AvaritiaModBlockEntities.REGISTRY.register(bus);
 		AvaritiaModItems.REGISTRY.register(bus);
 		AvaritiaModEntities.REGISTRY.register(bus);
-		AvaritiaModBlockEntities.REGISTRY.register(bus);
+
+		AvaritiaModTabs.REGISTRY.register(bus);
 
 		AvaritiaModMenus.REGISTRY.register(bus);
-
 	}
 
 	private static final String PROTOCOL_VERSION = "1";

@@ -121,8 +121,8 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onRightClicked": {
-      "name": "NeutroniumCompressorClick"
+    "onTickUpdate": {
+      "name": "NeutroniumCompressorTick"
     },
     "generateFeature": false,
     "restrictionBiomes": [],

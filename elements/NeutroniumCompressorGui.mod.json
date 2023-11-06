@@ -67,8 +67,8 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 186,
-          "y": 80
+          "x": 204,
+          "y": 89
         }
       },
       {
@@ -83,20 +83,32 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 186,
+          "x": 204,
+          "y": 98
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_www",
+          "text": "Clear",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "NeutroniumCompressorClear"
+          },
+          "width": 40,
+          "height": 20,
+          "x": 150,
           "y": 89
         }
       }
     ],
-    "onTick": {
-      "name": "NeutroniumCompressorGuiTick"
-    },
     "gridSettings": {
       "sx": 18,
       "sy": 18,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": false
+      "snapOnGrid": true
     }
   }
 }

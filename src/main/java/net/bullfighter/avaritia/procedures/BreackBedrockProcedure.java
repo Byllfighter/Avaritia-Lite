@@ -44,7 +44,7 @@ public class BreackBedrockProcedure {
 					public boolean checkGamemode(Entity _ent) {
 						if (_ent instanceof ServerPlayer _serverPlayer) {
 							return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.CREATIVE;
-						} else if (_ent.level.isClientSide() && _ent instanceof Player _player) {
+						} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
 							return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
 									&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.CREATIVE;
 						}
@@ -52,7 +52,7 @@ public class BreackBedrockProcedure {
 					}
 				}.checkGamemode(entity))) {
 			if (world instanceof ServerLevel _level) {
-				ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, (new ItemStack((world.getBlockState(BlockPos.containing(x, y, z))).getBlock())));
+				ItemEntity entityToSpawn = new ItemEntity(_level, (x + 0.5), (y + 0.5), (z + 0.5), (new ItemStack((world.getBlockState(BlockPos.containing(x, y, z))).getBlock())));
 				entityToSpawn.setPickUpDelay(10);
 				_level.addFreshEntity(entityToSpawn);
 			}

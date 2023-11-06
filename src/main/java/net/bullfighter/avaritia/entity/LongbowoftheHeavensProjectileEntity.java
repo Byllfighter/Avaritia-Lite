@@ -69,7 +69,7 @@ public class LongbowoftheHeavensProjectileEntity extends AbstractArrow implement
 	@Override
 	public void onHitBlock(BlockHitResult blockHitResult) {
 		super.onHitBlock(blockHitResult);
-		LongbowoftheHeavensBulletHitsBlockProcedure.execute(this.level, blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(), blockHitResult.getBlockPos().getZ());
+		LongbowoftheHeavensBulletHitsBlockProcedure.execute(this.level(), blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(), blockHitResult.getBlockPos().getZ());
 	}
 
 	@Override
@@ -96,7 +96,7 @@ public class LongbowoftheHeavensProjectileEntity extends AbstractArrow implement
 	}
 
 	public static LongbowoftheHeavensProjectileEntity shoot(LivingEntity entity, LivingEntity target) {
-		LongbowoftheHeavensProjectileEntity entityarrow = new LongbowoftheHeavensProjectileEntity(AvaritiaModEntities.LONGBOWOFTHE_HEAVENS_PROJECTILE.get(), entity, entity.level);
+		LongbowoftheHeavensProjectileEntity entityarrow = new LongbowoftheHeavensProjectileEntity(AvaritiaModEntities.LONGBOWOFTHE_HEAVENS_PROJECTILE.get(), entity, entity.level());
 		double dx = target.getX() - entity.getX();
 		double dy = target.getY() + target.getEyeHeight() - 1.1;
 		double dz = target.getZ() - entity.getZ();
@@ -105,8 +105,8 @@ public class LongbowoftheHeavensProjectileEntity extends AbstractArrow implement
 		entityarrow.setBaseDamage(9999);
 		entityarrow.setKnockback(5);
 		entityarrow.setCritArrow(true);
-		entity.level.addFreshEntity(entityarrow);
-		entity.level.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")), SoundSource.PLAYERS, 1, 1f / (RandomSource.create().nextFloat() * 0.5f + 1));
+		entity.level().addFreshEntity(entityarrow);
+		entity.level().playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")), SoundSource.PLAYERS, 1, 1f / (RandomSource.create().nextFloat() * 0.5f + 1));
 		return entityarrow;
 	}
 }
