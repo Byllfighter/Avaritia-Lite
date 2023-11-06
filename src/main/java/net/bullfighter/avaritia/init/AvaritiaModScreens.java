@@ -1,6 +1,6 @@
 
 /*
- *    MCreator note: This file will be REGENERATED on each build.
+ *	MCreator note: This file will be REGENERATED on each build.
  */
 package net.bullfighter.avaritia.init;
 
@@ -20,9 +20,9 @@ public class AvaritiaModScreens {
 	@SubscribeEvent
 	public static void clientLoad(FMLClientSetupEvent event) {
 		event.enqueueWork(() -> {
-			MenuScreens.register(AvaritiaModMenus.NEUTRON_COLLECTOR_GUI, NeutronCollectorGuiScreen::new);
-			MenuScreens.register(AvaritiaModMenus.EXTREME_CRAFTING_TABLE_GUI, ExtremeCraftingTableGuiScreen::new);
-			MenuScreens.register(AvaritiaModMenus.NEUTRONIUM_COMPRESSOR_GUI, NeutroniumCompressorGuiScreen::new);
+			MenuScreens.register(AvaritiaModMenus.NEUTRON_COLLECTOR_GUI.get(), NeutronCollectorGuiScreen::new);
+			MenuScreens.register(AvaritiaModMenus.EXTREME_CRAFTING_TABLE_GUI.get(), ExtremeCraftingTableGuiScreen::new);
+			MenuScreens.register(AvaritiaModMenus.NEUTRONIUM_COMPRESSOR_GUI.get(), NeutroniumCompressorGuiScreen::new);
 		});
 	}
 }

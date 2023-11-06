@@ -1,0 +1,7 @@
+{
+  "_fv": 55,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><xml xmlns=\"https://developers.google.com/blockly/xml\"><block deletable=\"false\" type=\"event_trigger\" x=\"40\" y=\"40\"><field name=\"trigger\">entity_ticks</field><next><block type=\"controls_if\"><value name=\"IF0\"><block type=\"logic_entity_compare\"><field name=\"entity\">EntityItem</field><value name=\"compareTo\"><block type=\"entity_from_deps\"/></value></block></value><statement name=\"DO0\"><block type=\"controls_if\"><value name=\"IF0\"><block type=\"compare_mcitems\"><value name=\"a\"><block type=\"itementity_to_mcitem\"><value name=\"source\"><block type=\"entity_from_deps\"/></value></block></value><value name=\"b\"><block type=\"mcitem_all\"><field name=\"value\">CUSTOM:BlackHoleItem</field></block></value></block></value><statement name=\"DO0\"><block type=\"entity_despawn\"><value name=\"entity\"><block type=\"entity_from_deps\"/></value></block></statement></block></statement></block></next></block></xml>"
+  }
+}

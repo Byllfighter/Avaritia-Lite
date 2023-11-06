@@ -1,16 +1,20 @@
 {
-  "_fv": 24,
+  "_fv": 55,
   "_type": "tool",
   "definition": {
+    "toolType": "Sword",
     "renderType": 0,
+    "blockingRenderType": 0,
     "texture": "layer_3",
     "customModelName": "Normal",
-    "name": "§cSword of the Cosmos§r",
-    "specialInfo": [],
+    "blockingModelName": "Normal blocking",
+    "name": "Â§cSword of the CosmosÂ§r",
+    "specialInformation": {
+      "fixedValue": []
+    },
     "creativeTab": {
       "value": "CUSTOM:Avaritiatab"
     },
-    "toolType": "Sword",
     "harvestLevel": 1,
     "efficiency": 0.0,
     "attackSpeed": 3.0,
@@ -18,7 +22,6 @@
     "damageVsEntity": 99999.0,
     "usageCount": 100,
     "blocksAffected": [],
-    "hasGlow": false,
     "repairItems": [],
     "immuneToFire": false,
     "stayInGridWhenCrafting": false,

@@ -1,6 +1,8 @@
 {
   "pack": {
     "description": "avaritia mod resources",
-    "pack_format": 6
+    "pack_format": 13,
+    "forge:resource_pack_format": 13,
+    "forge:data_pack_format": 12
   }
 }

@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 55,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -14,9 +14,10 @@
         "type": "outputslot",
         "data": {
           "id": 0,
-          "disableStackInteraction": false,
+          "disablePickup": {
+            "fixedValue": false
+          },
           "dropItemsWhenNotBound": true,
-          "name": "Slot #0",
           "x": 204,
           "y": 62
         }
@@ -24,12 +25,14 @@
       {
         "type": "label",
         "data": {
-          "text": "Neutron Collector",
+          "name": "label_neutron_collector",
+          "text": {
+            "fixedValue": "Neutron Collector"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Neutron Collector",
           "x": 177,
           "y": 44
         }
@@ -37,12 +40,15 @@
       {
         "type": "label",
         "data": {
-          "text": "<BNBT:number:process>%",
+          "name": "label_bnbtnumberprocess",
+          "text": {
+            "fixedValue": "<BNBT:number:process>%",
+            "name": "GetBNBTNumberProcess"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "<BNBT:number:process>%",
           "x": 199,
           "y": 83
         }

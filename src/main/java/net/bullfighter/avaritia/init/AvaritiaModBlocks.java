@@ -4,9 +4,9 @@
  */
 package net.bullfighter.avaritia.init;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.world.level.block.Block;
 
@@ -18,29 +18,16 @@ import net.bullfighter.avaritia.block.ExtremeCraftingTableBlock;
 import net.bullfighter.avaritia.block.DoubleCompressedCraftingTableBlock;
 import net.bullfighter.avaritia.block.CrystalMatrixBlock;
 import net.bullfighter.avaritia.block.CompressedCraftingTableBlock;
+import net.bullfighter.avaritia.AvaritiaMod;
 
-import java.util.List;
-import java.util.ArrayList;
-
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class AvaritiaModBlocks {
-	private static final List<Block> REGISTRY = new ArrayList<>();
-	public static final Block NEUTRON_COLLECTOR = register(new NeutronCollectorBlock());
-	public static final Block NEUTRONIUM_COMPRESSOR = register(new NeutroniumCompressorBlock());
-	public static final Block COMPRESSED_CRAFTING_TABLE = register(new CompressedCraftingTableBlock());
-	public static final Block DOUBLE_COMPRESSED_CRAFTING_TABLE = register(new DoubleCompressedCraftingTableBlock());
-	public static final Block EXTREME_CRAFTING_TABLE = register(new ExtremeCraftingTableBlock());
-	public static final Block NEUTRONIUM_BLOCK = register(new NeutroniumBlockBlock());
-	public static final Block INFINITY_BLOCK = register(new InfinityBlockBlock());
-	public static final Block CRYSTAL_MATRIX = register(new CrystalMatrixBlock());
-
-	private static Block register(Block block) {
-		REGISTRY.add(block);
-		return block;
-	}
-
-	@SubscribeEvent
-	public static void registerBlocks(RegistryEvent.Register<Block> event) {
-		event.getRegistry().registerAll(REGISTRY.toArray(new Block[0]));
-	}
+	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, AvaritiaMod.MODID);
+	public static final RegistryObject<Block> NEUTRON_COLLECTOR = REGISTRY.register("neutron_collector", () -> new NeutronCollectorBlock());
+	public static final RegistryObject<Block> NEUTRONIUM_COMPRESSOR = REGISTRY.register("neutronium_compressor", () -> new NeutroniumCompressorBlock());
+	public static final RegistryObject<Block> COMPRESSED_CRAFTING_TABLE = REGISTRY.register("compressed_crafting_table", () -> new CompressedCraftingTableBlock());
+	public static final RegistryObject<Block> DOUBLE_COMPRESSED_CRAFTING_TABLE = REGISTRY.register("double_compressed_crafting_table", () -> new DoubleCompressedCraftingTableBlock());
+	public static final RegistryObject<Block> EXTREME_CRAFTING_TABLE = REGISTRY.register("extreme_crafting_table", () -> new ExtremeCraftingTableBlock());
+	public static final RegistryObject<Block> NEUTRONIUM_BLOCK = REGISTRY.register("neutronium_block", () -> new NeutroniumBlockBlock());
+	public static final RegistryObject<Block> INFINITY_BLOCK = REGISTRY.register("infinity_block", () -> new InfinityBlockBlock());
+	public static final RegistryObject<Block> CRYSTAL_MATRIX = REGISTRY.register("crystal_matrix", () -> new CrystalMatrixBlock());
 }

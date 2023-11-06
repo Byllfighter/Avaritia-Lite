@@ -1,16 +1,20 @@
 {
-  "_fv": 24,
+  "_fv": 55,
   "_type": "tool",
   "definition": {
+    "toolType": "Sword",
     "renderType": 0,
+    "blockingRenderType": 0,
     "texture": "layer_4",
     "customModelName": "Normal",
-    "name": "§dSkullfire Sword§r",
-    "specialInfo": [],
+    "blockingModelName": "Normal blocking",
+    "name": "Â§dSkullfire SwordÂ§r",
+    "specialInformation": {
+      "fixedValue": []
+    },
     "creativeTab": {
       "value": "CUSTOM:Avaritiatab"
     },
-    "toolType": "Sword",
     "harvestLevel": 1,
     "efficiency": 2.0,
     "attackSpeed": 1.0,
@@ -18,7 +22,6 @@
     "damageVsEntity": 7.0,
     "usageCount": 1561,
     "blocksAffected": [],
-    "hasGlow": false,
     "repairItems": [],
     "immuneToFire": false,
     "stayInGridWhenCrafting": false,

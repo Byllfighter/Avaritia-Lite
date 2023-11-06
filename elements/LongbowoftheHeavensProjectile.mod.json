@@ -1,0 +1,22 @@
+{
+  "_fv": 55,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "CUSTOM:InfinityCatalyst"
+    },
+    "showParticles": true,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "igniteFire": false,
+    "power": 5.0,
+    "damage": 9999.0,
+    "knockback": 5,
+    "entityModel": "Default",
+    "customModelTexture": "",
+    "onHitsBlock": {
+      "name": "LongbowoftheHeavensBulletHitsBlock"
+    }
+  }
+}

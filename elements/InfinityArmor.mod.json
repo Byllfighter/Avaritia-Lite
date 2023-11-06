@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 55,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -26,14 +26,22 @@
       "value": "CUSTOM:Avaritiatab"
     },
     "armorTextureFile": "infinity",
-    "helmetName": "§cInfinity Helmet§r",
-    "bodyName": "§cInfinity Breastplate§r",
-    "leggingsName": "§cInfinity Leggings§r",
-    "bootsName": "§cInfinity Boots§r",
-    "helmetSpecialInfo": [],
-    "bodySpecialInfo": [],
-    "leggingsSpecialInfo": [],
-    "bootsSpecialInfo": [],
+    "helmetName": "Â§cInfinity HelmetÂ§r",
+    "bodyName": "Â§cInfinity BreastplateÂ§r",
+    "leggingsName": "Â§cInfinity LeggingsÂ§r",
+    "bootsName": "Â§cInfinity BootsÂ§r",
+    "helmetSpecialInformation": {
+      "fixedValue": []
+    },
+    "bodySpecialInformation": {
+      "fixedValue": []
+    },
+    "leggingsSpecialInformation": {
+      "fixedValue": []
+    },
+    "bootsSpecialInformation": {
+      "fixedValue": []
+    },
     "helmetModelName": "Default",
     "helmetModelPart": "Helmet",
     "helmetModelTexture": "From armor",
@@ -50,6 +58,14 @@
     "bootsModelPartL": "Boots L",
     "bootsModelPartR": "Boots R",
     "bootsModelTexture": "From armor",
+    "helmetItemRenderType": 0,
+    "helmetItemCustomModelName": "Normal",
+    "bodyItemRenderType": 0,
+    "bodyItemCustomModelName": "Normal",
+    "leggingsItemRenderType": 0,
+    "leggingsItemCustomModelName": "Normal",
+    "bootsItemRenderType": 0,
+    "bootsItemCustomModelName": "Normal",
     "helmetImmuneToFire": false,
     "bodyImmuneToFire": false,
     "leggingsImmuneToFire": false,

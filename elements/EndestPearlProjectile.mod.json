@@ -1,0 +1,25 @@
+{
+  "_fv": 55,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "CUSTOM:EndestPearl"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": ""
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 0.0,
+    "knockback": 0,
+    "entityModel": "Default",
+    "customModelTexture": "layer_9.png",
+    "onHitsBlock": {
+      "name": "BlackHoleSpawn"
+    },
+    "onHitsEntity": {
+      "name": "BlackHoleSpawn"
+    }
+  }
+}

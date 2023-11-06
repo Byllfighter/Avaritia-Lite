@@ -1,16 +1,20 @@
 {
-  "_fv": 24,
+  "_fv": 55,
   "_type": "tool",
   "definition": {
+    "toolType": "Axe",
     "renderType": 0,
+    "blockingRenderType": 0,
     "texture": "layer_6",
     "customModelName": "Normal",
-    "name": "§cNature's Ruin§r",
-    "specialInfo": [],
+    "blockingModelName": "Normal blocking",
+    "name": "Â§cNature's RuinÂ§r",
+    "specialInformation": {
+      "fixedValue": []
+    },
     "creativeTab": {
       "value": "CUSTOM:Avaritiatab"
     },
-    "toolType": "Axe",
     "harvestLevel": 1000,
     "efficiency": 99999.0,
     "attackSpeed": 1.0,
@@ -18,7 +22,6 @@
     "damageVsEntity": 21.0,
     "usageCount": 100,
     "blocksAffected": [],
-    "hasGlow": false,
     "repairItems": [],
     "immuneToFire": false,
     "stayInGridWhenCrafting": false,

@@ -3,16 +3,19 @@ package net.bullfighter.avaritia.item;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.network.chat.Component;
 
 import net.bullfighter.avaritia.procedures.SwordoftheCosmosKillProcedure;
 import net.bullfighter.avaritia.procedures.MendProcedure;
-import net.bullfighter.avaritia.init.AvaritiaModTabs;
+
+import java.util.List;
 
 public class SwordoftheCosmosItem extends SwordItem {
 	public SwordoftheCosmosItem() {
@@ -38,22 +41,21 @@ public class SwordoftheCosmosItem extends SwordItem {
 			}
 
 			public Ingredient getRepairIngredient() {
-				return Ingredient.EMPTY;
+				return Ingredient.of();
 			}
-		}, 3, -1f, new Item.Properties().tab(AvaritiaModTabs.TAB_AVARITIATAB));
-		setRegistryName("swordofthe_cosmos");
+		}, 3, -1f, new Item.Properties());
 	}
 
 	@Override
 	public boolean hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
 		boolean retval = super.hurtEnemy(itemstack, entity, sourceentity);
-		double x = entity.getX();
-		double y = entity.getY();
-		double z = entity.getZ();
-		Level world = entity.level;
-
 		SwordoftheCosmosKillProcedure.execute(entity);
 		return retval;
+	}
+
+	@Override
+	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
+		super.appendHoverText(itemstack, world, list, flag);
 	}
 
 	@Override

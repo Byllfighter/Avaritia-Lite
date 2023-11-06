@@ -1,3 +1,4 @@
+
 package net.bullfighter.avaritia.client.renderer;
 
 import net.minecraft.resources.ResourceLocation;
@@ -12,12 +13,11 @@ import net.bullfighter.avaritia.entity.BlackHoleEntity;
 public class BlackHoleRenderer extends HumanoidMobRenderer<BlackHoleEntity, HumanoidModel<BlackHoleEntity>> {
 	public BlackHoleRenderer(EntityRendererProvider.Context context) {
 		super(context, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER)), 0.5f);
-		this.addLayer(new HumanoidArmorLayer(this, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_INNER_ARMOR)),
-				new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_OUTER_ARMOR))));
+		this.addLayer(new HumanoidArmorLayer(this, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_INNER_ARMOR)), new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_OUTER_ARMOR)), context.getModelManager()));
 	}
 
 	@Override
 	public ResourceLocation getTextureLocation(BlackHoleEntity entity) {
-		return new ResourceLocation("avaritia:textures/black.png");
+		return new ResourceLocation("avaritia:textures/entities/null.png");
 	}
 }

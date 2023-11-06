@@ -1,7 +1,8 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "avaritia:blocks/infinity",
-    "particle": "avaritia:blocks/infinity"
-  }
+    "all": "avaritia:block/infinity",
+    "particle": "avaritia:block/infinity"
+  },
+  "render_type": "solid"
 }

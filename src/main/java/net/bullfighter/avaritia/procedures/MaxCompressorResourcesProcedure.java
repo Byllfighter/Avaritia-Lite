@@ -15,9 +15,9 @@ import javax.annotation.Nullable;
 @Mod.EventBusSubscriber
 public class MaxCompressorResourcesProcedure {
 	@SubscribeEvent
-	public static void onWorldTick(TickEvent.WorldTickEvent event) {
+	public static void onWorldTick(TickEvent.LevelTickEvent event) {
 		if (event.phase == TickEvent.Phase.END) {
-			execute(event, event.world);
+			execute(event, event.level);
 		}
 	}
 
@@ -26,8 +26,7 @@ public class MaxCompressorResourcesProcedure {
 	}
 
 	private static void execute(@Nullable Event event, LevelAccessor world) {
-		AvaritiaModVariables.MapVariables.get(world).MaxCompressorResources = (world.getLevelData().getGameRules()
-				.getInt(AvaritiaModGameRules.NEUTRONIUMCOMPRESSORAMOUNT));
+		AvaritiaModVariables.MapVariables.get(world).MaxCompressorResources = (world.getLevelData().getGameRules().getInt(AvaritiaModGameRules.NEUTRONIUMCOMPRESSORAMOUNT));
 		AvaritiaModVariables.MapVariables.get(world).syncData(world);
 	}
 }

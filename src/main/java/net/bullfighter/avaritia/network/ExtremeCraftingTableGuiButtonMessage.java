@@ -1,7 +1,7 @@
 
 package net.bullfighter.avaritia.network;
 
-import net.minecraftforge.fmllegacy.network.NetworkEvent;
+import net.minecraftforge.network.NetworkEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -70,7 +70,6 @@ public class ExtremeCraftingTableGuiButtonMessage {
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		AvaritiaMod.addNetworkMessage(ExtremeCraftingTableGuiButtonMessage.class, ExtremeCraftingTableGuiButtonMessage::buffer,
-				ExtremeCraftingTableGuiButtonMessage::new, ExtremeCraftingTableGuiButtonMessage::handler);
+		AvaritiaMod.addNetworkMessage(ExtremeCraftingTableGuiButtonMessage.class, ExtremeCraftingTableGuiButtonMessage::buffer, ExtremeCraftingTableGuiButtonMessage::new, ExtremeCraftingTableGuiButtonMessage::handler);
 	}
 }

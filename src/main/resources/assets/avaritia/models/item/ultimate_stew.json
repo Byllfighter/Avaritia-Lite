@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "avaritia:items/ultimatestew"
+    "layer0": "avaritia:item/ultimatestew"
   }
 }

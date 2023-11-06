@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "avaritia:items/layer_4"
+    "layer0": "avaritia:item/layer_4"
   }
 }

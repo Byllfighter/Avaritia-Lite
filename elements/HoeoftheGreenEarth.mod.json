@@ -1,16 +1,20 @@
 {
-  "_fv": 24,
+  "_fv": 55,
   "_type": "tool",
   "definition": {
+    "toolType": "Hoe",
     "renderType": 0,
+    "blockingRenderType": 0,
     "texture": "layer_5",
     "customModelName": "Normal",
-    "name": "§cHoe of the Green Earth§r",
-    "specialInfo": [],
+    "blockingModelName": "Normal blocking",
+    "name": "Â§cHoe of the Green EarthÂ§r",
+    "specialInformation": {
+      "fixedValue": []
+    },
     "creativeTab": {
       "value": "CUSTOM:Avaritiatab"
     },
-    "toolType": "Hoe",
     "harvestLevel": 1,
     "efficiency": 1.0,
     "attackSpeed": 1.0,
@@ -18,7 +22,6 @@
     "damageVsEntity": 9.0,
     "usageCount": 100,
     "blocksAffected": [],
-    "hasGlow": false,
     "repairItems": [],
     "immuneToFire": false,
     "stayInGridWhenCrafting": false,

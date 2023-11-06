@@ -2,8 +2,8 @@ package net.bullfighter.avaritia.block.entity;
 
 import net.minecraftforge.items.wrapper.SidedInvWrapper;
 import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.common.util.LazyOptional;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.capabilities.Capability;
 
 import net.minecraft.world.level.block.state.BlockState;
@@ -14,10 +14,8 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.WorldlyContainer;
 import net.minecraft.world.ContainerHelper;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.network.Connection;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.Direction;
@@ -37,7 +35,7 @@ public class NeutronCollectorBlockEntity extends RandomizableContainerBlockEntit
 	private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
 
 	public NeutronCollectorBlockEntity(BlockPos position, BlockState state) {
-		super(AvaritiaModBlockEntities.NEUTRON_COLLECTOR, position, state);
+		super(AvaritiaModBlockEntities.NEUTRON_COLLECTOR.get(), position, state);
 	}
 
 	@Override
@@ -49,27 +47,21 @@ public class NeutronCollectorBlockEntity extends RandomizableContainerBlockEntit
 	}
 
 	@Override
-	public CompoundTag save(CompoundTag compound) {
-		super.save(compound);
+	public void saveAdditional(CompoundTag compound) {
+		super.saveAdditional(compound);
 		if (!this.trySaveLootTable(compound)) {
 			ContainerHelper.saveAllItems(compound, this.stacks);
 		}
-		return compound;
 	}
 
 	@Override
 	public ClientboundBlockEntityDataPacket getUpdatePacket() {
-		return new ClientboundBlockEntityDataPacket(this.worldPosition, 0, this.getUpdateTag());
+		return ClientboundBlockEntityDataPacket.create(this);
 	}
 
 	@Override
 	public CompoundTag getUpdateTag() {
-		return this.save(new CompoundTag());
-	}
-
-	@Override
-	public void onDataPacket(Connection net, ClientboundBlockEntityDataPacket pkt) {
-		this.load(pkt.getTag());
+		return this.saveWithFullMetadata();
 	}
 
 	@Override
@@ -87,7 +79,7 @@ public class NeutronCollectorBlockEntity extends RandomizableContainerBlockEntit
 
 	@Override
 	public Component getDefaultName() {
-		return new TextComponent("neutron_collector");
+		return Component.literal("neutron_collector");
 	}
 
 	@Override
@@ -102,7 +94,7 @@ public class NeutronCollectorBlockEntity extends RandomizableContainerBlockEntit
 
 	@Override
 	public Component getDisplayName() {
-		return new TextComponent("Neutron Collector");
+		return Component.literal("Neutron Collector");
 	}
 
 	@Override
@@ -139,7 +131,7 @@ public class NeutronCollectorBlockEntity extends RandomizableContainerBlockEntit
 
 	@Override
 	public <T> LazyOptional<T> getCapability(Capability<T> capability, @Nullable Direction facing) {
-		if (!this.remove && facing != null && capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
+		if (!this.remove && facing != null && capability == ForgeCapabilities.ITEM_HANDLER)
 			return handlers[facing.ordinal()].cast();
 		return super.getCapability(capability, facing);
 	}

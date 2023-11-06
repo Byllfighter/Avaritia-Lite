@@ -1,12 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "avaritia:blocks/side",
-    "up": "avaritia:blocks/top2",
-    "north": "avaritia:blocks/active2",
-    "east": "avaritia:blocks/side",
-    "south": "avaritia:blocks/side",
-    "west": "avaritia:blocks/side",
-    "particle": "avaritia:blocks/side"
-  }
+    "down": "avaritia:block/side",
+    "up": "avaritia:block/top2",
+    "north": "avaritia:block/active2",
+    "east": "avaritia:block/side",
+    "south": "avaritia:block/side",
+    "west": "avaritia:block/side",
+    "particle": "avaritia:block/side"
+  },
+  "render_type": "solid"
 }

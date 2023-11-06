@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 55,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -13,12 +13,14 @@
       {
         "type": "label",
         "data": {
-          "text": "Neutronium Compressor",
+          "name": "label_neutronium_compressor",
+          "text": {
+            "fixedValue": "Neutronium Compressor"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Neutronium Compressor",
           "x": 159,
           "y": 44
         }
@@ -29,10 +31,14 @@
           "inputLimit": {
             "value": ""
           },
+          "disablePlacement": {
+            "fixedValue": false
+          },
           "id": 0,
-          "disableStackInteraction": false,
+          "disablePickup": {
+            "fixedValue": false
+          },
           "dropItemsWhenNotBound": true,
-          "name": "Slot #0",
           "x": 186,
           "y": 62
         }
@@ -41,9 +47,10 @@
         "type": "outputslot",
         "data": {
           "id": 1,
-          "disableStackInteraction": false,
+          "disablePickup": {
+            "fixedValue": false
+          },
           "dropItemsWhenNotBound": true,
-          "name": "Slot #1",
           "x": 222,
           "y": 62
         }
@@ -51,12 +58,15 @@
       {
         "type": "label",
         "data": {
-          "text": "<BNBT:number:process>/<VAR:integer:MaxCompressorResources>",
+          "name": "label_bnbtnumberprocessvarinteg",
+          "text": {
+            "fixedValue": "<BNBT:number:process>/<VAR:integer:MaxCompressorResources>",
+            "name": "GetBNBTNeutroniumCompressor"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "<BNBT:number:process>/<VAR:integer:MaxCompressorResources>",
           "x": 186,
           "y": 80
         }
@@ -64,12 +74,15 @@
       {
         "type": "label",
         "data": {
-          "text": "Material: <BNBT:text:material>",
+          "name": "label_material_bnbttextmaterial",
+          "text": {
+            "fixedValue": "Material: <BNBT:text:material>",
+            "name": "GetBNBTTextMaterial"
+          },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Material: <BNBT:text:material>",
           "x": 186,
           "y": 89
         }

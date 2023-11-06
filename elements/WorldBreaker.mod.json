@@ -1,16 +1,20 @@
 {
-  "_fv": 24,
+  "_fv": 55,
   "_type": "tool",
   "definition": {
+    "toolType": "Pickaxe",
     "renderType": 0,
+    "blockingRenderType": 0,
     "texture": "pickaxe",
     "customModelName": "Normal",
-    "name": "§cWorld Breaker§r",
-    "specialInfo": [],
+    "blockingModelName": "Normal blocking",
+    "name": "Â§cWorld BreakerÂ§r",
+    "specialInformation": {
+      "fixedValue": []
+    },
     "creativeTab": {
       "value": "CUSTOM:Avaritiatab"
     },
-    "toolType": "Pickaxe",
     "harvestLevel": 99999,
     "efficiency": 99999.0,
     "attackSpeed": 1.0,
@@ -18,8 +22,8 @@
     "damageVsEntity": 8.0,
     "usageCount": 1000,
     "blocksAffected": [],
-    "hasGlow": true,
     "glowCondition": {
+      "fixedValue": true,
       "name": "NeverGlow"
     },
     "repairItems": [],

@@ -1,5 +1,4 @@
 {
-  "id_map": {},
   "mod_elements": [
     {
       "name": "DiamondLattice",
@@ -7,8 +6,13 @@
       "sortid": 1,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "diamond_lattice"
+      "registry_name": "diamond_lattice",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/item/DiamondLatticeItem.java",
+          "src/main/resources/assets/avaritia/models/item/diamond_lattice.json"
+        ]
+      }
     },
     {
       "name": "InfinityCatalyst",
@@ -16,8 +20,13 @@
       "sortid": 6,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "infinity_catalyst"
+      "registry_name": "infinity_catalyst",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/avaritia/models/item/infinity_catalyst.json",
+          "src/main/java/net/bullfighter/avaritia/item/InfinityCatalystItem.java"
+        ]
+      }
     },
     {
       "name": "Avaritiatab",
@@ -25,8 +34,10 @@
       "sortid": 8,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "avaritiatab"
+      "registry_name": "avaritiatab",
+      "metadata": {
+        "files": []
+      }
     },
     {
       "name": "DiamondLatticeRecipe",
@@ -34,8 +45,12 @@
       "sortid": 9,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "diamond_lattice_recipe"
+      "registry_name": "diamond_lattice_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/recipes/diamond_lattice_recipe.json"
+        ]
+      }
     },
     {
       "name": "CrystalMatrixIngot",
@@ -43,8 +58,13 @@
       "sortid": 2,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "crystal_matrix_ingot"
+      "registry_name": "crystal_matrix_ingot",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/item/CrystalMatrixIngotItem.java",
+          "src/main/resources/assets/avaritia/models/item/crystal_matrix_ingot.json"
+        ]
+      }
     },
     {
       "name": "CrystalMatrixIngotRecipe",
@@ -52,8 +72,12 @@
       "sortid": 10,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "crystal_matrix_ingot_recipe"
+      "registry_name": "crystal_matrix_ingot_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/recipes/crystal_matrix_ingot_recipe.json"
+        ]
+      }
     },
     {
       "name": "PileofNeutrons",
@@ -61,8 +85,13 @@
       "sortid": 3,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "pileof_neutrons"
+      "registry_name": "pileof_neutrons",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/avaritia/models/item/pileof_neutrons.json",
+          "src/main/java/net/bullfighter/avaritia/item/PileofNeutronsItem.java"
+        ]
+      }
     },
     {
       "name": "NeutronCollector",
@@ -70,8 +99,16 @@
       "sortid": 7,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "neutron_collector"
+      "registry_name": "neutron_collector",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/block/NeutronCollectorBlock.java",
+          "src/main/resources/assets/avaritia/models/block/neutron_collector.json",
+          "src/main/resources/assets/avaritia/models/item/neutron_collector.json",
+          "src/main/java/net/bullfighter/avaritia/block/entity/NeutronCollectorBlockEntity.java",
+          "src/main/resources/assets/avaritia/blockstates/neutron_collector.json"
+        ]
+      }
     },
     {
       "name": "NeutronCollectorGui",
@@ -79,8 +116,13 @@
       "sortid": 11,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "neutron_collector_gui"
+      "registry_name": "neutron_collector_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/client/gui/NeutronCollectorGuiScreen.java",
+          "src/main/java/net/bullfighter/avaritia/world/inventory/NeutronCollectorGuiMenu.java"
+        ]
+      }
     },
     {
       "name": "NeutronCollectorGenerator",
@@ -88,9 +130,11 @@
       "sortid": 12,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "neutron_collector_generator",
       "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/NeutronCollectorGeneratorProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "x",
@@ -117,8 +161,13 @@
       "sortid": 4,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "neutronium_nugget"
+      "registry_name": "neutronium_nugget",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/item/NeutroniumNuggetItem.java",
+          "src/main/resources/assets/avaritia/models/item/neutronium_nugget.json"
+        ]
+      }
     },
     {
       "name": "NeutroniumIngot",
@@ -126,8 +175,13 @@
       "sortid": 5,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "neutronium_ingot"
+      "registry_name": "neutronium_ingot",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/item/NeutroniumIngotItem.java",
+          "src/main/resources/assets/avaritia/models/item/neutronium_ingot.json"
+        ]
+      }
     },
     {
       "name": "NeutroniumNuggetRecipe",
@@ -135,8 +189,12 @@
       "sortid": 13,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "neutronium_nugget_recipe"
+      "registry_name": "neutronium_nugget_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/recipes/neutronium_nugget_recipe.json"
+        ]
+      }
     },
     {
       "name": "PileofNeutroniumRecipe",
@@ -144,8 +202,12 @@
       "sortid": 14,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "pileof_neutronium_recipe"
+      "registry_name": "pileof_neutronium_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/recipes/pileof_neutronium_recipe.json"
+        ]
+      }
     },
     {
       "name": "NeutroniumNuggetRecipe2",
@@ -153,8 +215,12 @@
       "sortid": 15,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "neutronium_nugget_recipe_2"
+      "registry_name": "neutronium_nugget_recipe_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/recipes/neutronium_nugget_recipe_2.json"
+        ]
+      }
     },
     {
       "name": "NeutroniumIngotRecipe",
@@ -162,8 +228,12 @@
       "sortid": 16,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "neutronium_ingot_recipe"
+      "registry_name": "neutronium_ingot_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/recipes/neutronium_ingot_recipe.json"
+        ]
+      }
     },
     {
       "name": "InfinityIngot",
@@ -171,8 +241,13 @@
       "sortid": 17,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "infinity_ingot"
+      "registry_name": "infinity_ingot",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/item/InfinityIngotItem.java",
+          "src/main/resources/assets/avaritia/models/item/infinity_ingot.json"
+        ]
+      }
     },
     {
       "name": "ExtremeCraftingTableGui",
@@ -180,8 +255,14 @@
       "sortid": 18,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "extreme_crafting_table_gui"
+      "registry_name": "extreme_crafting_table_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/network/ExtremeCraftingTableGuiButtonMessage.java",
+          "src/main/java/net/bullfighter/avaritia/world/inventory/ExtremeCraftingTableGuiMenu.java",
+          "src/main/java/net/bullfighter/avaritia/client/gui/ExtremeCraftingTableGuiScreen.java"
+        ]
+      }
     },
     {
       "name": "RecordFragment",
@@ -189,8 +270,13 @@
       "sortid": 19,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "record_fragment"
+      "registry_name": "record_fragment",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/avaritia/models/item/record_fragment.json",
+          "src/main/java/net/bullfighter/avaritia/item/RecordFragmentItem.java"
+        ]
+      }
     },
     {
       "name": "RecordFragmentRecipe",
@@ -198,8 +284,12 @@
       "sortid": 20,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "record_fragment_recipe"
+      "registry_name": "record_fragment_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/recipes/record_fragment_recipe.json"
+        ]
+      }
     },
     {
       "name": "IronSingularity",
@@ -207,8 +297,13 @@
       "sortid": 22,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "iron_singularity"
+      "registry_name": "iron_singularity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/item/IronSingularityItem.java",
+          "src/main/resources/assets/avaritia/models/item/iron_singularity.json"
+        ]
+      }
     },
     {
       "name": "GoldenSingularity",
@@ -216,8 +311,13 @@
       "sortid": 23,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "golden_singularity"
+      "registry_name": "golden_singularity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/item/GoldenSingularityItem.java",
+          "src/main/resources/assets/avaritia/models/item/golden_singularity.json"
+        ]
+      }
     },
     {
       "name": "LapisSingularity",
@@ -225,8 +325,13 @@
       "sortid": 24,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "lapis_singularity"
+      "registry_name": "lapis_singularity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/item/LapisSingularityItem.java",
+          "src/main/resources/assets/avaritia/models/item/lapis_singularity.json"
+        ]
+      }
     },
     {
       "name": "RedstoneSingularity",
@@ -234,8 +339,13 @@
       "sortid": 25,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "redstone_singularity"
+      "registry_name": "redstone_singularity",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/avaritia/models/item/redstone_singularity.json",
+          "src/main/java/net/bullfighter/avaritia/item/RedstoneSingularityItem.java"
+        ]
+      }
     },
     {
       "name": "NetherQuartzSingularity",
@@ -243,8 +353,13 @@
       "sortid": 26,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "nether_quartz_singularity"
+      "registry_name": "nether_quartz_singularity",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/avaritia/models/item/nether_quartz_singularity.json",
+          "src/main/java/net/bullfighter/avaritia/item/NetherQuartzSingularityItem.java"
+        ]
+      }
     },
     {
       "name": "DiamondSingularity",
@@ -252,8 +367,13 @@
       "sortid": 27,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "diamond_singularity"
+      "registry_name": "diamond_singularity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/item/DiamondSingularityItem.java",
+          "src/main/resources/assets/avaritia/models/item/diamond_singularity.json"
+        ]
+      }
     },
     {
       "name": "EmeraldSingularity",
@@ -261,8 +381,13 @@
       "sortid": 28,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "emerald_singularity"
+      "registry_name": "emerald_singularity",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/avaritia/models/item/emerald_singularity.json",
+          "src/main/java/net/bullfighter/avaritia/item/EmeraldSingularityItem.java"
+        ]
+      }
     },
     {
       "name": "NeutroniumCompressorGui",
@@ -270,8 +395,13 @@
       "sortid": 31,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "neutronium_compressor_gui"
+      "registry_name": "neutronium_compressor_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/world/inventory/NeutroniumCompressorGuiMenu.java",
+          "src/main/java/net/bullfighter/avaritia/client/gui/NeutroniumCompressorGuiScreen.java"
+        ]
+      }
     },
     {
       "name": "NeutroniumCompressor",
@@ -279,8 +409,16 @@
       "sortid": 32,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "neutronium_compressor"
+      "registry_name": "neutronium_compressor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/block/entity/NeutroniumCompressorBlockEntity.java",
+          "src/main/resources/assets/avaritia/models/block/neutronium_compressor.json",
+          "src/main/java/net/bullfighter/avaritia/block/NeutroniumCompressorBlock.java",
+          "src/main/resources/assets/avaritia/blockstates/neutronium_compressor.json",
+          "src/main/resources/assets/avaritia/models/item/neutronium_compressor.json"
+        ]
+      }
     },
     {
       "name": "Mend",
@@ -288,9 +426,11 @@
       "sortid": 33,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "mend",
       "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/MendProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "itemstack",
@@ -305,8 +445,13 @@
       "sortid": 33,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "swordofthe_cosmos"
+      "registry_name": "swordofthe_cosmos",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/avaritia/models/item/swordofthe_cosmos.json",
+          "src/main/java/net/bullfighter/avaritia/item/SwordoftheCosmosItem.java"
+        ]
+      }
     },
     {
       "name": "PlanetEater",
@@ -314,8 +459,13 @@
       "sortid": 34,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "planet_eater"
+      "registry_name": "planet_eater",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/item/PlanetEaterItem.java",
+          "src/main/resources/assets/avaritia/models/item/planet_eater.json"
+        ]
+      }
     },
     {
       "name": "NaturesRuin",
@@ -323,8 +473,13 @@
       "sortid": 35,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "natures_ruin"
+      "registry_name": "natures_ruin",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/item/NaturesRuinItem.java",
+          "src/main/resources/assets/avaritia/models/item/natures_ruin.json"
+        ]
+      }
     },
     {
       "name": "HoeoftheGreenEarth",
@@ -332,8 +487,13 @@
       "sortid": 36,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "hoeofthe_green_earth"
+      "registry_name": "hoeofthe_green_earth",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/avaritia/models/item/hoeofthe_green_earth.json",
+          "src/main/java/net/bullfighter/avaritia/item/HoeoftheGreenEarthItem.java"
+        ]
+      }
     },
     {
       "name": "LongbowoftheHeavensBulletHitsBlock",
@@ -341,9 +501,11 @@
       "sortid": 37,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "longbowofthe_heavens_bullet_hits_block",
       "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/LongbowoftheHeavensBulletHitsBlockProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "x",
@@ -365,23 +527,16 @@
       }
     },
     {
-      "name": "LongbowoftheHeavens",
-      "type": "rangeditem",
-      "sortid": 37,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "longbowofthe_heavens"
-    },
-    {
       "name": "Neutroniumcollectoropen",
       "type": "procedure",
       "sortid": 38,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "neutroniumcollectoropen",
       "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/NeutroniumcollectoropenProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "x",
@@ -408,9 +563,11 @@
       "sortid": 39,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "neutron_collector_gui_tick",
       "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/NeutronCollectorGuiTickProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -429,8 +586,13 @@
       "sortid": 40,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "world_breaker"
+      "registry_name": "world_breaker",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/item/WorldBreakerItem.java",
+          "src/main/resources/assets/avaritia/models/item/world_breaker.json"
+        ]
+      }
     },
     {
       "name": "WorldBreakerTick",
@@ -438,9 +600,11 @@
       "sortid": 41,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "world_breaker_tick",
       "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/WorldBreakerTickProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "itemstack",
@@ -455,13 +619,19 @@
       "sortid": 42,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "infinity_armor",
       "metadata": {
         "eh": true,
         "el": true,
         "eb": true,
-        "ec": true
+        "ec": true,
+        "files": [
+          "src/main/resources/assets/avaritia/models/item/infinity_armor_helmet.json",
+          "src/main/java/net/bullfighter/avaritia/item/InfinityArmorItem.java",
+          "src/main/resources/assets/avaritia/models/item/infinity_armor_chestplate.json",
+          "src/main/resources/assets/avaritia/models/item/infinity_armor_leggings.json",
+          "src/main/resources/assets/avaritia/models/item/infinity_armor_boots.json"
+        ]
       }
     },
     {
@@ -470,9 +640,11 @@
       "sortid": 42,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "infinity_armor_tick",
       "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/InfinityArmorTickProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -491,9 +663,11 @@
       "sortid": 43,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "swordofthe_cosmos_kill",
       "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/SwordoftheCosmosKillProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -508,8 +682,13 @@
       "sortid": 44,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "skullfire_sword"
+      "registry_name": "skullfire_sword",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/avaritia/models/item/skullfire_sword.json",
+          "src/main/java/net/bullfighter/avaritia/item/SkullfireSwordItem.java"
+        ]
+      }
     },
     {
       "name": "EntityDeath",
@@ -517,9 +696,11 @@
       "sortid": 45,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "entity_death",
       "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/EntityDeathProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -554,9 +735,11 @@
       "sortid": 47,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "ultimate_stew_eaten",
       "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/UltimateStewEatenProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -566,32 +749,16 @@
       }
     },
     {
-      "name": "UltimateStew",
-      "type": "food",
-      "sortid": 47,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "ultimate_stew"
-    },
-    {
-      "name": "CosmicMeatballs",
-      "type": "food",
-      "sortid": 48,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "cosmic_meatballs"
-    },
-    {
       "name": "CosmicMeatballsEaten",
       "type": "procedure",
       "sortid": 49,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "cosmic_meatballs_eaten",
       "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/CosmicMeatballsEatenProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -606,9 +773,11 @@
       "sortid": 50,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "open_crafting_table",
       "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/OpenCraftingTableProcedure.java"
+        ],
         "dependencies": []
       }
     },
@@ -618,8 +787,15 @@
       "sortid": 50,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "compressed_crafting_table"
+      "registry_name": "compressed_crafting_table",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/avaritia/blockstates/compressed_crafting_table.json",
+          "src/main/java/net/bullfighter/avaritia/block/CompressedCraftingTableBlock.java",
+          "src/main/resources/assets/avaritia/models/item/compressed_crafting_table.json",
+          "src/main/resources/assets/avaritia/models/block/compressed_crafting_table.json"
+        ]
+      }
     },
     {
       "name": "DoubleCompressedCraftingTable",
@@ -627,8 +803,15 @@
       "sortid": 51,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "double_compressed_crafting_table"
+      "registry_name": "double_compressed_crafting_table",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/block/DoubleCompressedCraftingTableBlock.java",
+          "src/main/resources/assets/avaritia/models/block/double_compressed_crafting_table.json",
+          "src/main/resources/assets/avaritia/blockstates/double_compressed_crafting_table.json",
+          "src/main/resources/assets/avaritia/models/item/double_compressed_crafting_table.json"
+        ]
+      }
     },
     {
       "name": "CompressedCraftingTableRecipe",
@@ -636,8 +819,12 @@
       "sortid": 52,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "compressed_crafting_table_recipe"
+      "registry_name": "compressed_crafting_table_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/recipes/compressed_crafting_table_recipe.json"
+        ]
+      }
     },
     {
       "name": "DoubleCompressedCraftingTableRecipe",
@@ -645,26 +832,12 @@
       "sortid": 53,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "double_compressed_crafting_table_recipe"
-    },
-    {
-      "name": "CompressedCraftingTableFuel",
-      "type": "fuel",
-      "sortid": 54,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "compressed_crafting_table_fuel"
-    },
-    {
-      "name": "DoubleCompressedCraftingTableFuel",
-      "type": "fuel",
-      "sortid": 55,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "double_compressed_crafting_table_fuel"
+      "registry_name": "double_compressed_crafting_table_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/recipes/double_compressed_crafting_table_recipe.json"
+        ]
+      }
     },
     {
       "name": "ExtremeCraftingTable",
@@ -672,8 +845,16 @@
       "sortid": 56,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "extreme_crafting_table"
+      "registry_name": "extreme_crafting_table",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/avaritia/blockstates/extreme_crafting_table.json",
+          "src/main/resources/assets/avaritia/models/item/extreme_crafting_table.json",
+          "src/main/java/net/bullfighter/avaritia/block/ExtremeCraftingTableBlock.java",
+          "src/main/java/net/bullfighter/avaritia/block/entity/ExtremeCraftingTableBlockEntity.java",
+          "src/main/resources/assets/avaritia/models/block/extreme_crafting_table.json"
+        ]
+      }
     },
     {
       "name": "NeutroniumBlock",
@@ -681,8 +862,15 @@
       "sortid": 57,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "neutronium_block"
+      "registry_name": "neutronium_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/block/NeutroniumBlockBlock.java",
+          "src/main/resources/assets/avaritia/models/item/neutronium_block.json",
+          "src/main/resources/assets/avaritia/blockstates/neutronium_block.json",
+          "src/main/resources/assets/avaritia/models/block/neutronium_block.json"
+        ]
+      }
     },
     {
       "name": "InfinityBlock",
@@ -690,8 +878,15 @@
       "sortid": 58,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "infinity_block"
+      "registry_name": "infinity_block",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/avaritia/models/block/infinity_block.json",
+          "src/main/java/net/bullfighter/avaritia/block/InfinityBlockBlock.java",
+          "src/main/resources/assets/avaritia/blockstates/infinity_block.json",
+          "src/main/resources/assets/avaritia/models/item/infinity_block.json"
+        ]
+      }
     },
     {
       "name": "CrystalMatrix",
@@ -699,8 +894,15 @@
       "sortid": 59,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "crystal_matrix"
+      "registry_name": "crystal_matrix",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/block/CrystalMatrixBlock.java",
+          "src/main/resources/assets/avaritia/models/block/crystal_matrix.json",
+          "src/main/resources/assets/avaritia/models/item/crystal_matrix.json",
+          "src/main/resources/assets/avaritia/blockstates/crystal_matrix.json"
+        ]
+      }
     },
     {
       "name": "NeutroniumBlockUncraft",
@@ -708,8 +910,12 @@
       "sortid": 60,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "neutronium_block_uncraft"
+      "registry_name": "neutronium_block_uncraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/recipes/neutronium_block_uncraft.json"
+        ]
+      }
     },
     {
       "name": "NeutroniumBlockCraft",
@@ -717,8 +923,12 @@
       "sortid": 61,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "neutronium_block_craft"
+      "registry_name": "neutronium_block_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/recipes/neutronium_block_craft.json"
+        ]
+      }
     },
     {
       "name": "InfinityBlockUncraft",
@@ -726,8 +936,12 @@
       "sortid": 62,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "infinity_block_uncraft"
+      "registry_name": "infinity_block_uncraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/recipes/infinity_block_uncraft.json"
+        ]
+      }
     },
     {
       "name": "InfinityBlockCraft",
@@ -735,8 +949,12 @@
       "sortid": 63,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "infinity_block_craft"
+      "registry_name": "infinity_block_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/recipes/infinity_block_craft.json"
+        ]
+      }
     },
     {
       "name": "CrystalMatixUncraft",
@@ -744,8 +962,12 @@
       "sortid": 64,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "crystal_matix_uncraft"
+      "registry_name": "crystal_matix_uncraft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/recipes/crystal_matix_uncraft.json"
+        ]
+      }
     },
     {
       "name": "CrystalMatixCraft",
@@ -753,8 +975,12 @@
       "sortid": 65,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "crystal_matix_craft"
+      "registry_name": "crystal_matix_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/recipes/crystal_matix_craft.json"
+        ]
+      }
     },
     {
       "name": "NeutroniumCompressorClick",
@@ -762,9 +988,11 @@
       "sortid": 66,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "neutronium_compressor_click",
       "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/NeutroniumCompressorClickProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "x",
@@ -791,9 +1019,11 @@
       "sortid": 67,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "neutronium_compressor_gui_tick",
       "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/NeutroniumCompressorGuiTickProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -812,9 +1042,11 @@
       "sortid": 68,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "extreme_crafting_table_recipe",
       "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/ExtremeCraftingTableRecipeProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -829,9 +1061,11 @@
       "sortid": 69,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "extreme_crafting_table_recipes",
       "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/ExtremeCraftingTableRecipesProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -846,9 +1080,11 @@
       "sortid": 70,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "extreme_crafting_table_recipe_2",
       "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/ExtremeCraftingTableRecipe2Procedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -863,9 +1099,11 @@
       "sortid": 71,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "extreme_crafting_table_recipe_3",
       "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/ExtremeCraftingTableRecipe3Procedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -880,9 +1118,11 @@
       "sortid": 72,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "extreme_crafting_table_recipe_4",
       "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/ExtremeCraftingTableRecipe4Procedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -897,9 +1137,11 @@
       "sortid": 73,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "extreme_crafting_table_recipe_5",
       "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/ExtremeCraftingTableRecipe5Procedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -914,9 +1156,11 @@
       "sortid": 74,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "extreme_crafting_table_recipe_6",
       "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/ExtremeCraftingTableRecipe6Procedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -931,9 +1175,11 @@
       "sortid": 76,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "black_hole_tick",
       "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/BlackHoleTickProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -964,9 +1210,11 @@
       "sortid": 77,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "black_hole_spawn",
       "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/BlackHoleSpawnProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "x",
@@ -988,27 +1236,24 @@
       }
     },
     {
-      "name": "EndestPearl",
-      "type": "rangeditem",
-      "sortid": 78,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "endest_pearl"
-    },
-    {
       "name": "BlackHolePlayerCollides",
       "type": "procedure",
       "sortid": 79,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "black_hole_player_collides",
       "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/BlackHolePlayerCollidesProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -1019,9 +1264,11 @@
       "sortid": 80,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "fly_fixer",
       "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/FlyFixerProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -1036,9 +1283,11 @@
       "sortid": 82,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "breack_bedrock",
       "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/BreackBedrockProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -1069,10 +1318,12 @@
       "sortid": 83,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "never_glow",
       "metadata": {
         "return_type": "logic",
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/NeverGlowProcedure.java"
+        ],
         "dependencies": []
       }
     },
@@ -1082,8 +1333,13 @@
       "sortid": 84,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
-      "registry_name": "black_hole"
+      "registry_name": "black_hole",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/entity/BlackHoleEntity.java",
+          "src/main/java/net/bullfighter/avaritia/client/renderer/BlackHoleRenderer.java"
+        ]
+      }
     },
     {
       "name": "WorldBreakerBedrockBreak",
@@ -1091,10 +1347,10 @@
       "sortid": 85,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "world_breaker_bedrock_break",
       "metadata": {
-        "type": "logic"
+        "type": "logic",
+        "files": []
       }
     },
     {
@@ -1103,9 +1359,11 @@
       "sortid": 86,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "infinity_armor_hurt",
       "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/InfinityArmorHurtProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -1114,6 +1372,10 @@
           {
             "name": "sourceentity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -1124,10 +1386,10 @@
       "sortid": 87,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "neutroniumCompressorAmount",
       "metadata": {
-        "type": "number"
+        "type": "number",
+        "files": []
       }
     },
     {
@@ -1136,14 +1398,316 @@
       "sortid": 88,
       "compiles": true,
       "locked_code": false,
-      "ids": {},
       "registry_name": "max_compressor_resources",
       "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/MaxCompressorResourcesProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "world",
             "type": "world"
           }
+        ]
+      }
+    },
+    {
+      "name": "UltimateStew",
+      "type": "item",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ultimate_stew",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/item/UltimateStewItem.java",
+          "src/main/resources/assets/avaritia/models/item/ultimate_stew.json"
+        ]
+      }
+    },
+    {
+      "name": "CosmicMeatballs",
+      "type": "item",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cosmic_meatballs",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/avaritia/models/item/cosmic_meatballs.json",
+          "src/main/java/net/bullfighter/avaritia/item/CosmicMeatballsItem.java"
+        ]
+      }
+    },
+    {
+      "name": "CompressedCraftingTableFuel",
+      "type": "itemextension",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "compressed_crafting_table_fuel",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "DoubleCompressedCraftingTableFuel",
+      "type": "itemextension",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "double_compressed_crafting_table_fuel",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "BlackHoleItem",
+      "type": "item",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "black_hole_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/item/BlackHoleItemItem.java",
+          "src/main/resources/assets/avaritia/models/item/black_hole_item.json"
+        ]
+      }
+    },
+    {
+      "name": "BlackHoleItemRemove",
+      "type": "procedure",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "black_hole_item_remove",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/BlackHoleItemRemoveProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BlackHoleDroppedItemRemove",
+      "type": "procedure",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "black_hole_dropped_item_remove",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/BlackHoleDroppedItemRemoveProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ExtremeCraftingTableCraft",
+      "type": "recipe",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "extreme_crafting_table_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/recipes/extreme_crafting_table_craft.json"
+        ]
+      }
+    },
+    {
+      "name": "GetBNBTNumberProcess",
+      "type": "procedure",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_bnbt_number_process",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/GetBNBTNumberProcessProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GetBNBTNeutroniumCompressor",
+      "type": "procedure",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_bnbt_neutronium_compressor",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/GetBNBTNeutroniumCompressorProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GetBNBTTextMaterial",
+      "type": "procedure",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_bnbt_text_material",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/GetBNBTTextMaterialProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BlackHoleDamage",
+      "type": "procedure",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "black_hole_damage",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/BlackHoleDamageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LongbowoftheHeavensProjectile",
+      "type": "projectile",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "longbowofthe_heavens_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/entity/LongbowoftheHeavensProjectileEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "LongbowoftheHeavens",
+      "type": "item",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "longbowofthe_heavens",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/avaritia/models/item/longbowofthe_heavens.json",
+          "src/main/java/net/bullfighter/avaritia/item/LongbowoftheHeavensItem.java"
+        ]
+      }
+    },
+    {
+      "name": "EndestPearlProjectile",
+      "type": "projectile",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "endest_pearl_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/entity/EndestPearlProjectileEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "EndestPearl",
+      "type": "item",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "endest_pearl",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/item/EndestPearlItem.java",
+          "src/main/resources/assets/avaritia/models/item/endest_pearl.json"
         ]
       }
     }
@@ -1178,49 +1742,59 @@
   "language_map": {
     "en_us": {
       "gamerule.neutroniumCompressorAmount.description": "Number of resources for Neutronium Compressor",
-      "block.avaritia.compressed_crafting_table": "Compressed Crafting Table",
       "block.avaritia.double_compressed_crafting_table": "Double Compressed Crafting Table",
-      "item.avaritia.longbowofthe_heavens": "Longbow of the Heavens",
-      "item.avaritia.redstone_singularity": "Redstone Singularity",
-      "gamerule.neutroniumCompressorAmount": "Neutronium Compressor Material Amount",
       "itemGroup.tabavaritiatab": "Avaritia",
-      "item.avaritia.iron_singularity": "Iron Singularity",
-      "item.avaritia.planet_eater": "§cPlanet Eater§r",
-      "item.avaritia.infinity_armor_helmet": "§cInfinity Helmet§r",
-      "item.avaritia.hoeofthe_green_earth": "§cHoe of the Green Earth§r",
-      "item.avaritia.diamond_singularity": "Diamond Singularity",
-      "item.avaritia.skullfire_sword": "§dSkullfire Sword§r",
-      "item.avaritia.record_fragment": "Record Fragment",
-      "block.avaritia.neutronium_compressor": "Neutronium Compressor",
-      "item.avaritia.infinity_armor_chestplate": "§cInfinity Breastplate§r",
-      "gamerule.world_breaker_bedrock_break": "Allow breacks bedrock with World Breacker",
-      "item.avaritia.infinity_armor_leggings": "§cInfinity Leggings§r",
+      "item.avaritia.planet_eater": "Â§cPlanet EaterÂ§r",
+      "item.avaritia.hoeofthe_green_earth": "Â§cHoe of the Green EarthÂ§r",
+      "gui.avaritia.neutronium_compressor_gui.label_neutronium_compressor": "Neutronium Compressor",
+      "item.avaritia.skullfire_sword": "Â§dSkullfire SwordÂ§r",
+      "item.avaritia.infinity_armor_chestplate": "Â§cInfinity BreastplateÂ§r",
+      "gamerule.worldBreakerBedrockBreak.description": "Allow breacks bedrock with World Breacker",
       "item.avaritia.crystal_matrix_ingot": "Crystal Matrix Ingot",
-      "item.avaritia.emerald_singularity": "Emerald Singularity",
+      "gui.avaritia.neutron_collector_gui.label_neutron_collector": "Neutron Collector",
       "gamerule.world_breaker_bedrock_break.description": "Allow breacks bedrock with World Breacker",
-      "item.avaritia.swordofthe_cosmos": "§cSword of the Cosmos§r",
       "item.avaritia.diamond_lattice": "Diamond Lattice",
-      "item.avaritia.black_hole_spawn_egg": "Black Hole Spawn Egg",
-      "item.avaritia.nether_quartz_singularity": "Nether Quartz Singularity",
-      "item.avaritia.pileof_neutrons": "Pile of Neutrons",
+      "gui.avaritia.neutronium_compressor_gui.label_bnbtnumberprocessvarinteg": "\u003cBNBT:number:process\u003e/\u003cVAR:integer:MaxCompressorResources\u003e",
       "block.avaritia.extreme_crafting_table": "Extreme Crafting Table",
-      "item.avaritia.infinity_armor_boots": "§cInfinity Boots§r",
       "item.avaritia.neutronium_ingot": "Neutronium Ingot",
-      "item.avaritia.neutronium_nugget": "Neutronium Nugget",
-      "item.avaritia.natures_ruin": "§cNature\u0027s Ruin§r",
+      "gui.avaritia.extreme_crafting_table_gui.label_extreme_crafting_table": "Extreme Crafting Table",
       "block.avaritia.crystal_matrix": "Crystal Matrix",
+      "gui.avaritia.neutronium_compressor_gui.label_material_bnbttextmaterial": "Material: \u003cBNBT:text:material\u003e",
       "item.avaritia.infinity_catalyst": "Infinity Catalyst",
       "item.avaritia.lapis_singularity": "Lapis Singularity",
       "item.avaritia.infinity_ingot": "Infinity Ingot",
-      "item.avaritia.endest_pearl": "Endest Pearl",
       "block.avaritia.neutron_collector": "Neutron Collector",
       "item.avaritia.ultimate_stew": "Ultimate Stew",
-      "block.avaritia.neutronium_block": "Neutronium Block",
       "item.avaritia.cosmic_meatballs": "Cosmic Meatballs",
+      "item.avaritia.world_breaker": "Â§cWorld BreakerÂ§r",
+      "item.avaritia.golden_singularity": "Golden Singularity",
+      "gui.avaritia.neutron_collector_gui.label_bnbtnumberprocess": "\u003cBNBT:number:process\u003e%",
+      "gui.avaritia.extreme_crafting_table_gui.button_craft": "Craft",
+      "block.avaritia.compressed_crafting_table": "Compressed Crafting Table",
+      "item.avaritia.longbowofthe_heavens": "Longbow of the Heavens",
+      "item.avaritia.redstone_singularity": "Redstone Singularity",
+      "gamerule.neutroniumCompressorAmount": "Neutronium Compressor Material Amount",
+      "gamerule.worldBreakerBedrockBreak": "Allow breacks bedrock with World Breacker",
+      "item.avaritia.iron_singularity": "Iron Singularity",
+      "item.avaritia.infinity_armor_helmet": "Â§cInfinity HelmetÂ§r",
+      "item.avaritia.diamond_singularity": "Diamond Singularity",
+      "block.avaritia.neutronium_compressor": "Neutronium Compressor",
+      "item.avaritia.record_fragment": "Record Fragment",
+      "item.avaritia.black_hole_item": "Black Hole Item",
+      "gamerule.world_breaker_bedrock_break": "Allow breacks bedrock with World Breacker",
+      "item.avaritia.infinity_armor_leggings": "Â§cInfinity LeggingsÂ§r",
+      "item.avaritia.emerald_singularity": "Emerald Singularity",
+      "item.avaritia.swordofthe_cosmos": "Â§cSword of the CosmosÂ§r",
+      "item.avaritia.nether_quartz_singularity": "Nether Quartz Singularity",
+      "item.avaritia.pileof_neutrons": "Pile of Neutrons",
+      "item.avaritia.infinity_armor_boots": "Â§cInfinity BootsÂ§r",
+      "item.avaritia.natures_ruin": "Â§cNature\u0027s RuinÂ§r",
+      "item.avaritia.neutronium_nugget": "Neutronium Nugget",
+      "item.avaritia.endest_pearl": "Endest Pearl",
+      "item_group.avaritia.avaritiatab": "Avaritia",
+      "block.avaritia.neutronium_block": "Neutronium Block",
       "entity.avaritia.black_hole": "Black Hole",
-      "item.avaritia.world_breaker": "§cWorld Breaker§r",
-      "block.avaritia.infinity_block": "Infinity Block",
-      "item.avaritia.golden_singularity": "Golden Singularity"
+      "block.avaritia.infinity_block": "Infinity Block"
     }
   },
   "foldersRoot": {
@@ -1230,7 +1804,7 @@
   "workspaceSettings": {
     "modid": "avaritia",
     "modName": "Avaritia Lite",
-    "version": "1.4.4",
+    "version": "1.5.3",
     "author": "Bullfighter, MCreator",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/avaritia-lite",
     "license": "Not specified",
@@ -1241,10 +1815,10 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
-    "currentGenerator": "forge-1.17.1",
+    "currentGenerator": "forge-1.19.4",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.bullfighter.avaritia",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202100351610
+  "mcreatorVersion": 202300444716
 }

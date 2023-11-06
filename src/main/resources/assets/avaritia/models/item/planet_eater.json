@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "avaritia:items/shovel"
+    "layer0": "avaritia:item/shovel"
   }
 }

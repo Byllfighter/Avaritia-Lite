@@ -1,7 +1,8 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "avaritia:blocks/neutronium",
-    "particle": "avaritia:blocks/neutronium"
-  }
+    "all": "avaritia:block/neutronium",
+    "particle": "avaritia:block/neutronium"
+  },
+  "render_type": "solid"
 }

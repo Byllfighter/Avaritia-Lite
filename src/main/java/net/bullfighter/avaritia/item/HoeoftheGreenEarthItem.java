@@ -3,14 +3,17 @@ package net.bullfighter.avaritia.item;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.network.chat.Component;
 
 import net.bullfighter.avaritia.procedures.MendProcedure;
-import net.bullfighter.avaritia.init.AvaritiaModTabs;
+
+import java.util.List;
 
 public class HoeoftheGreenEarthItem extends HoeItem {
 	public HoeoftheGreenEarthItem() {
@@ -36,10 +39,14 @@ public class HoeoftheGreenEarthItem extends HoeItem {
 			}
 
 			public Ingredient getRepairIngredient() {
-				return Ingredient.EMPTY;
+				return Ingredient.of();
 			}
-		}, 0, -3f, new Item.Properties().tab(AvaritiaModTabs.TAB_AVARITIATAB));
-		setRegistryName("hoeofthe_green_earth");
+		}, 0, -3f, new Item.Properties());
+	}
+
+	@Override
+	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
+		super.appendHoverText(itemstack, world, list, flag);
 	}
 
 	@Override

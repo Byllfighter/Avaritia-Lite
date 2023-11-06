@@ -1,16 +1,20 @@
 {
-  "_fv": 24,
+  "_fv": 55,
   "_type": "tool",
   "definition": {
+    "toolType": "Spade",
     "renderType": 0,
+    "blockingRenderType": 0,
     "texture": "shovel",
     "customModelName": "Normal",
-    "name": "§cPlanet Eater§r",
-    "specialInfo": [],
+    "blockingModelName": "Normal blocking",
+    "name": "Â§cPlanet EaterÂ§r",
+    "specialInformation": {
+      "fixedValue": []
+    },
     "creativeTab": {
       "value": "CUSTOM:Avaritiatab"
     },
-    "toolType": "Spade",
     "harvestLevel": 1000,
     "efficiency": 99999.0,
     "attackSpeed": 1.0,
@@ -18,7 +22,6 @@
     "damageVsEntity": 9.0,
     "usageCount": 100,
     "blocksAffected": [],
-    "hasGlow": false,
     "repairItems": [],
     "immuneToFire": false,
     "stayInGridWhenCrafting": false,

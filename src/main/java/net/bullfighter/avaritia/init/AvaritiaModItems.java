@@ -4,13 +4,12 @@
  */
 package net.bullfighter.avaritia.init;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.BlockItem;
 
 import net.bullfighter.avaritia.item.WorldBreakerItem;
@@ -39,63 +38,51 @@ import net.bullfighter.avaritia.item.DiamondSingularityItem;
 import net.bullfighter.avaritia.item.DiamondLatticeItem;
 import net.bullfighter.avaritia.item.CrystalMatrixIngotItem;
 import net.bullfighter.avaritia.item.CosmicMeatballsItem;
+import net.bullfighter.avaritia.item.BlackHoleItemItem;
+import net.bullfighter.avaritia.AvaritiaMod;
 
-import java.util.List;
-import java.util.ArrayList;
-
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class AvaritiaModItems {
-	private static final List<Item> REGISTRY = new ArrayList<>();
-	public static final Item DIAMOND_LATTICE = register(new DiamondLatticeItem());
-	public static final Item CRYSTAL_MATRIX_INGOT = register(new CrystalMatrixIngotItem());
-	public static final Item PILEOF_NEUTRONS = register(new PileofNeutronsItem());
-	public static final Item NEUTRONIUM_NUGGET = register(new NeutroniumNuggetItem());
-	public static final Item NEUTRONIUM_INGOT = register(new NeutroniumIngotItem());
-	public static final Item INFINITY_CATALYST = register(new InfinityCatalystItem());
-	public static final Item NEUTRON_COLLECTOR = register(AvaritiaModBlocks.NEUTRON_COLLECTOR, AvaritiaModTabs.TAB_AVARITIATAB);
-	public static final Item INFINITY_INGOT = register(new InfinityIngotItem());
-	public static final Item RECORD_FRAGMENT = register(new RecordFragmentItem());
-	public static final Item IRON_SINGULARITY = register(new IronSingularityItem());
-	public static final Item GOLDEN_SINGULARITY = register(new GoldenSingularityItem());
-	public static final Item LAPIS_SINGULARITY = register(new LapisSingularityItem());
-	public static final Item REDSTONE_SINGULARITY = register(new RedstoneSingularityItem());
-	public static final Item NETHER_QUARTZ_SINGULARITY = register(new NetherQuartzSingularityItem());
-	public static final Item DIAMOND_SINGULARITY = register(new DiamondSingularityItem());
-	public static final Item EMERALD_SINGULARITY = register(new EmeraldSingularityItem());
-	public static final Item NEUTRONIUM_COMPRESSOR = register(AvaritiaModBlocks.NEUTRONIUM_COMPRESSOR, AvaritiaModTabs.TAB_AVARITIATAB);
-	public static final Item SWORDOFTHE_COSMOS = register(new SwordoftheCosmosItem());
-	public static final Item PLANET_EATER = register(new PlanetEaterItem());
-	public static final Item NATURES_RUIN = register(new NaturesRuinItem());
-	public static final Item HOEOFTHE_GREEN_EARTH = register(new HoeoftheGreenEarthItem());
-	public static final Item LONGBOWOFTHE_HEAVENS = register(new LongbowoftheHeavensItem());
-	public static final Item WORLD_BREAKER = register(new WorldBreakerItem());
-	public static final Item INFINITY_ARMOR_HELMET = register(new InfinityArmorItem.Helmet());
-	public static final Item INFINITY_ARMOR_CHESTPLATE = register(new InfinityArmorItem.Chestplate());
-	public static final Item INFINITY_ARMOR_LEGGINGS = register(new InfinityArmorItem.Leggings());
-	public static final Item INFINITY_ARMOR_BOOTS = register(new InfinityArmorItem.Boots());
-	public static final Item SKULLFIRE_SWORD = register(new SkullfireSwordItem());
-	public static final Item ULTIMATE_STEW = register(new UltimateStewItem());
-	public static final Item COSMIC_MEATBALLS = register(new CosmicMeatballsItem());
-	public static final Item COMPRESSED_CRAFTING_TABLE = register(AvaritiaModBlocks.COMPRESSED_CRAFTING_TABLE, AvaritiaModTabs.TAB_AVARITIATAB);
-	public static final Item DOUBLE_COMPRESSED_CRAFTING_TABLE = register(AvaritiaModBlocks.DOUBLE_COMPRESSED_CRAFTING_TABLE,
-			AvaritiaModTabs.TAB_AVARITIATAB);
-	public static final Item EXTREME_CRAFTING_TABLE = register(AvaritiaModBlocks.EXTREME_CRAFTING_TABLE, AvaritiaModTabs.TAB_AVARITIATAB);
-	public static final Item NEUTRONIUM_BLOCK = register(AvaritiaModBlocks.NEUTRONIUM_BLOCK, AvaritiaModTabs.TAB_AVARITIATAB);
-	public static final Item INFINITY_BLOCK = register(AvaritiaModBlocks.INFINITY_BLOCK, AvaritiaModTabs.TAB_AVARITIATAB);
-	public static final Item CRYSTAL_MATRIX = register(AvaritiaModBlocks.CRYSTAL_MATRIX, AvaritiaModTabs.TAB_AVARITIATAB);
-	public static final Item ENDEST_PEARL = register(new EndestPearlItem());
+	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, AvaritiaMod.MODID);
+	public static final RegistryObject<Item> DIAMOND_LATTICE = REGISTRY.register("diamond_lattice", () -> new DiamondLatticeItem());
+	public static final RegistryObject<Item> CRYSTAL_MATRIX_INGOT = REGISTRY.register("crystal_matrix_ingot", () -> new CrystalMatrixIngotItem());
+	public static final RegistryObject<Item> PILEOF_NEUTRONS = REGISTRY.register("pileof_neutrons", () -> new PileofNeutronsItem());
+	public static final RegistryObject<Item> NEUTRONIUM_NUGGET = REGISTRY.register("neutronium_nugget", () -> new NeutroniumNuggetItem());
+	public static final RegistryObject<Item> NEUTRONIUM_INGOT = REGISTRY.register("neutronium_ingot", () -> new NeutroniumIngotItem());
+	public static final RegistryObject<Item> INFINITY_CATALYST = REGISTRY.register("infinity_catalyst", () -> new InfinityCatalystItem());
+	public static final RegistryObject<Item> NEUTRON_COLLECTOR = block(AvaritiaModBlocks.NEUTRON_COLLECTOR);
+	public static final RegistryObject<Item> INFINITY_INGOT = REGISTRY.register("infinity_ingot", () -> new InfinityIngotItem());
+	public static final RegistryObject<Item> RECORD_FRAGMENT = REGISTRY.register("record_fragment", () -> new RecordFragmentItem());
+	public static final RegistryObject<Item> IRON_SINGULARITY = REGISTRY.register("iron_singularity", () -> new IronSingularityItem());
+	public static final RegistryObject<Item> GOLDEN_SINGULARITY = REGISTRY.register("golden_singularity", () -> new GoldenSingularityItem());
+	public static final RegistryObject<Item> LAPIS_SINGULARITY = REGISTRY.register("lapis_singularity", () -> new LapisSingularityItem());
+	public static final RegistryObject<Item> REDSTONE_SINGULARITY = REGISTRY.register("redstone_singularity", () -> new RedstoneSingularityItem());
+	public static final RegistryObject<Item> NETHER_QUARTZ_SINGULARITY = REGISTRY.register("nether_quartz_singularity", () -> new NetherQuartzSingularityItem());
+	public static final RegistryObject<Item> DIAMOND_SINGULARITY = REGISTRY.register("diamond_singularity", () -> new DiamondSingularityItem());
+	public static final RegistryObject<Item> EMERALD_SINGULARITY = REGISTRY.register("emerald_singularity", () -> new EmeraldSingularityItem());
+	public static final RegistryObject<Item> NEUTRONIUM_COMPRESSOR = block(AvaritiaModBlocks.NEUTRONIUM_COMPRESSOR);
+	public static final RegistryObject<Item> SWORDOFTHE_COSMOS = REGISTRY.register("swordofthe_cosmos", () -> new SwordoftheCosmosItem());
+	public static final RegistryObject<Item> PLANET_EATER = REGISTRY.register("planet_eater", () -> new PlanetEaterItem());
+	public static final RegistryObject<Item> NATURES_RUIN = REGISTRY.register("natures_ruin", () -> new NaturesRuinItem());
+	public static final RegistryObject<Item> HOEOFTHE_GREEN_EARTH = REGISTRY.register("hoeofthe_green_earth", () -> new HoeoftheGreenEarthItem());
+	public static final RegistryObject<Item> WORLD_BREAKER = REGISTRY.register("world_breaker", () -> new WorldBreakerItem());
+	public static final RegistryObject<Item> INFINITY_ARMOR_HELMET = REGISTRY.register("infinity_armor_helmet", () -> new InfinityArmorItem.Helmet());
+	public static final RegistryObject<Item> INFINITY_ARMOR_CHESTPLATE = REGISTRY.register("infinity_armor_chestplate", () -> new InfinityArmorItem.Chestplate());
+	public static final RegistryObject<Item> INFINITY_ARMOR_LEGGINGS = REGISTRY.register("infinity_armor_leggings", () -> new InfinityArmorItem.Leggings());
+	public static final RegistryObject<Item> INFINITY_ARMOR_BOOTS = REGISTRY.register("infinity_armor_boots", () -> new InfinityArmorItem.Boots());
+	public static final RegistryObject<Item> SKULLFIRE_SWORD = REGISTRY.register("skullfire_sword", () -> new SkullfireSwordItem());
+	public static final RegistryObject<Item> COMPRESSED_CRAFTING_TABLE = block(AvaritiaModBlocks.COMPRESSED_CRAFTING_TABLE);
+	public static final RegistryObject<Item> DOUBLE_COMPRESSED_CRAFTING_TABLE = block(AvaritiaModBlocks.DOUBLE_COMPRESSED_CRAFTING_TABLE);
+	public static final RegistryObject<Item> EXTREME_CRAFTING_TABLE = block(AvaritiaModBlocks.EXTREME_CRAFTING_TABLE);
+	public static final RegistryObject<Item> NEUTRONIUM_BLOCK = block(AvaritiaModBlocks.NEUTRONIUM_BLOCK);
+	public static final RegistryObject<Item> INFINITY_BLOCK = block(AvaritiaModBlocks.INFINITY_BLOCK);
+	public static final RegistryObject<Item> CRYSTAL_MATRIX = block(AvaritiaModBlocks.CRYSTAL_MATRIX);
+	public static final RegistryObject<Item> ULTIMATE_STEW = REGISTRY.register("ultimate_stew", () -> new UltimateStewItem());
+	public static final RegistryObject<Item> COSMIC_MEATBALLS = REGISTRY.register("cosmic_meatballs", () -> new CosmicMeatballsItem());
+	public static final RegistryObject<Item> BLACK_HOLE_ITEM = REGISTRY.register("black_hole_item", () -> new BlackHoleItemItem());
+	public static final RegistryObject<Item> LONGBOWOFTHE_HEAVENS = REGISTRY.register("longbowofthe_heavens", () -> new LongbowoftheHeavensItem());
+	public static final RegistryObject<Item> ENDEST_PEARL = REGISTRY.register("endest_pearl", () -> new EndestPearlItem());
 
-	private static Item register(Item item) {
-		REGISTRY.add(item);
-		return item;
-	}
-
-	private static Item register(Block block, CreativeModeTab tab) {
-		return register(new BlockItem(block, new Item.Properties().tab(tab)).setRegistryName(block.getRegistryName()));
-	}
-
-	@SubscribeEvent
-	public static void registerItems(RegistryEvent.Register<Item> event) {
-		event.getRegistry().registerAll(REGISTRY.toArray(new Item[0]));
+	private static RegistryObject<Item> block(RegistryObject<Block> block) {
+		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
 	}
 }

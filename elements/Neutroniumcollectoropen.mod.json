@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 55,
   "_type": "procedure",
   "definition": {
     "procedurexml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><xml xmlns=\"https://developers.google.com/blockly/xml\"><block deletable=\"false\" type=\"event_trigger\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"variables_set_number\"><field name=\"VAR\">global:neutroniumcollectorx</field><value name=\"VAL\"><block type=\"coord_x\"/></value><next><block type=\"variables_set_number\"><field name=\"VAR\">global:neutroniumcollectory</field><value name=\"VAL\"><block type=\"coord_y\"/></value><next><block type=\"variables_set_number\"><field name=\"VAR\">global:neutroniumcollectorz</field><value name=\"VAL\"><block type=\"coord_z\"/></value></block></next></block></next></block></next></block></xml>"

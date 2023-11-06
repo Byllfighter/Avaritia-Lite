@@ -1,9 +1,8 @@
 
 package net.bullfighter.avaritia.entity;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.fmllegacy.network.NetworkHooks;
-import net.minecraftforge.fmllegacy.network.FMLPlayMessages;
+import net.minecraftforge.network.PlayMessages;
+import net.minecraftforge.network.NetworkHooks;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
@@ -19,10 +18,10 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.AreaEffectCloud;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.BlockPos;
 
@@ -31,19 +30,20 @@ import net.bullfighter.avaritia.procedures.BlackHolePlayerCollidesProcedure;
 import net.bullfighter.avaritia.init.AvaritiaModEntities;
 
 public class BlackHoleEntity extends Monster {
-	public BlackHoleEntity(FMLPlayMessages.SpawnEntity packet, Level world) {
-		this(AvaritiaModEntities.BLACK_HOLE, world);
+	public BlackHoleEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(AvaritiaModEntities.BLACK_HOLE.get(), world);
 	}
 
 	public BlackHoleEntity(EntityType<BlackHoleEntity> type, Level world) {
 		super(type, world);
+		maxUpStep = 0.6f;
 		xpReward = 0;
 		setNoAi(false);
 		this.moveControl = new FlyingMoveControl(this, 10, true);
 	}
 
 	@Override
-	public Packet<?> getAddEntityPacket() {
+	public Packet<ClientGamePacketListener> getAddEntityPacket() {
 		return NetworkHooks.getEntitySpawningPacket(this);
 	}
 
@@ -64,13 +64,8 @@ public class BlackHoleEntity extends Monster {
 	}
 
 	@Override
-	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
-	}
-
-	@Override
-	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
+	public double getMyRidingOffset() {
+		return -0.35D;
 	}
 
 	@Override
@@ -79,58 +74,48 @@ public class BlackHoleEntity extends Monster {
 	}
 
 	@Override
-	public boolean hurt(DamageSource source, float amount) {
-		if (source.getDirectEntity() instanceof AbstractArrow)
+	public boolean hurt(DamageSource damagesource, float amount) {
+		if (damagesource.is(DamageTypes.IN_FIRE))
 			return false;
-		if (source.getDirectEntity() instanceof Player)
+		if (damagesource.getDirectEntity() instanceof AbstractArrow)
 			return false;
-		if (source.getDirectEntity() instanceof ThrownPotion)
+		if (damagesource.getDirectEntity() instanceof Player)
 			return false;
-		if (source == DamageSource.FALL)
+		if (damagesource.getDirectEntity() instanceof ThrownPotion || damagesource.getDirectEntity() instanceof AreaEffectCloud)
 			return false;
-		if (source == DamageSource.CACTUS)
+		if (damagesource.is(DamageTypes.FALL))
 			return false;
-		if (source == DamageSource.DROWN)
+		if (damagesource.is(DamageTypes.CACTUS))
 			return false;
-		if (source == DamageSource.LIGHTNING_BOLT)
+		if (damagesource.is(DamageTypes.DROWN))
 			return false;
-		if (source.isExplosion())
+		if (damagesource.is(DamageTypes.LIGHTNING_BOLT))
 			return false;
-		if (source.getMsgId().equals("trident"))
+		if (damagesource.is(DamageTypes.EXPLOSION))
 			return false;
-		if (source == DamageSource.ANVIL)
+		if (damagesource.is(DamageTypes.TRIDENT))
 			return false;
-		if (source == DamageSource.DRAGON_BREATH)
+		if (damagesource.is(DamageTypes.FALLING_ANVIL))
 			return false;
-		if (source == DamageSource.WITHER)
+		if (damagesource.is(DamageTypes.DRAGON_BREATH))
 			return false;
-		if (source.getMsgId().equals("witherSkull"))
+		if (damagesource.is(DamageTypes.WITHER))
 			return false;
-		return super.hurt(source, amount);
+		if (damagesource.is(DamageTypes.WITHER_SKULL))
+			return false;
+		return super.hurt(damagesource, amount);
 	}
 
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		double x = this.getX();
-		double y = this.getY();
-		double z = this.getZ();
-		Entity entity = this;
-		Level world = this.level;
-
-		BlackHoleTickProcedure.execute(world, x, y, z, entity);
+		BlackHoleTickProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	@Override
 	public void playerTouch(Player sourceentity) {
 		super.playerTouch(sourceentity);
-		Entity entity = this;
-		Level world = this.level;
-		double x = this.getX();
-		double y = this.getY();
-		double z = this.getZ();
-
-		BlackHolePlayerCollidesProcedure.execute(entity);
+		BlackHolePlayerCollidesProcedure.execute(this.level, this);
 	}
 
 	@Override
@@ -156,6 +141,7 @@ public class BlackHoleEntity extends Monster {
 		builder = builder.add(Attributes.MAX_HEALTH, 1000);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
+		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		builder = builder.add(Attributes.FLYING_SPEED, 0.3);
 		return builder;
 	}

@@ -1,10 +1,15 @@
 {
-  "_fv": 24,
-  "_type": "fuel",
+  "_fv": 55,
+  "_type": "itemextension",
   "definition": {
-    "power": 300,
-    "block": {
+    "item": {
       "value": "CUSTOM:DoubleCompressedCraftingTable"
-    }
+    },
+    "enableFuel": true,
+    "fuelPower": {
+      "fixedValue": 300.0
+    },
+    "hasDispenseBehavior": false,
+    "compostLayerChance": 0.0
   }
 }
