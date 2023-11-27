@@ -445,7 +445,7 @@
       "type": "tool",
       "sortid": 33,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "swordofthe_cosmos",
       "metadata": {
         "files": [
@@ -598,7 +598,7 @@
       "type": "tool",
       "sortid": 40,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "world_breaker",
       "metadata": {
         "files": [
@@ -1679,7 +1679,8 @@
       "registry_name": "longbowofthe_heavens_projectile",
       "metadata": {
         "files": [
-          "src/main/java/net/bullfighter/avaritia/entity/LongbowoftheHeavensProjectileEntity.java"
+          "src/main/java/net/bullfighter/avaritia/entity/LongbowoftheHeavensProjectileEntity.java",
+          "src/main/java/net/bullfighter/avaritia/client/renderer/LongbowoftheHeavensProjectileRenderer.java"
         ]
       }
     },
@@ -1688,7 +1689,7 @@
       "type": "item",
       "sortid": 100,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "longbowofthe_heavens",
       "metadata": {
         "files": [
@@ -1804,6 +1805,111 @@
           }
         ]
       }
+    },
+    {
+      "name": "CrystalMatrixIngotSpecialInformation",
+      "type": "procedure",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_matrix_ingot_special_information",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/CrystalMatrixIngotSpecialInformationProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "PileofNeutronsSpecialInformation",
+      "type": "procedure",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pileof_neutrons_special_information",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/PileofNeutronsSpecialInformationProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "NeutroniumNuggetSpecialInformation",
+      "type": "procedure",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "neutronium_nugget_special_information",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/NeutroniumNuggetSpecialInformationProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "NeutroniumIngotSpecialInformation",
+      "type": "procedure",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "neutronium_ingot_special_information",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/NeutroniumIngotSpecialInformationProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "InfinityIngotSpecialInformation",
+      "type": "procedure",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinity_ingot_special_information",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/InfinityIngotSpecialInformationProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "RecordFragmentSpecialInformation",
+      "type": "procedure",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "record_fragment_special_information",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/RecordFragmentSpecialInformationProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "SkullfireSwordSpecialInformation",
+      "type": "procedure",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skullfire_sword_special_information",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/SkullfireSwordSpecialInformationProcedure.java"
+        ],
+        "dependencies": []
+      }
     }
   ],
   "variable_elements": [
@@ -1834,30 +1940,97 @@
   ],
   "sound_elements": [],
   "language_map": {
+    "ru_ru": {
+      "gamerule.neutroniumCompressorAmount.description": "Number of resources for Neutronium Compressor",
+      "gui.avaritia.neutronium_compressor_gui.button_www": "Clear",
+      "block.avaritia.double_compressed_crafting_table": "Двойной сжатый верстак",
+      "itemGroup.tabavaritiatab": "Avaritia",
+      "item.avaritia.planet_eater": "§cПожиратель планет",
+      "item.avaritia.hoeofthe_green_earth": "§cМотыга зеленой земли§r",
+      "gui.avaritia.neutronium_compressor_gui.label_neutronium_compressor": "Компрессор Нейтрония",
+      "item.avaritia.skullfire_sword": "§dМеч Огненного-черепа§r",
+      "item.avaritia.infinity_armor_chestplate": "§cБесконечный нагрудник§r",
+      "gamerule.worldBreakerBedrockBreak.description": "Разрешено ломать бедрок при помощи Крушителя Мира",
+      "item.avaritia.crystal_matrix_ingot": "Кристально-матричный слиток",
+      "gui.avaritia.neutron_collector_gui.label_neutron_collector": "Количество Нейтрония",
+      "gamerule.world_breaker_bedrock_break.description": "Разрешено ломать бедрок при помощи Крушителя Мира",
+      "item.avaritia.skullfire_sword.description": "§8Обезглавливает скелеты и обжигает их.§r",
+      "item.avaritia.diamond_lattice": "Алмазная решётка",
+      "gui.avaritia.neutronium_compressor_gui.label_bnbtnumberprocessvarinteg": "\u003cBNBT:number:process\u003e/\u003cVAR:integer:MaxCompressorResources\u003e",
+      "block.avaritia.extreme_crafting_table": "Сложный верстак",
+      "item.avaritia.neutronium_ingot": "Нейтрониевый слиток",
+      "item.avaritia.neutronium_nugget.description": "§8Около 35,6 млн. метрических тонн.§r",
+      "gui.avaritia.extreme_crafting_table_gui.label_extreme_crafting_table": "Сложный верстак",
+      "block.avaritia.crystal_matrix": "Кристальная матрица",
+      "gui.avaritia.neutronium_compressor_gui.label_material_bnbttextmaterial": "Материал: \u003cBNBT:text:material\u003e",
+      "item.avaritia.infinity_catalyst": "Бесконечный катализатор",
+      "item.avaritia.lapis_singularity": "Лазуритовая Сингулярность",
+      "item.avaritia.infinity_ingot": "Бесконечный слиток",
+      "item.avaritia.infinity_ingot.description": "§8Ярость Вселенной на ладони.§r",
+      "block.avaritia.neutron_collector": "Коллектор Нейтрония",
+      "item.avaritia.ultimate_stew": "Предельное рагу",
+      "item.avaritia.cosmic_meatballs": "Космические тефтели",
+      "item.avaritia.world_breaker": "§cКрушитель Мира",
+      "item.avaritia.golden_singularity": "Золотая Сингулярность",
+      "gui.avaritia.neutron_collector_gui.label_bnbtnumberprocess": "\u003cBNBT:число процесса\u003e%",
+      "gui.avaritia.extreme_crafting_table_gui.button_craft": "Создать",
+      "block.avaritia.compressed_crafting_table": "Сжатый верстак",
+      "item.avaritia.longbowofthe_heavens": "Небесный лук",
+      "item.avaritia.redstone_singularity": "Редстоуновая Сингулярность",
+      "gamerule.neutroniumCompressorAmount": "Количество материала в Нейтрониевом Компрессоре",
+      "gamerule.worldBreakerBedrockBreak": "Allow breacks bedrock with World Breacker",
+      "item.avaritia.iron_singularity": "Железная Сингулярность",
+      "item.avaritia.infinity_armor_helmet": "§cБесконечный шлем§r",
+      "item.avaritia.diamond_singularity": "Алмазная Сингулярность",
+      "block.avaritia.neutronium_compressor": "Нейтрониевый Компрессор",
+      "item.avaritia.record_fragment": "Фрагмент пластинки",
+      "item.avaritia.black_hole_item": "Предмет чёрной дыры",
+      "gamerule.world_breaker_bedrock_break": "Allow breacks bedrock with World Breacker",
+      "item.avaritia.infinity_armor_leggings": "§cБесконечные поножи§r",
+      "item.avaritia.pileof_neutrons.description": "§8Постарайтесь не думать о мыслях.§r",
+      "item.avaritia.emerald_singularity": "Изумрудная Сингулярность",
+      "item.avaritia.record_fragment.description": "§8Нравится верить в свободу музыки~§r",
+      "item.avaritia.neutronium_ingot.description": "§8Плотное сердце звезды в виде удобного слитка.§r",
+      "item.avaritia.swordofthe_cosmos": "§cМеч Космоса§r",
+      "item.avaritia.nether_quartz_singularity": "Кварцевая Сингулярность",
+      "item.avaritia.pileof_neutrons": "Пылинка Нейтрония",
+      "item.avaritia.infinity_armor_boots": "§cБесконечные ботинки§r",
+      "item.avaritia.natures_ruin": "§cРазрушитель Природы§r",
+      "item.avaritia.neutronium_nugget": "Кусочек Нейтрония",
+      "item.avaritia.crystal_matrix_ingot.description": "§8Это еще не окончательная форма.§r",
+      "item.avaritia.endest_pearl": "Бесконечный жемчуг",
+      "item_group.avaritia.avaritiatab": "Avaritia",
+      "block.avaritia.neutronium_block": "Блок Нейтрониума",
+      "entity.avaritia.black_hole": "Чёрная Дыра",
+      "block.avaritia.infinity_block": "Бесконечный Блок"
+    },
     "en_us": {
       "gamerule.neutroniumCompressorAmount.description": "Number of resources for Neutronium Compressor",
       "gui.avaritia.neutronium_compressor_gui.button_www": "Clear",
       "block.avaritia.double_compressed_crafting_table": "Double Compressed Crafting Table",
       "itemGroup.tabavaritiatab": "Avaritia",
       "item.avaritia.planet_eater": "§cPlanet Eater§r",
-      "item.avaritia.hoeofthe_green_earth": "§cHoe of the Green Earth§r",
       "gui.avaritia.neutronium_compressor_gui.label_neutronium_compressor": "Neutronium Compressor",
+      "item.avaritia.hoeofthe_green_earth": "§cHoe of the Green Earth§r",
       "item.avaritia.skullfire_sword": "§dSkullfire Sword§r",
       "item.avaritia.infinity_armor_chestplate": "§cInfinity Breastplate§r",
       "gamerule.worldBreakerBedrockBreak.description": "Allow breacks bedrock with World Breacker",
-      "item.avaritia.crystal_matrix_ingot": "Crystal Matrix Ingot",
       "gui.avaritia.neutron_collector_gui.label_neutron_collector": "Neutron Collector",
+      "item.avaritia.crystal_matrix_ingot": "Crystal Matrix Ingot",
       "gamerule.world_breaker_bedrock_break.description": "Allow breacks bedrock with World Breacker",
+      "item.avaritia.skullfire_sword.description": "§8Beheads skeletons and scorches them black.§r",
       "item.avaritia.diamond_lattice": "Diamond Lattice",
       "gui.avaritia.neutronium_compressor_gui.label_bnbtnumberprocessvarinteg": "\u003cBNBT:number:process\u003e/\u003cVAR:integer:MaxCompressorResources\u003e",
       "block.avaritia.extreme_crafting_table": "Extreme Crafting Table",
       "item.avaritia.neutronium_ingot": "Neutronium Ingot",
+      "item.avaritia.neutronium_nugget.description": "§8About 35.6 million metric tons.§r",
       "gui.avaritia.extreme_crafting_table_gui.label_extreme_crafting_table": "Extreme Crafting Table",
       "block.avaritia.crystal_matrix": "Crystal Matrix",
       "gui.avaritia.neutronium_compressor_gui.label_material_bnbttextmaterial": "Material: \u003cBNBT:text:material\u003e",
       "item.avaritia.infinity_catalyst": "Infinity Catalyst",
       "item.avaritia.lapis_singularity": "Lapis Singularity",
       "item.avaritia.infinity_ingot": "Infinity Ingot",
+      "item.avaritia.infinity_ingot.description": "§8The fury of the universe in the palm of your hand.§r",
       "block.avaritia.neutron_collector": "Neutron Collector",
       "item.avaritia.ultimate_stew": "Ultimate Stew",
       "item.avaritia.cosmic_meatballs": "Cosmic Meatballs",
@@ -1878,13 +2051,17 @@
       "item.avaritia.black_hole_item": "Black Hole Item",
       "gamerule.world_breaker_bedrock_break": "Allow breacks bedrock with World Breacker",
       "item.avaritia.infinity_armor_leggings": "§cInfinity Leggings§r",
+      "item.avaritia.pileof_neutrons.description": "§8Try not to think about think.§r",
       "item.avaritia.emerald_singularity": "Emerald Singularity",
+      "item.avaritia.record_fragment.description": "§8One likes to believe in the freedom of music~§r",
+      "item.avaritia.neutronium_ingot.description": "§8The dense heart of a star in convenient ingot form.§r",
       "item.avaritia.swordofthe_cosmos": "§cSword of the Cosmos§r",
       "item.avaritia.nether_quartz_singularity": "Nether Quartz Singularity",
       "item.avaritia.pileof_neutrons": "Pile of Neutrons",
       "item.avaritia.infinity_armor_boots": "§cInfinity Boots§r",
       "item.avaritia.natures_ruin": "§cNature\u0027s Ruin§r",
       "item.avaritia.neutronium_nugget": "Neutronium Nugget",
+      "item.avaritia.crystal_matrix_ingot.description": "§8This isn\u0027t even its final form.§r",
       "item.avaritia.endest_pearl": "Endest Pearl",
       "item_group.avaritia.avaritiatab": "Avaritia",
       "block.avaritia.neutronium_block": "Neutronium Block",
@@ -1899,7 +2076,7 @@
   "workspaceSettings": {
     "modid": "avaritia",
     "modName": "Avaritia Lite",
-    "version": "1.6.0",
+    "version": "1.6.3",
     "author": "Bullfighter, MCreator",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/avaritia-lite",
     "license": "Not specified",

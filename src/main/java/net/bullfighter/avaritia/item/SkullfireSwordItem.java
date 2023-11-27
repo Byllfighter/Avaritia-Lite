@@ -8,7 +8,10 @@ import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
+
+import net.bullfighter.avaritia.procedures.SkullfireSwordSpecialInformationProcedure;
 
 import java.util.List;
 
@@ -44,5 +47,10 @@ public class SkullfireSwordItem extends SwordItem {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
+		Entity entity = itemstack.getEntityRepresentation();
+		double x = entity != null ? entity.getX() : 0.0;
+		double y = entity != null ? entity.getY() : 0.0;
+		double z = entity != null ? entity.getZ() : 0.0;
+		list.add(Component.literal(SkullfireSwordSpecialInformationProcedure.execute()));
 	}
 }

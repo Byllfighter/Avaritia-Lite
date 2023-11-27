@@ -1,0 +1,6 @@
+{
+  "parent": "avaritia:item/longbowofthe_heavens",
+  "textures": {
+    "layer0": "avaritia:item/pull_1"
+  }
+}

@@ -15,13 +15,16 @@
     "creativeTab": {
       "value": "CUSTOM:Avaritiatab"
     },
-    "harvestLevel": 1,
+    "harvestLevel": 99999,
     "efficiency": 0.0,
     "attackSpeed": 3.0,
     "enchantability": 100,
-    "damageVsEntity": 99999.0,
+    "damageVsEntity": 3.0,
     "usageCount": 100,
     "blocksAffected": [],
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [],
     "immuneToFire": false,
     "stayInGridWhenCrafting": false,

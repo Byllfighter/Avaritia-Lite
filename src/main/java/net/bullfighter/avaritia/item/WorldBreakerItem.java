@@ -27,11 +27,11 @@ public class WorldBreakerItem extends PickaxeItem {
 	public WorldBreakerItem() {
 		super(new Tier() {
 			public int getUses() {
-				return 1000;
+				return (int) Double.POSITIVE_INFINITY;
 			}
 
 			public float getSpeed() {
-				return 99999f;
+				return (float) Double.POSITIVE_INFINITY;
 			}
 
 			public float getAttackDamageBonus() {
@@ -39,11 +39,11 @@ public class WorldBreakerItem extends PickaxeItem {
 			}
 
 			public int getLevel() {
-				return 99999;
+				return (int) Double.POSITIVE_INFINITY;
 			}
 
 			public int getEnchantmentValue() {
-				return 99999;
+				return 100;
 			}
 
 			public Ingredient getRepairIngredient() {

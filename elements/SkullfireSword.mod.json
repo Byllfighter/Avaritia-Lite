@@ -10,7 +10,8 @@
     "blockingModelName": "Normal blocking",
     "name": "§dSkullfire Sword§r",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [],
+      "name": "SkullfireSwordSpecialInformation"
     },
     "creativeTab": {
       "value": "CUSTOM:Avaritiatab"
@@ -22,6 +23,9 @@
     "damageVsEntity": 7.0,
     "usageCount": 1561,
     "blocksAffected": [],
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [],
     "immuneToFire": false,
     "stayInGridWhenCrafting": false,

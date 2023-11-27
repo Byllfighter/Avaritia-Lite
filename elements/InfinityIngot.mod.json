@@ -29,16 +29,26 @@
     "specialInformation": {
       "fixedValue": [
         "The fury universe in the palm of your hand."
-      ]
+      ],
+      "name": "InfinityIngotSpecialInformation"
+    },
+    "glowCondition": {
+      "fixedValue": false
     },
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "enableRanged": false,
     "shootConstantly": false,
+    "projectile": {
+      "value": "CUSTOM:LongbowoftheHeavensProjectile"
+    },
     "isFood": false,
     "nutritionalValue": 0,
     "saturation": 0.30000001192092896,
+    "eatResultItem": {
+      "value": ""
+    },
     "isMeat": false,
     "isAlwaysEdible": false,
     "animation": "eat"

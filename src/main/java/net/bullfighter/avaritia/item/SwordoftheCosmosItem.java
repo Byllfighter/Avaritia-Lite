@@ -21,7 +21,7 @@ public class SwordoftheCosmosItem extends SwordItem {
 	public SwordoftheCosmosItem() {
 		super(new Tier() {
 			public int getUses() {
-				return 100;
+				return (int) Double.POSITIVE_INFINITY;
 			}
 
 			public float getSpeed() {
@@ -29,11 +29,11 @@ public class SwordoftheCosmosItem extends SwordItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 99997f;
+				return (float) Double.POSITIVE_INFINITY;
 			}
 
 			public int getLevel() {
-				return 1;
+				return (int) Double.POSITIVE_INFINITY;
 			}
 
 			public int getEnchantmentValue() {
