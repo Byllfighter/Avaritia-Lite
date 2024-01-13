@@ -22,6 +22,7 @@ import net.bullfighter.avaritia.item.PlanetEaterItem;
 import net.bullfighter.avaritia.item.PileofNeutronsItem;
 import net.bullfighter.avaritia.item.NeutroniumNuggetItem;
 import net.bullfighter.avaritia.item.NeutroniumIngotItem;
+import net.bullfighter.avaritia.item.NetheriteSingularityItem;
 import net.bullfighter.avaritia.item.NetherQuartzSingularityItem;
 import net.bullfighter.avaritia.item.NaturesRuinItem;
 import net.bullfighter.avaritia.item.LongbowoftheHeavensItem;
@@ -38,7 +39,9 @@ import net.bullfighter.avaritia.item.DiamondSingularityItem;
 import net.bullfighter.avaritia.item.DiamondLatticeItem;
 import net.bullfighter.avaritia.item.CrystalMatrixIngotItem;
 import net.bullfighter.avaritia.item.CosmicMeatballsItem;
+import net.bullfighter.avaritia.item.CopperSingularityItem;
 import net.bullfighter.avaritia.item.BlackHoleItemItem;
+import net.bullfighter.avaritia.item.AmethystSingularityItem;
 import net.bullfighter.avaritia.AvaritiaMod;
 
 public class AvaritiaModItems {
@@ -59,6 +62,9 @@ public class AvaritiaModItems {
 	public static final RegistryObject<Item> NETHER_QUARTZ_SINGULARITY = REGISTRY.register("nether_quartz_singularity", () -> new NetherQuartzSingularityItem());
 	public static final RegistryObject<Item> DIAMOND_SINGULARITY = REGISTRY.register("diamond_singularity", () -> new DiamondSingularityItem());
 	public static final RegistryObject<Item> EMERALD_SINGULARITY = REGISTRY.register("emerald_singularity", () -> new EmeraldSingularityItem());
+	public static final RegistryObject<Item> COPPER_SINGULARITY = REGISTRY.register("copper_singularity", () -> new CopperSingularityItem());
+	public static final RegistryObject<Item> AMETHYST_SINGULARITY = REGISTRY.register("amethyst_singularity", () -> new AmethystSingularityItem());
+	public static final RegistryObject<Item> NETHERITE_SINGULARITY = REGISTRY.register("netherite_singularity", () -> new NetheriteSingularityItem());
 	public static final RegistryObject<Item> NEUTRONIUM_COMPRESSOR = block(AvaritiaModBlocks.NEUTRONIUM_COMPRESSOR);
 	public static final RegistryObject<Item> SWORDOFTHE_COSMOS = REGISTRY.register("swordofthe_cosmos", () -> new SwordoftheCosmosItem());
 	public static final RegistryObject<Item> PLANET_EATER = REGISTRY.register("planet_eater", () -> new PlanetEaterItem());
@@ -78,9 +84,9 @@ public class AvaritiaModItems {
 	public static final RegistryObject<Item> CRYSTAL_MATRIX = block(AvaritiaModBlocks.CRYSTAL_MATRIX);
 	public static final RegistryObject<Item> ULTIMATE_STEW = REGISTRY.register("ultimate_stew", () -> new UltimateStewItem());
 	public static final RegistryObject<Item> COSMIC_MEATBALLS = REGISTRY.register("cosmic_meatballs", () -> new CosmicMeatballsItem());
-	public static final RegistryObject<Item> BLACK_HOLE_ITEM = REGISTRY.register("black_hole_item", () -> new BlackHoleItemItem());
 	public static final RegistryObject<Item> LONGBOWOFTHE_HEAVENS = REGISTRY.register("longbowofthe_heavens", () -> new LongbowoftheHeavensItem());
 	public static final RegistryObject<Item> ENDEST_PEARL = REGISTRY.register("endest_pearl", () -> new EndestPearlItem());
+	public static final RegistryObject<Item> BLACK_HOLE_ITEM = REGISTRY.register("black_hole_item", () -> new BlackHoleItemItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

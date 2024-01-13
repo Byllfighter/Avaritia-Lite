@@ -19,7 +19,7 @@ public class AvaritiaModEntityRenderers {
 	@SubscribeEvent
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(AvaritiaModEntities.BLACK_HOLE.get(), BlackHoleRenderer::new);
-		event.registerEntityRenderer(AvaritiaModEntities.ENDEST_PEARL_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(AvaritiaModEntities.LONGBOWOFTHE_HEAVENS_PROJECTILE.get(), LongbowoftheHeavensProjectileRenderer::new);
+		event.registerEntityRenderer(AvaritiaModEntities.ENDEST_PEARL_PROJECTILE.get(), ThrownItemRenderer::new);
 	}
 }

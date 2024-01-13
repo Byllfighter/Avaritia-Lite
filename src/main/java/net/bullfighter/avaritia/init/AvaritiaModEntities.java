@@ -26,12 +26,12 @@ public class AvaritiaModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, AvaritiaMod.MODID);
 	public static final RegistryObject<EntityType<BlackHoleEntity>> BLACK_HOLE = register("black_hole", EntityType.Builder.<BlackHoleEntity>of(BlackHoleEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 			.setUpdateInterval(3).setCustomClientFactory(BlackHoleEntity::new).fireImmune().sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<EndestPearlProjectileEntity>> ENDEST_PEARL_PROJECTILE = register("projectile_endest_pearl_projectile",
-			EntityType.Builder.<EndestPearlProjectileEntity>of(EndestPearlProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(EndestPearlProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
-					.setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<LongbowoftheHeavensProjectileEntity>> LONGBOWOFTHE_HEAVENS_PROJECTILE = register("projectile_longbowofthe_heavens_projectile",
 			EntityType.Builder.<LongbowoftheHeavensProjectileEntity>of(LongbowoftheHeavensProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(LongbowoftheHeavensProjectileEntity::new).setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<EndestPearlProjectileEntity>> ENDEST_PEARL_PROJECTILE = register("projectile_endest_pearl_projectile",
+			EntityType.Builder.<EndestPearlProjectileEntity>of(EndestPearlProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(EndestPearlProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

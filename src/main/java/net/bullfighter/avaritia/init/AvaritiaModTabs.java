@@ -34,6 +34,9 @@ public class AvaritiaModTabs {
 				tabData.accept(AvaritiaModItems.NETHER_QUARTZ_SINGULARITY.get());
 				tabData.accept(AvaritiaModItems.DIAMOND_SINGULARITY.get());
 				tabData.accept(AvaritiaModItems.EMERALD_SINGULARITY.get());
+				tabData.accept(AvaritiaModItems.COPPER_SINGULARITY.get());
+				tabData.accept(AvaritiaModItems.AMETHYST_SINGULARITY.get());
+				tabData.accept(AvaritiaModItems.NETHERITE_SINGULARITY.get());
 				tabData.accept(AvaritiaModBlocks.NEUTRONIUM_COMPRESSOR.get().asItem());
 				tabData.accept(AvaritiaModItems.SWORDOFTHE_COSMOS.get());
 				tabData.accept(AvaritiaModItems.PLANET_EATER.get());

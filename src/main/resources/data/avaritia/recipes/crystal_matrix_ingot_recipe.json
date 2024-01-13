@@ -2,27 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "012",
-    "345"
+    "aba",
+    "aba"
   ],
   "key": {
-    "0": {
+    "a": {
       "item": "avaritia:diamond_lattice"
     },
-    "1": {
+    "b": {
       "item": "minecraft:nether_star"
-    },
-    "2": {
-      "item": "avaritia:diamond_lattice"
-    },
-    "3": {
-      "item": "avaritia:diamond_lattice"
-    },
-    "4": {
-      "item": "minecraft:nether_star"
-    },
-    "5": {
-      "item": "avaritia:diamond_lattice"
     }
   },
   "result": {

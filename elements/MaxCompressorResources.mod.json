@@ -1,5 +1,5 @@
 {
-  "_fv": 55,
+  "_fv": 57,
   "_type": "procedure",
   "definition": {
     "procedurexml": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><xml xmlns=\"https://developers.google.com/blockly/xml\"><block deletable=\"false\" type=\"event_trigger\" x=\"40\" y=\"40\"><field name=\"trigger\">world_ticks</field><next><block type=\"variables_set_number\"><field name=\"VAR\">global:MaxCompressorResources</field><value name=\"VAL\"><block type=\"world_data_num_getgamerule\"><field name=\"gamerulesnumber\">CUSTOM:NeutroniumCompressorAmount</field></block></value></block></next></block></xml>"

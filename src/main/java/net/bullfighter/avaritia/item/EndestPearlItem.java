@@ -87,7 +87,7 @@ public class EndestPearlItem extends Item {
 							player.getInventory().removeItem(stack);
 					}
 				}
-				MendProcedure.execute(itemstack);
+				MendProcedure.execute(stack);
 			}
 		}
 	}

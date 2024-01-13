@@ -31,7 +31,7 @@
     {
       "name": "Avaritiatab",
       "type": "tab",
-      "sortid": 8,
+      "sortid": 38,
       "compiles": true,
       "locked_code": false,
       "registry_name": "avaritiatab",
@@ -42,7 +42,7 @@
     {
       "name": "DiamondLatticeRecipe",
       "type": "recipe",
-      "sortid": 9,
+      "sortid": 39,
       "compiles": true,
       "locked_code": false,
       "registry_name": "diamond_lattice_recipe",
@@ -69,7 +69,7 @@
     {
       "name": "CrystalMatrixIngotRecipe",
       "type": "recipe",
-      "sortid": 10,
+      "sortid": 40,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crystal_matrix_ingot_recipe",
@@ -113,7 +113,7 @@
     {
       "name": "NeutronCollectorGui",
       "type": "gui",
-      "sortid": 11,
+      "sortid": 41,
       "compiles": true,
       "locked_code": false,
       "registry_name": "neutron_collector_gui",
@@ -127,7 +127,7 @@
     {
       "name": "NeutronCollectorGenerator",
       "type": "procedure",
-      "sortid": 12,
+      "sortid": 42,
       "compiles": true,
       "locked_code": false,
       "registry_name": "neutron_collector_generator",
@@ -186,7 +186,7 @@
     {
       "name": "NeutroniumNuggetRecipe",
       "type": "recipe",
-      "sortid": 13,
+      "sortid": 43,
       "compiles": true,
       "locked_code": false,
       "registry_name": "neutronium_nugget_recipe",
@@ -199,7 +199,7 @@
     {
       "name": "PileofNeutroniumRecipe",
       "type": "recipe",
-      "sortid": 14,
+      "sortid": 44,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pileof_neutronium_recipe",
@@ -212,7 +212,7 @@
     {
       "name": "NeutroniumNuggetRecipe2",
       "type": "recipe",
-      "sortid": 15,
+      "sortid": 45,
       "compiles": true,
       "locked_code": false,
       "registry_name": "neutronium_nugget_recipe_2",
@@ -225,7 +225,7 @@
     {
       "name": "NeutroniumIngotRecipe",
       "type": "recipe",
-      "sortid": 16,
+      "sortid": 46,
       "compiles": true,
       "locked_code": false,
       "registry_name": "neutronium_ingot_recipe",
@@ -238,7 +238,7 @@
     {
       "name": "InfinityIngot",
       "type": "item",
-      "sortid": 17,
+      "sortid": 8,
       "compiles": true,
       "locked_code": false,
       "registry_name": "infinity_ingot",
@@ -252,7 +252,7 @@
     {
       "name": "ExtremeCraftingTableGui",
       "type": "gui",
-      "sortid": 18,
+      "sortid": 47,
       "compiles": true,
       "locked_code": false,
       "registry_name": "extreme_crafting_table_gui",
@@ -267,7 +267,7 @@
     {
       "name": "RecordFragment",
       "type": "item",
-      "sortid": 19,
+      "sortid": 9,
       "compiles": true,
       "locked_code": false,
       "registry_name": "record_fragment",
@@ -281,7 +281,7 @@
     {
       "name": "RecordFragmentRecipe",
       "type": "recipe",
-      "sortid": 20,
+      "sortid": 48,
       "compiles": true,
       "locked_code": false,
       "registry_name": "record_fragment_recipe",
@@ -294,7 +294,7 @@
     {
       "name": "IronSingularity",
       "type": "item",
-      "sortid": 22,
+      "sortid": 10,
       "compiles": true,
       "locked_code": false,
       "registry_name": "iron_singularity",
@@ -308,7 +308,7 @@
     {
       "name": "GoldenSingularity",
       "type": "item",
-      "sortid": 23,
+      "sortid": 11,
       "compiles": true,
       "locked_code": false,
       "registry_name": "golden_singularity",
@@ -322,7 +322,7 @@
     {
       "name": "LapisSingularity",
       "type": "item",
-      "sortid": 24,
+      "sortid": 12,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lapis_singularity",
@@ -336,7 +336,7 @@
     {
       "name": "RedstoneSingularity",
       "type": "item",
-      "sortid": 25,
+      "sortid": 13,
       "compiles": true,
       "locked_code": false,
       "registry_name": "redstone_singularity",
@@ -350,7 +350,7 @@
     {
       "name": "NetherQuartzSingularity",
       "type": "item",
-      "sortid": 26,
+      "sortid": 14,
       "compiles": true,
       "locked_code": false,
       "registry_name": "nether_quartz_singularity",
@@ -364,7 +364,7 @@
     {
       "name": "DiamondSingularity",
       "type": "item",
-      "sortid": 27,
+      "sortid": 15,
       "compiles": true,
       "locked_code": false,
       "registry_name": "diamond_singularity",
@@ -378,7 +378,7 @@
     {
       "name": "EmeraldSingularity",
       "type": "item",
-      "sortid": 28,
+      "sortid": 16,
       "compiles": true,
       "locked_code": false,
       "registry_name": "emerald_singularity",
@@ -392,7 +392,7 @@
     {
       "name": "NeutroniumCompressorGui",
       "type": "gui",
-      "sortid": 31,
+      "sortid": 49,
       "compiles": true,
       "locked_code": false,
       "registry_name": "neutronium_compressor_gui",
@@ -407,7 +407,7 @@
     {
       "name": "NeutroniumCompressor",
       "type": "block",
-      "sortid": 32,
+      "sortid": 20,
       "compiles": true,
       "locked_code": false,
       "registry_name": "neutronium_compressor",
@@ -424,7 +424,7 @@
     {
       "name": "Mend",
       "type": "procedure",
-      "sortid": 33,
+      "sortid": 50,
       "compiles": true,
       "locked_code": false,
       "registry_name": "mend",
@@ -443,7 +443,7 @@
     {
       "name": "SwordoftheCosmos",
       "type": "tool",
-      "sortid": 33,
+      "sortid": 21,
       "compiles": true,
       "locked_code": true,
       "registry_name": "swordofthe_cosmos",
@@ -457,7 +457,7 @@
     {
       "name": "PlanetEater",
       "type": "tool",
-      "sortid": 34,
+      "sortid": 22,
       "compiles": true,
       "locked_code": false,
       "registry_name": "planet_eater",
@@ -471,7 +471,7 @@
     {
       "name": "NaturesRuin",
       "type": "tool",
-      "sortid": 35,
+      "sortid": 23,
       "compiles": true,
       "locked_code": false,
       "registry_name": "natures_ruin",
@@ -485,7 +485,7 @@
     {
       "name": "HoeoftheGreenEarth",
       "type": "tool",
-      "sortid": 36,
+      "sortid": 24,
       "compiles": true,
       "locked_code": false,
       "registry_name": "hoeofthe_green_earth",
@@ -499,7 +499,7 @@
     {
       "name": "LongbowoftheHeavensBulletHitsBlock",
       "type": "procedure",
-      "sortid": 37,
+      "sortid": 51,
       "compiles": true,
       "locked_code": false,
       "registry_name": "longbowofthe_heavens_bullet_hits_block",
@@ -530,7 +530,7 @@
     {
       "name": "Neutroniumcollectoropen",
       "type": "procedure",
-      "sortid": 38,
+      "sortid": 52,
       "compiles": true,
       "locked_code": false,
       "registry_name": "neutroniumcollectoropen",
@@ -561,7 +561,7 @@
     {
       "name": "NeutronCollectorGuiTick",
       "type": "procedure",
-      "sortid": 39,
+      "sortid": 53,
       "compiles": true,
       "locked_code": false,
       "registry_name": "neutron_collector_gui_tick",
@@ -596,7 +596,7 @@
     {
       "name": "WorldBreaker",
       "type": "tool",
-      "sortid": 40,
+      "sortid": 25,
       "compiles": true,
       "locked_code": true,
       "registry_name": "world_breaker",
@@ -610,7 +610,7 @@
     {
       "name": "WorldBreakerTick",
       "type": "procedure",
-      "sortid": 41,
+      "sortid": 54,
       "compiles": true,
       "locked_code": false,
       "registry_name": "world_breaker_tick",
@@ -629,7 +629,7 @@
     {
       "name": "InfinityArmor",
       "type": "armor",
-      "sortid": 42,
+      "sortid": 26,
       "compiles": true,
       "locked_code": false,
       "registry_name": "infinity_armor",
@@ -650,7 +650,7 @@
     {
       "name": "InfinityArmorTick",
       "type": "procedure",
-      "sortid": 42,
+      "sortid": 55,
       "compiles": true,
       "locked_code": false,
       "registry_name": "infinity_armor_tick",
@@ -673,7 +673,7 @@
     {
       "name": "SwordoftheCosmosKill",
       "type": "procedure",
-      "sortid": 43,
+      "sortid": 56,
       "compiles": true,
       "locked_code": false,
       "registry_name": "swordofthe_cosmos_kill",
@@ -692,7 +692,7 @@
     {
       "name": "SkullfireSword",
       "type": "tool",
-      "sortid": 44,
+      "sortid": 27,
       "compiles": true,
       "locked_code": false,
       "registry_name": "skullfire_sword",
@@ -706,7 +706,7 @@
     {
       "name": "EntityDeath",
       "type": "procedure",
-      "sortid": 45,
+      "sortid": 57,
       "compiles": true,
       "locked_code": false,
       "registry_name": "entity_death",
@@ -745,7 +745,7 @@
     {
       "name": "UltimateStewEaten",
       "type": "procedure",
-      "sortid": 47,
+      "sortid": 58,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ultimate_stew_eaten",
@@ -764,7 +764,7 @@
     {
       "name": "CosmicMeatballsEaten",
       "type": "procedure",
-      "sortid": 49,
+      "sortid": 59,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cosmic_meatballs_eaten",
@@ -783,7 +783,7 @@
     {
       "name": "OpenCraftingTable",
       "type": "procedure",
-      "sortid": 50,
+      "sortid": 60,
       "compiles": true,
       "locked_code": false,
       "registry_name": "open_crafting_table",
@@ -797,7 +797,7 @@
     {
       "name": "CompressedCraftingTable",
       "type": "block",
-      "sortid": 50,
+      "sortid": 28,
       "compiles": true,
       "locked_code": false,
       "registry_name": "compressed_crafting_table",
@@ -813,7 +813,7 @@
     {
       "name": "DoubleCompressedCraftingTable",
       "type": "block",
-      "sortid": 51,
+      "sortid": 29,
       "compiles": true,
       "locked_code": false,
       "registry_name": "double_compressed_crafting_table",
@@ -829,7 +829,7 @@
     {
       "name": "CompressedCraftingTableRecipe",
       "type": "recipe",
-      "sortid": 52,
+      "sortid": 61,
       "compiles": true,
       "locked_code": false,
       "registry_name": "compressed_crafting_table_recipe",
@@ -842,7 +842,7 @@
     {
       "name": "DoubleCompressedCraftingTableRecipe",
       "type": "recipe",
-      "sortid": 53,
+      "sortid": 62,
       "compiles": true,
       "locked_code": false,
       "registry_name": "double_compressed_crafting_table_recipe",
@@ -855,7 +855,7 @@
     {
       "name": "ExtremeCraftingTable",
       "type": "block",
-      "sortid": 56,
+      "sortid": 30,
       "compiles": true,
       "locked_code": false,
       "registry_name": "extreme_crafting_table",
@@ -872,7 +872,7 @@
     {
       "name": "NeutroniumBlock",
       "type": "block",
-      "sortid": 57,
+      "sortid": 31,
       "compiles": true,
       "locked_code": false,
       "registry_name": "neutronium_block",
@@ -888,7 +888,7 @@
     {
       "name": "InfinityBlock",
       "type": "block",
-      "sortid": 58,
+      "sortid": 32,
       "compiles": true,
       "locked_code": false,
       "registry_name": "infinity_block",
@@ -904,7 +904,7 @@
     {
       "name": "CrystalMatrix",
       "type": "block",
-      "sortid": 59,
+      "sortid": 33,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crystal_matrix",
@@ -920,7 +920,7 @@
     {
       "name": "NeutroniumBlockUncraft",
       "type": "recipe",
-      "sortid": 60,
+      "sortid": 63,
       "compiles": true,
       "locked_code": false,
       "registry_name": "neutronium_block_uncraft",
@@ -933,7 +933,7 @@
     {
       "name": "NeutroniumBlockCraft",
       "type": "recipe",
-      "sortid": 61,
+      "sortid": 64,
       "compiles": true,
       "locked_code": false,
       "registry_name": "neutronium_block_craft",
@@ -946,7 +946,7 @@
     {
       "name": "InfinityBlockUncraft",
       "type": "recipe",
-      "sortid": 62,
+      "sortid": 65,
       "compiles": true,
       "locked_code": false,
       "registry_name": "infinity_block_uncraft",
@@ -959,7 +959,7 @@
     {
       "name": "InfinityBlockCraft",
       "type": "recipe",
-      "sortid": 63,
+      "sortid": 66,
       "compiles": true,
       "locked_code": false,
       "registry_name": "infinity_block_craft",
@@ -972,7 +972,7 @@
     {
       "name": "CrystalMatixUncraft",
       "type": "recipe",
-      "sortid": 64,
+      "sortid": 67,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crystal_matix_uncraft",
@@ -985,7 +985,7 @@
     {
       "name": "CrystalMatixCraft",
       "type": "recipe",
-      "sortid": 65,
+      "sortid": 68,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crystal_matix_craft",
@@ -998,7 +998,7 @@
     {
       "name": "NeutroniumCompressorClick",
       "type": "procedure",
-      "sortid": 66,
+      "sortid": 69,
       "compiles": true,
       "locked_code": false,
       "registry_name": "neutronium_compressor_click",
@@ -1029,7 +1029,7 @@
     {
       "name": "NeutroniumCompressorGuiTick",
       "type": "procedure",
-      "sortid": 67,
+      "sortid": 70,
       "compiles": true,
       "locked_code": false,
       "registry_name": "neutronium_compressor_gui_tick",
@@ -1052,7 +1052,7 @@
     {
       "name": "ExtremeCraftingTableRecipe",
       "type": "procedure",
-      "sortid": 68,
+      "sortid": 71,
       "compiles": true,
       "locked_code": false,
       "registry_name": "extreme_crafting_table_recipe",
@@ -1071,7 +1071,7 @@
     {
       "name": "ExtremeCraftingTableRecipes",
       "type": "procedure",
-      "sortid": 69,
+      "sortid": 72,
       "compiles": true,
       "locked_code": false,
       "registry_name": "extreme_crafting_table_recipes",
@@ -1090,7 +1090,7 @@
     {
       "name": "ExtremeCraftingTableRecipe2",
       "type": "procedure",
-      "sortid": 70,
+      "sortid": 73,
       "compiles": true,
       "locked_code": false,
       "registry_name": "extreme_crafting_table_recipe_2",
@@ -1109,7 +1109,7 @@
     {
       "name": "ExtremeCraftingTableRecipe3",
       "type": "procedure",
-      "sortid": 71,
+      "sortid": 74,
       "compiles": true,
       "locked_code": false,
       "registry_name": "extreme_crafting_table_recipe_3",
@@ -1128,7 +1128,7 @@
     {
       "name": "ExtremeCraftingTableRecipe4",
       "type": "procedure",
-      "sortid": 72,
+      "sortid": 75,
       "compiles": true,
       "locked_code": false,
       "registry_name": "extreme_crafting_table_recipe_4",
@@ -1147,7 +1147,7 @@
     {
       "name": "ExtremeCraftingTableRecipe5",
       "type": "procedure",
-      "sortid": 73,
+      "sortid": 76,
       "compiles": true,
       "locked_code": false,
       "registry_name": "extreme_crafting_table_recipe_5",
@@ -1166,7 +1166,7 @@
     {
       "name": "ExtremeCraftingTableRecipe6",
       "type": "procedure",
-      "sortid": 74,
+      "sortid": 77,
       "compiles": true,
       "locked_code": false,
       "registry_name": "extreme_crafting_table_recipe_6",
@@ -1185,7 +1185,7 @@
     {
       "name": "BlackHoleTick",
       "type": "procedure",
-      "sortid": 76,
+      "sortid": 78,
       "compiles": true,
       "locked_code": false,
       "registry_name": "black_hole_tick",
@@ -1220,7 +1220,7 @@
     {
       "name": "BlackHoleSpawn",
       "type": "procedure",
-      "sortid": 77,
+      "sortid": 79,
       "compiles": true,
       "locked_code": false,
       "registry_name": "black_hole_spawn",
@@ -1251,7 +1251,7 @@
     {
       "name": "BlackHolePlayerCollides",
       "type": "procedure",
-      "sortid": 79,
+      "sortid": 80,
       "compiles": true,
       "locked_code": false,
       "registry_name": "black_hole_player_collides",
@@ -1274,7 +1274,7 @@
     {
       "name": "FlyFixer",
       "type": "procedure",
-      "sortid": 80,
+      "sortid": 81,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fly_fixer",
@@ -1401,8 +1401,8 @@
       "locked_code": false,
       "registry_name": "neutroniumCompressorAmount",
       "metadata": {
-        "type": "number",
-        "files": []
+        "files": [],
+        "type": "number"
       }
     },
     {
@@ -1427,7 +1427,7 @@
     {
       "name": "UltimateStew",
       "type": "item",
-      "sortid": 89,
+      "sortid": 34,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ultimate_stew",
@@ -1441,7 +1441,7 @@
     {
       "name": "CosmicMeatballs",
       "type": "item",
-      "sortid": 90,
+      "sortid": 35,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cosmic_meatballs",
@@ -1455,7 +1455,7 @@
     {
       "name": "CompressedCraftingTableFuel",
       "type": "itemextension",
-      "sortid": 91,
+      "sortid": 89,
       "compiles": true,
       "locked_code": false,
       "registry_name": "compressed_crafting_table_fuel",
@@ -1466,7 +1466,7 @@
     {
       "name": "DoubleCompressedCraftingTableFuel",
       "type": "itemextension",
-      "sortid": 92,
+      "sortid": 90,
       "compiles": true,
       "locked_code": false,
       "registry_name": "double_compressed_crafting_table_fuel",
@@ -1477,7 +1477,7 @@
     {
       "name": "BlackHoleItem",
       "type": "item",
-      "sortid": 93,
+      "sortid": 91,
       "compiles": true,
       "locked_code": false,
       "registry_name": "black_hole_item",
@@ -1491,7 +1491,7 @@
     {
       "name": "BlackHoleItemRemove",
       "type": "procedure",
-      "sortid": 93,
+      "sortid": 92,
       "compiles": true,
       "locked_code": false,
       "registry_name": "black_hole_item_remove",
@@ -1510,7 +1510,7 @@
     {
       "name": "BlackHoleDroppedItemRemove",
       "type": "procedure",
-      "sortid": 94,
+      "sortid": 93,
       "compiles": true,
       "locked_code": false,
       "registry_name": "black_hole_dropped_item_remove",
@@ -1529,7 +1529,7 @@
     {
       "name": "ExtremeCraftingTableCraft",
       "type": "recipe",
-      "sortid": 95,
+      "sortid": 94,
       "compiles": true,
       "locked_code": false,
       "registry_name": "extreme_crafting_table_craft",
@@ -1542,7 +1542,7 @@
     {
       "name": "GetBNBTNumberProcess",
       "type": "procedure",
-      "sortid": 96,
+      "sortid": 95,
       "compiles": true,
       "locked_code": false,
       "registry_name": "get_bnbt_number_process",
@@ -1574,7 +1574,7 @@
     {
       "name": "GetBNBTNeutroniumCompressor",
       "type": "procedure",
-      "sortid": 97,
+      "sortid": 96,
       "compiles": true,
       "locked_code": false,
       "registry_name": "get_bnbt_neutronium_compressor",
@@ -1606,7 +1606,7 @@
     {
       "name": "GetBNBTTextMaterial",
       "type": "procedure",
-      "sortid": 98,
+      "sortid": 97,
       "compiles": true,
       "locked_code": false,
       "registry_name": "get_bnbt_text_material",
@@ -1638,7 +1638,7 @@
     {
       "name": "BlackHoleDamage",
       "type": "procedure",
-      "sortid": 99,
+      "sortid": 98,
       "compiles": true,
       "locked_code": false,
       "registry_name": "black_hole_damage",
@@ -1673,7 +1673,7 @@
     {
       "name": "LongbowoftheHeavensProjectile",
       "type": "projectile",
-      "sortid": 103,
+      "sortid": 99,
       "compiles": true,
       "locked_code": false,
       "registry_name": "longbowofthe_heavens_projectile",
@@ -1687,9 +1687,9 @@
     {
       "name": "LongbowoftheHeavens",
       "type": "item",
-      "sortid": 100,
+      "sortid": 36,
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "longbowofthe_heavens",
       "metadata": {
         "files": [
@@ -1701,7 +1701,7 @@
     {
       "name": "EndestPearlProjectile",
       "type": "projectile",
-      "sortid": 102,
+      "sortid": 100,
       "compiles": true,
       "locked_code": false,
       "registry_name": "endest_pearl_projectile",
@@ -1714,7 +1714,7 @@
     {
       "name": "EndestPearl",
       "type": "item",
-      "sortid": 101,
+      "sortid": 37,
       "compiles": true,
       "locked_code": false,
       "registry_name": "endest_pearl",
@@ -1728,7 +1728,7 @@
     {
       "name": "ExtremeCraftingTableRemoveAllSlots",
       "type": "procedure",
-      "sortid": 104,
+      "sortid": 101,
       "compiles": true,
       "locked_code": false,
       "registry_name": "extreme_crafting_table_remove_all_slots",
@@ -1747,7 +1747,7 @@
     {
       "name": "NeutroniumCompressorTick",
       "type": "procedure",
-      "sortid": 105,
+      "sortid": 102,
       "compiles": true,
       "locked_code": false,
       "registry_name": "neutronium_compressor_tick",
@@ -1778,7 +1778,7 @@
     {
       "name": "NeutroniumCompressorClear",
       "type": "procedure",
-      "sortid": 106,
+      "sortid": 103,
       "compiles": true,
       "locked_code": false,
       "registry_name": "neutronium_compressor_clear",
@@ -1809,7 +1809,7 @@
     {
       "name": "CrystalMatrixIngotSpecialInformation",
       "type": "procedure",
-      "sortid": 107,
+      "sortid": 104,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crystal_matrix_ingot_special_information",
@@ -1824,7 +1824,7 @@
     {
       "name": "PileofNeutronsSpecialInformation",
       "type": "procedure",
-      "sortid": 108,
+      "sortid": 105,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pileof_neutrons_special_information",
@@ -1839,7 +1839,7 @@
     {
       "name": "NeutroniumNuggetSpecialInformation",
       "type": "procedure",
-      "sortid": 109,
+      "sortid": 106,
       "compiles": true,
       "locked_code": false,
       "registry_name": "neutronium_nugget_special_information",
@@ -1854,7 +1854,7 @@
     {
       "name": "NeutroniumIngotSpecialInformation",
       "type": "procedure",
-      "sortid": 110,
+      "sortid": 107,
       "compiles": true,
       "locked_code": false,
       "registry_name": "neutronium_ingot_special_information",
@@ -1869,7 +1869,7 @@
     {
       "name": "InfinityIngotSpecialInformation",
       "type": "procedure",
-      "sortid": 111,
+      "sortid": 108,
       "compiles": true,
       "locked_code": false,
       "registry_name": "infinity_ingot_special_information",
@@ -1884,7 +1884,7 @@
     {
       "name": "RecordFragmentSpecialInformation",
       "type": "procedure",
-      "sortid": 112,
+      "sortid": 109,
       "compiles": true,
       "locked_code": false,
       "registry_name": "record_fragment_special_information",
@@ -1899,7 +1899,7 @@
     {
       "name": "SkullfireSwordSpecialInformation",
       "type": "procedure",
-      "sortid": 113,
+      "sortid": 110,
       "compiles": true,
       "locked_code": false,
       "registry_name": "skullfire_sword_special_information",
@@ -1909,6 +1909,67 @@
           "src/main/java/net/bullfighter/avaritia/procedures/SkullfireSwordSpecialInformationProcedure.java"
         ],
         "dependencies": []
+      }
+    },
+    {
+      "name": "ExtremeCraftingTableRecipeCatalyst",
+      "type": "procedure",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "extreme_crafting_table_recipe_catalyst",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/ExtremeCraftingTableRecipeCatalystProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CopperSingularity",
+      "type": "item",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "copper_singularity",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/avaritia/models/item/copper_singularity.json",
+          "src/main/java/net/bullfighter/avaritia/item/CopperSingularityItem.java"
+        ]
+      }
+    },
+    {
+      "name": "AmethystSingularity",
+      "type": "item",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amethyst_singularity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/item/AmethystSingularityItem.java",
+          "src/main/resources/assets/avaritia/models/item/amethyst_singularity.json"
+        ]
+      }
+    },
+    {
+      "name": "NetheriteSingularity",
+      "type": "item",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_singularity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/item/NetheriteSingularityItem.java",
+          "src/main/resources/assets/avaritia/models/item/netherite_singularity.json"
+        ]
       }
     }
   ],
@@ -1946,13 +2007,14 @@
       "block.avaritia.double_compressed_crafting_table": "Двойной сжатый верстак",
       "itemGroup.tabavaritiatab": "Avaritia",
       "item.avaritia.planet_eater": "§cПожиратель планет",
-      "item.avaritia.hoeofthe_green_earth": "§cМотыга зеленой земли§r",
+      "item.avaritia.copper_singularity": "Emerald Singularity",
       "gui.avaritia.neutronium_compressor_gui.label_neutronium_compressor": "Компрессор Нейтрония",
+      "item.avaritia.hoeofthe_green_earth": "§cМотыга зеленой земли§r",
       "item.avaritia.skullfire_sword": "§dМеч Огненного-черепа§r",
       "item.avaritia.infinity_armor_chestplate": "§cБесконечный нагрудник§r",
       "gamerule.worldBreakerBedrockBreak.description": "Разрешено ломать бедрок при помощи Крушителя Мира",
-      "item.avaritia.crystal_matrix_ingot": "Кристально-матричный слиток",
       "gui.avaritia.neutron_collector_gui.label_neutron_collector": "Количество Нейтрония",
+      "item.avaritia.crystal_matrix_ingot": "Кристально-матричный слиток",
       "gamerule.world_breaker_bedrock_break.description": "Разрешено ломать бедрок при помощи Крушителя Мира",
       "item.avaritia.skullfire_sword.description": "§8Обезглавливает скелеты и обжигает их.§r",
       "item.avaritia.diamond_lattice": "Алмазная решётка",
@@ -1963,6 +2025,7 @@
       "gui.avaritia.extreme_crafting_table_gui.label_extreme_crafting_table": "Сложный верстак",
       "block.avaritia.crystal_matrix": "Кристальная матрица",
       "gui.avaritia.neutronium_compressor_gui.label_material_bnbttextmaterial": "Материал: \u003cBNBT:text:material\u003e",
+      "item.avaritia.netherite_singularity": "Amethyst Singularity",
       "item.avaritia.infinity_catalyst": "Бесконечный катализатор",
       "item.avaritia.lapis_singularity": "Лазуритовая Сингулярность",
       "item.avaritia.infinity_ingot": "Бесконечный слиток",
@@ -1973,6 +2036,7 @@
       "item.avaritia.world_breaker": "§cКрушитель Мира",
       "item.avaritia.golden_singularity": "Золотая Сингулярность",
       "gui.avaritia.neutron_collector_gui.label_bnbtnumberprocess": "\u003cBNBT:число процесса\u003e%",
+      "item.avaritia.amethyst_singularity": "Copper Singularity",
       "gui.avaritia.extreme_crafting_table_gui.button_craft": "Создать",
       "block.avaritia.compressed_crafting_table": "Сжатый верстак",
       "item.avaritia.longbowofthe_heavens": "Небесный лук",
@@ -2010,13 +2074,14 @@
       "block.avaritia.double_compressed_crafting_table": "Double Compressed Crafting Table",
       "itemGroup.tabavaritiatab": "Avaritia",
       "item.avaritia.planet_eater": "§cPlanet Eater§r",
-      "gui.avaritia.neutronium_compressor_gui.label_neutronium_compressor": "Neutronium Compressor",
+      "item.avaritia.copper_singularity": "Copper Singularity",
       "item.avaritia.hoeofthe_green_earth": "§cHoe of the Green Earth§r",
+      "gui.avaritia.neutronium_compressor_gui.label_neutronium_compressor": "Neutronium Compressor",
       "item.avaritia.skullfire_sword": "§dSkullfire Sword§r",
       "item.avaritia.infinity_armor_chestplate": "§cInfinity Breastplate§r",
       "gamerule.worldBreakerBedrockBreak.description": "Allow breacks bedrock with World Breacker",
-      "gui.avaritia.neutron_collector_gui.label_neutron_collector": "Neutron Collector",
       "item.avaritia.crystal_matrix_ingot": "Crystal Matrix Ingot",
+      "gui.avaritia.neutron_collector_gui.label_neutron_collector": "Neutron Collector",
       "gamerule.world_breaker_bedrock_break.description": "Allow breacks bedrock with World Breacker",
       "item.avaritia.skullfire_sword.description": "§8Beheads skeletons and scorches them black.§r",
       "item.avaritia.diamond_lattice": "Diamond Lattice",
@@ -2027,6 +2092,7 @@
       "gui.avaritia.extreme_crafting_table_gui.label_extreme_crafting_table": "Extreme Crafting Table",
       "block.avaritia.crystal_matrix": "Crystal Matrix",
       "gui.avaritia.neutronium_compressor_gui.label_material_bnbttextmaterial": "Material: \u003cBNBT:text:material\u003e",
+      "item.avaritia.netherite_singularity": "Netherite Singularity",
       "item.avaritia.infinity_catalyst": "Infinity Catalyst",
       "item.avaritia.lapis_singularity": "Lapis Singularity",
       "item.avaritia.infinity_ingot": "Infinity Ingot",
@@ -2037,6 +2103,7 @@
       "item.avaritia.world_breaker": "§cWorld Breaker§r",
       "item.avaritia.golden_singularity": "Golden Singularity",
       "gui.avaritia.neutron_collector_gui.label_bnbtnumberprocess": "\u003cBNBT:number:process\u003e%",
+      "item.avaritia.amethyst_singularity": "Amethyst Singularity",
       "gui.avaritia.extreme_crafting_table_gui.button_craft": "Craft",
       "block.avaritia.compressed_crafting_table": "Compressed Crafting Table",
       "item.avaritia.longbowofthe_heavens": "Longbow of the Heavens",
@@ -2076,7 +2143,7 @@
   "workspaceSettings": {
     "modid": "avaritia",
     "modName": "Avaritia Lite",
-    "version": "1.6.3",
+    "version": "1.7.0",
     "author": "Bullfighter, MCreator",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/avaritia-lite",
     "license": "Not specified",
@@ -2092,5 +2159,5 @@
     "modElementsPackage": "net.bullfighter.avaritia",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202300444716
+  "mcreatorVersion": 202300452316
 }

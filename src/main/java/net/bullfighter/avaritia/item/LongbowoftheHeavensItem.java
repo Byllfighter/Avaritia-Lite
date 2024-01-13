@@ -16,16 +16,13 @@ import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.BowItem;
 
 import net.bullfighter.avaritia.procedures.MendProcedure;
 import net.bullfighter.avaritia.entity.LongbowoftheHeavensProjectileEntity;
 
 import java.util.List;
 
-import net.minecraft.util.ResourceLocationPattern;
-
-public class LongbowoftheHeavensItem extends BowItem {
+public class LongbowoftheHeavensItem extends Item {
 	public LongbowoftheHeavensItem() {
 		super(new Item.Properties().durability(100).rarity(Rarity.COMMON));
 	}
@@ -89,7 +86,7 @@ public class LongbowoftheHeavensItem extends BowItem {
 							player.getInventory().removeItem(stack);
 					}
 				}
-				MendProcedure.execute(itemstack);
+				MendProcedure.execute(stack);
 			}
 		}
 	}

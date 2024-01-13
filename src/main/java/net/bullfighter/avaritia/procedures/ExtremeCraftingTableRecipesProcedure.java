@@ -13,5 +13,6 @@ public class ExtremeCraftingTableRecipesProcedure {
 		ExtremeCraftingTableRecipe4Procedure.execute(entity);
 		ExtremeCraftingTableRecipe5Procedure.execute(entity);
 		ExtremeCraftingTableRecipe6Procedure.execute(entity);
+		ExtremeCraftingTableRecipeCatalystProcedure.execute(entity);
 	}
 }

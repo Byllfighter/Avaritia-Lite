@@ -11,5 +11,5 @@ import net.minecraft.world.level.GameRules;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class AvaritiaModGameRules {
 	public static final GameRules.Key<GameRules.BooleanValue> WORLD_BREAKER_BEDROCK_BREAK = GameRules.register("worldBreakerBedrockBreak", GameRules.Category.PLAYER, GameRules.BooleanValue.create(true));
-	public static final GameRules.Key<GameRules.IntegerValue> NEUTRONIUMCOMPRESSORAMOUNT = GameRules.register("neutroniumCompressorAmount", GameRules.Category.MISC, GameRules.IntegerValue.create(1000));
+	public static final GameRules.Key<GameRules.IntegerValue> NEUTRONIUMCOMPRESSORAMOUNT = GameRules.register("neutroniumCompressorAmount", GameRules.Category.MISC, GameRules.IntegerValue.create(200));
 }
