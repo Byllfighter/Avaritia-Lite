@@ -1,0 +1,256 @@
+{
+  "_fv": 57,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "extreme_crafting_table_jei",
+    "result": {
+      "value": "CUSTOM:InfinityCatalyst"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "CUSTOM:DiamondLattice"
+      },
+      {
+        "value": "CUSTOM:CrystalMatrixIngot"
+      },
+      {
+        "value": "CUSTOM:PileofNeutrons"
+      },
+      {
+        "value": "CUSTOM:NeutroniumNugget"
+      },
+      {
+        "value": "CUSTOM:NeutroniumIngot"
+      },
+      {
+        "value": "CUSTOM:UltimateStew"
+      },
+      {
+        "value": "CUSTOM:CosmicMeatballs"
+      },
+      {
+        "value": "CUSTOM:EndestPearl"
+      },
+      {
+        "value": "CUSTOM:RecordFragment"
+      },
+      {
+        "value": "CUSTOM:IronSingularity"
+      },
+      {
+        "value": "CUSTOM:GoldenSingularity"
+      },
+      {
+        "value": "CUSTOM:LapisSingularity"
+      },
+      {
+        "value": "CUSTOM:RedstoneSingularity"
+      },
+      {
+        "value": "CUSTOM:NetherQuartzSingularity"
+      },
+      {
+        "value": "CUSTOM:DiamondSingularity"
+      },
+      {
+        "value": "CUSTOM:EmeraldSingularity"
+      },
+      {
+        "value": "CUSTOM:CopperSingularity"
+      },
+      {
+        "value": "CUSTOM:AmethystSingularity"
+      },
+      {
+        "value": "CUSTOM:NetheriteSingularity"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      }
+    ]
+  }
+}

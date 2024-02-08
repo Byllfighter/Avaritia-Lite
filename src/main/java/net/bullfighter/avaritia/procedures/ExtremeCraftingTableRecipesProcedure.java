@@ -14,5 +14,7 @@ public class ExtremeCraftingTableRecipesProcedure {
 		ExtremeCraftingTableRecipe5Procedure.execute(entity);
 		ExtremeCraftingTableRecipe6Procedure.execute(entity);
 		ExtremeCraftingTableRecipeCatalystProcedure.execute(entity);
+		ExtremeCraftingTableRecipeCosmicMeatballsProcedure.execute(entity);
+		ExtremeCraftingTableRecipeUltimateStewProcedure.execute(entity);
 	}
 }

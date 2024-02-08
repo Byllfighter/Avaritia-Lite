@@ -1,0 +1,252 @@
+{
+  "type": "avaritia:extreme_crafting_table_jei",
+  "ingredients": [
+    {
+      "item": "avaritia:pileof_neutrons"
+    },
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "item": "minecraft:potato"
+    },
+    {
+      "item": "minecraft:potato"
+    },
+    {
+      "item": "minecraft:beetroot"
+    },
+    {
+      "item": "minecraft:beetroot"
+    },
+    {
+      "item": "minecraft:apple"
+    },
+    {
+      "item": "minecraft:apple"
+    },
+    {
+      "item": "minecraft:melon"
+    },
+    {
+      "item": "minecraft:melon"
+    },
+    {
+      "item": "minecraft:pumpkin"
+    },
+    {
+      "item": "minecraft:pumpkin"
+    },
+    {
+      "item": "minecraft:cactus"
+    },
+    {
+      "item": "minecraft:cactus"
+    },
+    {
+      "item": "minecraft:red_mushroom"
+    },
+    {
+      "item": "minecraft:red_mushroom"
+    },
+    {
+      "item": "minecraft:brown_mushroom"
+    },
+    {
+      "item": "minecraft:brown_mushroom"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    }
+  ],
+  "output": {
+    "item": "avaritia:ultimate_stew",
+    "count": 1
+  }
+}

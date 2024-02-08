@@ -1,0 +1,252 @@
+{
+  "type": "avaritia:extreme_crafting_table_jei",
+  "ingredients": [
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "item": "minecraft:end_stone"
+    },
+    {
+      "item": "minecraft:end_stone"
+    },
+    {
+      "item": "minecraft:end_stone"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "item": "minecraft:end_stone"
+    },
+    {
+      "item": "minecraft:end_stone"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:end_stone"
+    },
+    {
+      "item": "minecraft:end_stone"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "item": "minecraft:end_stone"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:end_stone"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "item": "minecraft:end_stone"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "avaritia:neutronium_ingot"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:end_stone"
+    },
+    {
+      "item": "minecraft:end_stone"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "avaritia:neutronium_ingot"
+    },
+    {
+      "item": "minecraft:nether_star"
+    },
+    {
+      "item": "avaritia:neutronium_ingot"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:end_stone"
+    },
+    {
+      "item": "minecraft:end_stone"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "avaritia:neutronium_ingot"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:end_stone"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "item": "minecraft:end_stone"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:end_stone"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "item": "minecraft:end_stone"
+    },
+    {
+      "item": "minecraft:end_stone"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:end_stone"
+    },
+    {
+      "item": "minecraft:end_stone"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "item": "minecraft:end_stone"
+    },
+    {
+      "item": "minecraft:end_stone"
+    },
+    {
+      "item": "minecraft:end_stone"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    }
+  ],
+  "output": {
+    "item": "avaritia:endest_pearl",
+    "count": 1
+  }
+}

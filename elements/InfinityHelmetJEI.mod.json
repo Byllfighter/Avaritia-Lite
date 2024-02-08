@@ -1,0 +1,256 @@
+{
+  "_fv": 57,
+  "_type": "jeirecipe",
+  "definition": {
+    "category": "extreme_crafting_table_jei",
+    "result": {
+      "value": "CUSTOM:InfinityArmor.helmet"
+    },
+    "count": 1,
+    "ingredients": [
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "CUSTOM:NeutroniumIngot"
+      },
+      {
+        "value": "CUSTOM:NeutroniumIngot"
+      },
+      {
+        "value": "CUSTOM:NeutroniumIngot"
+      },
+      {
+        "value": "CUSTOM:NeutroniumIngot"
+      },
+      {
+        "value": "CUSTOM:NeutroniumIngot"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "CUSTOM:NeutroniumIngot"
+      },
+      {
+        "value": "CUSTOM:InfinityIngot"
+      },
+      {
+        "value": "CUSTOM:InfinityIngot"
+      },
+      {
+        "value": "CUSTOM:InfinityIngot"
+      },
+      {
+        "value": "CUSTOM:InfinityIngot"
+      },
+      {
+        "value": "CUSTOM:InfinityIngot"
+      },
+      {
+        "value": "CUSTOM:NeutroniumIngot"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "CUSTOM:NeutroniumIngot"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "CUSTOM:InfinityCatalyst"
+      },
+      {
+        "value": "CUSTOM:InfinityIngot"
+      },
+      {
+        "value": "CUSTOM:InfinityCatalyst"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "CUSTOM:NeutroniumIngot"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "CUSTOM:NeutroniumIngot"
+      },
+      {
+        "value": "CUSTOM:InfinityIngot"
+      },
+      {
+        "value": "CUSTOM:InfinityIngot"
+      },
+      {
+        "value": "CUSTOM:InfinityIngot"
+      },
+      {
+        "value": "CUSTOM:InfinityIngot"
+      },
+      {
+        "value": "CUSTOM:InfinityIngot"
+      },
+      {
+        "value": "CUSTOM:NeutroniumIngot"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "CUSTOM:NeutroniumIngot"
+      },
+      {
+        "value": "CUSTOM:InfinityIngot"
+      },
+      {
+        "value": "CUSTOM:InfinityIngot"
+      },
+      {
+        "value": "CUSTOM:InfinityIngot"
+      },
+      {
+        "value": "CUSTOM:InfinityIngot"
+      },
+      {
+        "value": "CUSTOM:InfinityIngot"
+      },
+      {
+        "value": "CUSTOM:NeutroniumIngot"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "CUSTOM:NeutroniumIngot"
+      },
+      {
+        "value": "CUSTOM:InfinityIngot"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "CUSTOM:InfinityIngot"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "CUSTOM:InfinityIngot"
+      },
+      {
+        "value": "CUSTOM:NeutroniumIngot"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      },
+      {
+        "value": "Blocks.AIR"
+      }
+    ]
+  }
+}

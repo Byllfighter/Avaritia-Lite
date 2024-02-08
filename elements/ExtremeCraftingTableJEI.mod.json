@@ -1,0 +1,511 @@
+{
+  "_fv": 57,
+  "_type": "jeirecipetype",
+  "definition": {
+    "textureSelector": "extreme_crafting_table_gui_jei.png",
+    "width": 260,
+    "height": 200,
+    "icon": {
+      "value": "CUSTOM:ExtremeCraftingTable"
+    },
+    "craftingtable": {
+      "value": "CUSTOM:ExtremeCraftingTable"
+    },
+    "enableCraftingtable": true,
+    "title": "Extreme Crafting Table",
+    "slotList": [
+      {
+        "type": "INPUT",
+        "x": 19,
+        "y": 24,
+        "slotid": 0
+      },
+      {
+        "type": "INPUT",
+        "x": 37,
+        "y": 24,
+        "slotid": 1
+      },
+      {
+        "type": "OUTPUT",
+        "x": 228,
+        "y": 97,
+        "slotid": 0
+      },
+      {
+        "type": "INPUT",
+        "x": 55,
+        "y": 24,
+        "slotid": 2
+      },
+      {
+        "type": "INPUT",
+        "x": 73,
+        "y": 24,
+        "slotid": 3
+      },
+      {
+        "type": "INPUT",
+        "x": 91,
+        "y": 24,
+        "slotid": 4
+      },
+      {
+        "type": "INPUT",
+        "x": 109,
+        "y": 24,
+        "slotid": 5
+      },
+      {
+        "type": "INPUT",
+        "x": 127,
+        "y": 24,
+        "slotid": 6
+      },
+      {
+        "type": "INPUT",
+        "x": 145,
+        "y": 24,
+        "slotid": 7
+      },
+      {
+        "type": "INPUT",
+        "x": 163,
+        "y": 24,
+        "slotid": 8
+      },
+      {
+        "type": "INPUT",
+        "x": 19,
+        "y": 42,
+        "slotid": 9
+      },
+      {
+        "type": "INPUT",
+        "x": 37,
+        "y": 42,
+        "slotid": 10
+      },
+      {
+        "type": "INPUT",
+        "x": 55,
+        "y": 42,
+        "slotid": 11
+      },
+      {
+        "type": "INPUT",
+        "x": 73,
+        "y": 42,
+        "slotid": 12
+      },
+      {
+        "type": "INPUT",
+        "x": 91,
+        "y": 42,
+        "slotid": 13
+      },
+      {
+        "type": "INPUT",
+        "x": 109,
+        "y": 42,
+        "slotid": 14
+      },
+      {
+        "type": "INPUT",
+        "x": 127,
+        "y": 42,
+        "slotid": 15
+      },
+      {
+        "type": "INPUT",
+        "x": 145,
+        "y": 42,
+        "slotid": 16
+      },
+      {
+        "type": "INPUT",
+        "x": 163,
+        "y": 42,
+        "slotid": 17
+      },
+      {
+        "type": "INPUT",
+        "x": 19,
+        "y": 60,
+        "slotid": 18
+      },
+      {
+        "type": "INPUT",
+        "x": 37,
+        "y": 60,
+        "slotid": 19
+      },
+      {
+        "type": "INPUT",
+        "x": 55,
+        "y": 60,
+        "slotid": 20
+      },
+      {
+        "type": "INPUT",
+        "x": 73,
+        "y": 60,
+        "slotid": 21
+      },
+      {
+        "type": "INPUT",
+        "x": 91,
+        "y": 60,
+        "slotid": 22
+      },
+      {
+        "type": "INPUT",
+        "x": 109,
+        "y": 60,
+        "slotid": 23
+      },
+      {
+        "type": "INPUT",
+        "x": 127,
+        "y": 60,
+        "slotid": 24
+      },
+      {
+        "type": "INPUT",
+        "x": 145,
+        "y": 60,
+        "slotid": 25
+      },
+      {
+        "type": "INPUT",
+        "x": 163,
+        "y": 60,
+        "slotid": 26
+      },
+      {
+        "type": "INPUT",
+        "x": 19,
+        "y": 78,
+        "slotid": 27
+      },
+      {
+        "type": "INPUT",
+        "x": 37,
+        "y": 78,
+        "slotid": 28
+      },
+      {
+        "type": "INPUT",
+        "x": 55,
+        "y": 78,
+        "slotid": 29
+      },
+      {
+        "type": "INPUT",
+        "x": 73,
+        "y": 78,
+        "slotid": 30
+      },
+      {
+        "type": "INPUT",
+        "x": 91,
+        "y": 78,
+        "slotid": 31
+      },
+      {
+        "type": "INPUT",
+        "x": 109,
+        "y": 78,
+        "slotid": 32
+      },
+      {
+        "type": "INPUT",
+        "x": 127,
+        "y": 78,
+        "slotid": 33
+      },
+      {
+        "type": "INPUT",
+        "x": 145,
+        "y": 78,
+        "slotid": 34
+      },
+      {
+        "type": "INPUT",
+        "x": 163,
+        "y": 78,
+        "slotid": 35
+      },
+      {
+        "type": "INPUT",
+        "x": 19,
+        "y": 96,
+        "slotid": 36
+      },
+      {
+        "type": "INPUT",
+        "x": 37,
+        "y": 96,
+        "slotid": 37
+      },
+      {
+        "type": "INPUT",
+        "x": 55,
+        "y": 96,
+        "slotid": 38
+      },
+      {
+        "type": "INPUT",
+        "x": 73,
+        "y": 96,
+        "slotid": 39
+      },
+      {
+        "type": "INPUT",
+        "x": 91,
+        "y": 96,
+        "slotid": 40
+      },
+      {
+        "type": "INPUT",
+        "x": 109,
+        "y": 96,
+        "slotid": 41
+      },
+      {
+        "type": "INPUT",
+        "x": 127,
+        "y": 96,
+        "slotid": 42
+      },
+      {
+        "type": "INPUT",
+        "x": 145,
+        "y": 96,
+        "slotid": 43
+      },
+      {
+        "type": "INPUT",
+        "x": 163,
+        "y": 96,
+        "slotid": 44
+      },
+      {
+        "type": "INPUT",
+        "x": 19,
+        "y": 114,
+        "slotid": 45
+      },
+      {
+        "type": "INPUT",
+        "x": 37,
+        "y": 114,
+        "slotid": 46
+      },
+      {
+        "type": "INPUT",
+        "x": 55,
+        "y": 114,
+        "slotid": 47
+      },
+      {
+        "type": "INPUT",
+        "x": 73,
+        "y": 114,
+        "slotid": 48
+      },
+      {
+        "type": "INPUT",
+        "x": 91,
+        "y": 114,
+        "slotid": 49
+      },
+      {
+        "type": "INPUT",
+        "x": 109,
+        "y": 114,
+        "slotid": 50
+      },
+      {
+        "type": "INPUT",
+        "x": 127,
+        "y": 114,
+        "slotid": 51
+      },
+      {
+        "type": "INPUT",
+        "x": 145,
+        "y": 114,
+        "slotid": 52
+      },
+      {
+        "type": "INPUT",
+        "x": 163,
+        "y": 114,
+        "slotid": 53
+      },
+      {
+        "type": "INPUT",
+        "x": 19,
+        "y": 132,
+        "slotid": 54
+      },
+      {
+        "type": "INPUT",
+        "x": 37,
+        "y": 132,
+        "slotid": 55
+      },
+      {
+        "type": "INPUT",
+        "x": 55,
+        "y": 132,
+        "slotid": 56
+      },
+      {
+        "type": "INPUT",
+        "x": 73,
+        "y": 132,
+        "slotid": 57
+      },
+      {
+        "type": "INPUT",
+        "x": 91,
+        "y": 132,
+        "slotid": 58
+      },
+      {
+        "type": "INPUT",
+        "x": 109,
+        "y": 132,
+        "slotid": 59
+      },
+      {
+        "type": "INPUT",
+        "x": 127,
+        "y": 132,
+        "slotid": 60
+      },
+      {
+        "type": "INPUT",
+        "x": 145,
+        "y": 132,
+        "slotid": 61
+      },
+      {
+        "type": "INPUT",
+        "x": 163,
+        "y": 132,
+        "slotid": 62
+      },
+      {
+        "type": "INPUT",
+        "x": 19,
+        "y": 150,
+        "slotid": 63
+      },
+      {
+        "type": "INPUT",
+        "x": 37,
+        "y": 150,
+        "slotid": 64
+      },
+      {
+        "type": "INPUT",
+        "x": 55,
+        "y": 150,
+        "slotid": 65
+      },
+      {
+        "type": "INPUT",
+        "x": 73,
+        "y": 150,
+        "slotid": 66
+      },
+      {
+        "type": "INPUT",
+        "x": 91,
+        "y": 150,
+        "slotid": 67
+      },
+      {
+        "type": "INPUT",
+        "x": 109,
+        "y": 150,
+        "slotid": 68
+      },
+      {
+        "type": "INPUT",
+        "x": 127,
+        "y": 150,
+        "slotid": 69
+      },
+      {
+        "type": "INPUT",
+        "x": 145,
+        "y": 150,
+        "slotid": 70
+      },
+      {
+        "type": "INPUT",
+        "x": 163,
+        "y": 150,
+        "slotid": 71
+      },
+      {
+        "type": "INPUT",
+        "x": 19,
+        "y": 168,
+        "slotid": 72
+      },
+      {
+        "type": "INPUT",
+        "x": 37,
+        "y": 168,
+        "slotid": 73
+      },
+      {
+        "type": "INPUT",
+        "x": 55,
+        "y": 168,
+        "slotid": 74
+      },
+      {
+        "type": "INPUT",
+        "x": 73,
+        "y": 168,
+        "slotid": 75
+      },
+      {
+        "type": "INPUT",
+        "x": 91,
+        "y": 168,
+        "slotid": 76
+      },
+      {
+        "type": "INPUT",
+        "x": 109,
+        "y": 168,
+        "slotid": 77
+      },
+      {
+        "type": "INPUT",
+        "x": 127,
+        "y": 168,
+        "slotid": 78
+      },
+      {
+        "type": "INPUT",
+        "x": 145,
+        "y": 168,
+        "slotid": 79
+      },
+      {
+        "type": "INPUT",
+        "x": 163,
+        "y": 168,
+        "slotid": 80
+      }
+    ]
+  }
+}

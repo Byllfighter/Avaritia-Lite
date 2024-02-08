@@ -12,7 +12,7 @@
     "recipeShapeless": true,
     "recipeSlots": [
       {
-        "value": "Items.RECORD_13"
+        "value": "TAG:minecraft:music_discs"
       },
       {
         "value": ""

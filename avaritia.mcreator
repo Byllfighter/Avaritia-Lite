@@ -1282,12 +1282,7 @@
         "files": [
           "src/main/java/net/bullfighter/avaritia/procedures/FlyFixerProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       }
     },
     {
@@ -1971,6 +1966,292 @@
           "src/main/resources/assets/avaritia/models/item/netherite_singularity.json"
         ]
       }
+    },
+    {
+      "name": "ExtremeCraftingTableJEI",
+      "type": "jeirecipetype",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "extreme_crafting_table_jei",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/jei_recipes/ExtremeCraftingTableJEIRecipe.java",
+          "src/main/java/net/bullfighter/avaritia/jei_recipes/ExtremeCraftingTableJEIRecipeCategory.java"
+        ]
+      }
+    },
+    {
+      "name": "SwordoftheCosmosJEI",
+      "type": "jeirecipe",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "swordofthe_cosmos_jei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/recipes/swordofthe_cosmos_jei.json"
+        ]
+      }
+    },
+    {
+      "name": "LongbowoftheHeavensJEI",
+      "type": "jeirecipe",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "longbowofthe_heavens_jei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/recipes/longbowofthe_heavens_jei.json"
+        ]
+      }
+    },
+    {
+      "name": "WorldBreakerJEI",
+      "type": "jeirecipe",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "world_breaker_jei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/recipes/world_breaker_jei.json"
+        ]
+      }
+    },
+    {
+      "name": "InfinityIngotJEI",
+      "type": "jeirecipe",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinity_ingot_jei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/recipes/infinity_ingot_jei.json"
+        ]
+      }
+    },
+    {
+      "name": "PlanetEaterJEI",
+      "type": "jeirecipe",
+      "sortid": 117,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "planet_eater_jei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/recipes/planet_eater_jei.json"
+        ]
+      }
+    },
+    {
+      "name": "NaturesRuinJEI",
+      "type": "jeirecipe",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "natures_ruin_jei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/recipes/natures_ruin_jei.json"
+        ]
+      }
+    },
+    {
+      "name": "HoeoftheGreenEarthJEI",
+      "type": "jeirecipe",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hoeofthe_green_earth_jei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/recipes/hoeofthe_green_earth_jei.json"
+        ]
+      }
+    },
+    {
+      "name": "InfinityHelmetJEI",
+      "type": "jeirecipe",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinity_helmet_jei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/recipes/infinity_helmet_jei.json"
+        ]
+      }
+    },
+    {
+      "name": "InfinityChestplateJEI",
+      "type": "jeirecipe",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinity_chestplate_jei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/recipes/infinity_chestplate_jei.json"
+        ]
+      }
+    },
+    {
+      "name": "InfinityLeggingsJEI",
+      "type": "jeirecipe",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinity_leggings_jei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/recipes/infinity_leggings_jei.json"
+        ]
+      }
+    },
+    {
+      "name": "InfinityBootsJEI",
+      "type": "jeirecipe",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinity_boots_jei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/recipes/infinity_boots_jei.json"
+        ]
+      }
+    },
+    {
+      "name": "SkullfireSwordJEI",
+      "type": "jeirecipe",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skullfire_sword_jei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/recipes/skullfire_sword_jei.json"
+        ]
+      }
+    },
+    {
+      "name": "EndestPearlJEI",
+      "type": "jeirecipe",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "endest_pearl_jei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/recipes/endest_pearl_jei.json"
+        ]
+      }
+    },
+    {
+      "name": "CosmicMeatballsJEI",
+      "type": "jeirecipe",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cosmic_meatballs_jei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/recipes/cosmic_meatballs_jei.json"
+        ]
+      }
+    },
+    {
+      "name": "NeutronCollectorJEI",
+      "type": "jeirecipe",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "neutron_collector_jei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/recipes/neutron_collector_jei.json"
+        ]
+      }
+    },
+    {
+      "name": "NeutroniumCompressorJEI",
+      "type": "jeirecipe",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "neutronium_compressor_jei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/recipes/neutronium_compressor_jei.json"
+        ]
+      }
+    },
+    {
+      "name": "InfinityCatalystJEI",
+      "type": "jeirecipe",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinity_catalyst_jei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/recipes/infinity_catalyst_jei.json"
+        ]
+      }
+    },
+    {
+      "name": "ExtremeCraftingTableRecipeCosmicMeatballs",
+      "type": "procedure",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "extreme_crafting_table_recipe_cosmic_meatballs",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/ExtremeCraftingTableRecipeCosmicMeatballsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ExtremeCraftingTableRecipeUltimateStew",
+      "type": "procedure",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "extreme_crafting_table_recipe_ultimate_stew",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/ExtremeCraftingTableRecipeUltimateStewProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "UltimateStewJEI",
+      "type": "jeirecipe",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ultimate_stew_jei",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/recipes/ultimate_stew_jei.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -2143,7 +2424,7 @@
   "workspaceSettings": {
     "modid": "avaritia",
     "modName": "Avaritia Lite",
-    "version": "1.7.0",
+    "version": "1.8.0",
     "author": "Bullfighter, MCreator",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/avaritia-lite",
     "license": "Not specified",
@@ -2153,7 +2434,9 @@
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
-    "mcreatorDependencies": [],
+    "mcreatorDependencies": [
+      "jei"
+    ],
     "currentGenerator": "forge-1.20.1",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.bullfighter.avaritia",

@@ -1,0 +1,252 @@
+{
+  "type": "avaritia:extreme_crafting_table_jei",
+  "ingredients": [
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "item": "avaritia:neutronium_ingot"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "item": "avaritia:neutronium_ingot"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "item": "avaritia:infinity_catalyst"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    }
+  ],
+  "output": {
+    "item": "avaritia:swordofthe_cosmos",
+    "count": 1
+  }
+}
