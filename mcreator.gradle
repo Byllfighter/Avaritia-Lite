@@ -1,5 +1,16 @@
 repositories {
   maven {
+    url = "https://cursemaven.com"
+  }
+}
+
+dependencies {
+  implementation fg.deobf("curse.maven:kleidersplayerrenderer-682065:5083323")
+}
+
+
+repositories {
+  maven {
     name = "Progwml6's maven"
     url = "https://dvs1.progwml6.com/files/maven/"
   }

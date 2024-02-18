@@ -14,7 +14,7 @@
     "damage": 9999.0,
     "knockback": 5,
     "entityModel": "Modellongbowoftheheavensprojectile",
-    "customModelTexture": "arrow.png",
+    "customModelTexture": "heavenarrow.png",
     "onHitsBlock": {
       "name": "LongbowoftheHeavensBulletHitsBlock"
     }

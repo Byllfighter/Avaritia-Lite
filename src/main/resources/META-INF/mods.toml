@@ -4,7 +4,7 @@ license="Not specified"
 
 [[mods]]
 modId="avaritia"
-version="1.8.0"
+version="1.9.0"
 displayName="Avaritia Lite"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/avaritia-lite"
 logoFile="logo.png"
@@ -20,6 +20,12 @@ authors="Bullfighter, MCreator"
 
 
 
+[[dependencies.avaritia]]
+    modId="kleidersplayerrenderer"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 [[dependencies.avaritia]]
     modId="jei"
     mandatory=false

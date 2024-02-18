@@ -2252,6 +2252,25 @@
           "src/main/resources/data/avaritia/recipes/ultimate_stew_jei.json"
         ]
       }
+    },
+    {
+      "name": "PlayerRender",
+      "type": "procedure",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_render",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/PlayerRenderProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -2424,7 +2443,7 @@
   "workspaceSettings": {
     "modid": "avaritia",
     "modName": "Avaritia Lite",
-    "version": "1.8.0",
+    "version": "1.9.0",
     "author": "Bullfighter, MCreator",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/avaritia-lite",
     "license": "Not specified",
@@ -2435,6 +2454,7 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
+      "kleidersplayerrenderer",
       "jei"
     ],
     "currentGenerator": "forge-1.20.1",

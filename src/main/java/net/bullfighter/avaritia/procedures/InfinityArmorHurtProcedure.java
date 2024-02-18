@@ -129,7 +129,7 @@ public class InfinityArmorHurtProcedure {
 						_player.getAbilities().invulnerable = false;
 						_player.onUpdateAbilities();
 					}
-					entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.GENERIC)), 4);
+					entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.PLAYER_EXPLOSION), sourceentity), 4);
 					if (entity instanceof Player _player) {
 						_player.getAbilities().invulnerable = true;
 						_player.onUpdateAbilities();

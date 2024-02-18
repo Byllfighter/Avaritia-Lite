@@ -16,7 +16,7 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 public class LongbowoftheHeavensProjectileRenderer extends EntityRenderer<LongbowoftheHeavensProjectileEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("avaritia:textures/entities/arrow.png");
+	private static final ResourceLocation texture = new ResourceLocation("avaritia:textures/entities/heavenarrow.png");
 	private final Modellongbowoftheheavensprojectile model;
 
 	public LongbowoftheHeavensProjectileRenderer(EntityRendererProvider.Context context) {
