@@ -933,7 +933,31 @@ public class NeutroniumCompressorTickProcedure {
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 					return _retval.get();
 				}
-			}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == Blocks.COPPER_BLOCK.asItem()) {
+			}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == Blocks.COPPER_BLOCK.asItem() || (new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+					BlockEntity _ent = world.getBlockEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+					return _retval.get();
+				}
+			}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == Blocks.EXPOSED_COPPER.asItem() || (new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+					BlockEntity _ent = world.getBlockEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+					return _retval.get();
+				}
+			}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == Blocks.WEATHERED_COPPER.asItem() || (new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+					BlockEntity _ent = world.getBlockEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+					return _retval.get();
+				}
+			}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == Blocks.OXIDIZED_COPPER.asItem()) {
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -1101,7 +1125,7 @@ public class NeutroniumCompressorTickProcedure {
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_blockEntity != null)
-						_blockEntity.getPersistentData().putString("material", "Amethyst");
+						_blockEntity.getPersistentData().putString("material", "Netherite");
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
