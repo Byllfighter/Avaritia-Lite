@@ -2271,6 +2271,19 @@
           }
         ]
       }
+    },
+    {
+      "name": "ExtremeCraftingTableRecipeEvent",
+      "type": "code",
+      "sortid": 136,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "extreme_crafting_table_recipe_event",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/ExtremeCraftingTableRecipeEvent.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -2443,7 +2456,7 @@
   "workspaceSettings": {
     "modid": "avaritia",
     "modName": "Avaritia Lite",
-    "version": "1.9.1",
+    "version": "1.9.2",
     "author": "Bullfighter, MCreator",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/avaritia-lite",
     "license": "Not specified",
