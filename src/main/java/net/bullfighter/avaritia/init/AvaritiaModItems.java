@@ -13,12 +13,14 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
 import net.bullfighter.avaritia.item.WorldBreakerItem;
+import net.bullfighter.avaritia.item.WorldBreakerHammerItem;
 import net.bullfighter.avaritia.item.UltimateStewItem;
 import net.bullfighter.avaritia.item.SwordoftheCosmosItem;
 import net.bullfighter.avaritia.item.SkullfireSwordItem;
 import net.bullfighter.avaritia.item.RedstoneSingularityItem;
 import net.bullfighter.avaritia.item.RecordFragmentItem;
 import net.bullfighter.avaritia.item.PlanetEaterItem;
+import net.bullfighter.avaritia.item.PlanetEaterDestroyerItem;
 import net.bullfighter.avaritia.item.PileofNeutronsItem;
 import net.bullfighter.avaritia.item.NeutroniumNuggetItem;
 import net.bullfighter.avaritia.item.NeutroniumIngotItem;
@@ -87,6 +89,8 @@ public class AvaritiaModItems {
 	public static final RegistryObject<Item> LONGBOWOFTHE_HEAVENS = REGISTRY.register("longbowofthe_heavens", () -> new LongbowoftheHeavensItem());
 	public static final RegistryObject<Item> ENDEST_PEARL = REGISTRY.register("endest_pearl", () -> new EndestPearlItem());
 	public static final RegistryObject<Item> BLACK_HOLE_ITEM = REGISTRY.register("black_hole_item", () -> new BlackHoleItemItem());
+	public static final RegistryObject<Item> WORLD_BREAKER_HAMMER = REGISTRY.register("world_breaker_hammer", () -> new WorldBreakerHammerItem());
+	public static final RegistryObject<Item> PLANET_EATER_DESTROYER = REGISTRY.register("planet_eater_destroyer", () -> new PlanetEaterDestroyerItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

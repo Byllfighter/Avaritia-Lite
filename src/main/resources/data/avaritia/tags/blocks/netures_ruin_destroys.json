@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:saplings",
+    "#minecraft:logs",
+    "#minecraft:leaves",
+    "#minecraft:flowers",
+    "minecraft:grass",
+    "minecraft:fern",
+    "minecraft:tall_grass",
+    "minecraft:tall_seagrass",
+    "minecraft:sugar_cane",
+    "minecraft:bamboo_sapling",
+    "minecraft:bamboo"
+  ]
+}

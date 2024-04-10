@@ -459,7 +459,7 @@
       "type": "tool",
       "sortid": 22,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "planet_eater",
       "metadata": {
         "files": [
@@ -473,7 +473,7 @@
       "type": "tool",
       "sortid": 23,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "natures_ruin",
       "metadata": {
         "files": [
@@ -2284,6 +2284,248 @@
           "src/main/java/net/bullfighter/avaritia/ExtremeCraftingTableRecipeEvent.java"
         ]
       }
+    },
+    {
+      "name": "WorldBreakerHammer",
+      "type": "tool",
+      "sortid": 137,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "world_breaker_hammer",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/avaritia/models/item/world_breaker_hammer.json",
+          "src/main/java/net/bullfighter/avaritia/item/WorldBreakerHammerItem.java"
+        ]
+      }
+    },
+    {
+      "name": "WorldBreakerRightclicked",
+      "type": "procedure",
+      "sortid": 138,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "world_breaker_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/WorldBreakerRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "WorldBreakerHammerRightclicked",
+      "type": "procedure",
+      "sortid": 139,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "world_breaker_hammer_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/WorldBreakerHammerRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "WorldBreakerHammerBlockDestroy",
+      "type": "procedure",
+      "sortid": 140,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "world_breaker_hammer_block_destroy",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/WorldBreakerHammerBlockDestroyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "direction",
+            "type": "direction"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PlanetEaterDestroyer",
+      "type": "tool",
+      "sortid": 142,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "planet_eater_destroyer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/item/PlanetEaterDestroyerItem.java",
+          "src/main/resources/assets/avaritia/models/item/planet_eater_destroyer.json"
+        ]
+      }
+    },
+    {
+      "name": "PlanetEaterRightclicked",
+      "type": "procedure",
+      "sortid": 141,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "planet_eater_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/PlanetEaterRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PlanetEaterDestroyerRightclicked",
+      "type": "procedure",
+      "sortid": 143,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "planet_eater_destroyer_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/PlanetEaterDestroyerRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PlanetEaterDestroyerBlockDestroy",
+      "type": "procedure",
+      "sortid": 144,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "planet_eater_destroyer_block_destroy",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/PlanetEaterDestroyerBlockDestroyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "direction",
+            "type": "direction"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "NaturesRuinRightclicked",
+      "type": "procedure",
+      "sortid": 145,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "natures_ruin_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/NaturesRuinRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "NeturesRuinDestroys",
+      "type": "tag",
+      "sortid": 146,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netures_ruin_destroys",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/avaritia/tags/blocks/netures_ruin_destroys.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -2369,12 +2611,14 @@
       "item.avaritia.record_fragment.description": "§8Нравится верить в свободу музыки~§r",
       "item.avaritia.neutronium_ingot.description": "§8Плотное сердце звезды в виде удобного слитка.§r",
       "item.avaritia.swordofthe_cosmos": "§cМеч Космоса§r",
+      "item.avaritia.planet_eater_destroyer": "§cPlanet Eater§r",
       "item.avaritia.nether_quartz_singularity": "Кварцевая Сингулярность",
       "item.avaritia.pileof_neutrons": "Пылинка Нейтрония",
       "item.avaritia.infinity_armor_boots": "§cБесконечные ботинки§r",
       "item.avaritia.natures_ruin": "§cРазрушитель Природы§r",
       "item.avaritia.neutronium_nugget": "Кусочек Нейтрония",
       "item.avaritia.crystal_matrix_ingot.description": "§8Это еще не окончательная форма.§r",
+      "item.avaritia.world_breaker_hammer": "§cWorld Breaker§r",
       "item.avaritia.endest_pearl": "Бесконечный жемчуг",
       "item_group.avaritia.avaritiatab": "Аварития",
       "block.avaritia.neutronium_block": "Блок Нейтрониума",
@@ -2436,12 +2680,14 @@
       "item.avaritia.record_fragment.description": "§8One likes to believe in the freedom of music~§r",
       "item.avaritia.neutronium_ingot.description": "§8The dense heart of a star in convenient ingot form.§r",
       "item.avaritia.swordofthe_cosmos": "§cSword of the Cosmos§r",
+      "item.avaritia.planet_eater_destroyer": "§cPlanet Eater§r",
       "item.avaritia.nether_quartz_singularity": "Nether Quartz Singularity",
       "item.avaritia.pileof_neutrons": "Pile of Neutrons",
       "item.avaritia.infinity_armor_boots": "§cInfinity Boots§r",
       "item.avaritia.natures_ruin": "§cNature\u0027s Ruin§r",
       "item.avaritia.neutronium_nugget": "Neutronium Nugget",
       "item.avaritia.crystal_matrix_ingot.description": "§8This isn\u0027t even its final form.§r",
+      "item.avaritia.world_breaker_hammer": "§cWorld Breaker§r",
       "item.avaritia.endest_pearl": "Endest Pearl",
       "item_group.avaritia.avaritiatab": "Avaritia",
       "block.avaritia.neutronium_block": "Neutronium Block",
@@ -2456,7 +2702,7 @@
   "workspaceSettings": {
     "modid": "avaritia",
     "modName": "Avaritia Lite",
-    "version": "1.9.2",
+    "version": "1.10.0",
     "author": "Bullfighter, MCreator",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/avaritia-lite",
     "license": "Not specified",

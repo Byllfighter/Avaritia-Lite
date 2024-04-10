@@ -30,6 +30,12 @@
     "immuneToFire": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
+    "onRightClickedInAir": {
+      "name": "WorldBreakerRightclicked"
+    },
+    "onRightClickedOnBlock": {
+      "name": "WorldBreakerRightclicked"
+    },
     "onEntityHitWith": {
       "name": "Mend"
     },

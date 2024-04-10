@@ -2,40 +2,47 @@
   "_fv": 57,
   "_type": "tool",
   "definition": {
-    "toolType": "Spade",
+    "toolType": "Pickaxe",
     "renderType": 0,
     "blockingRenderType": 0,
-    "texture": "shovel",
+    "texture": "infinity_pickaxe_hammer",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
-    "name": "§cPlanet Eater§r",
+    "name": "§cWorld Breaker§r",
     "specialInformation": {
       "fixedValue": []
     },
     "creativeTab": {
-      "value": "CUSTOM:Avaritiatab"
+      "value": "No creative tab entry"
     },
-    "harvestLevel": 1000,
+    "harvestLevel": 99999,
     "efficiency": 99999.0,
     "attackSpeed": 1.0,
-    "enchantability": 100,
-    "damageVsEntity": 9.0,
-    "usageCount": 100,
+    "enchantability": 99999,
+    "damageVsEntity": 8.0,
+    "usageCount": 1000,
     "blocksAffected": [],
     "glowCondition": {
-      "fixedValue": false
+      "fixedValue": true,
+      "name": "NeverGlow"
     },
     "repairItems": [],
     "immuneToFire": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "onRightClickedInAir": {
-      "name": "PlanetEaterRightclicked"
+      "name": "WorldBreakerHammerRightclicked"
     },
     "onRightClickedOnBlock": {
-      "name": "PlanetEaterRightclicked"
+      "name": "WorldBreakerHammerRightclicked"
     },
-    "onItemInUseTick": {
+    "onEntityHitWith": {
+      "name": "Mend"
+    },
+    "onItemInInventoryTick": {
+      "name": "WorldBreakerTick"
+    },
+    "onBlockDestroyedWithTool": {
       "name": "Mend"
     }
   }

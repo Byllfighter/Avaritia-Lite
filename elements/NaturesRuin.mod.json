@@ -22,10 +22,16 @@
     "damageVsEntity": 21.0,
     "usageCount": 100,
     "blocksAffected": [],
+    "glowCondition": {
+      "fixedValue": false
+    },
     "repairItems": [],
     "immuneToFire": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
+    "onRightClickedInAir": {
+      "name": "NaturesRuinRightclicked"
+    },
     "onItemInUseTick": {
       "name": "Mend"
     }

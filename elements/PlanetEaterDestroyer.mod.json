@@ -5,7 +5,7 @@
     "toolType": "Spade",
     "renderType": 0,
     "blockingRenderType": 0,
-    "texture": "shovel",
+    "texture": "infinity_shovel_destroyer",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
     "name": "§cPlanet Eater§r",
@@ -13,7 +13,7 @@
       "fixedValue": []
     },
     "creativeTab": {
-      "value": "CUSTOM:Avaritiatab"
+      "value": "No creative tab entry"
     },
     "harvestLevel": 1000,
     "efficiency": 99999.0,
@@ -30,10 +30,10 @@
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "onRightClickedInAir": {
-      "name": "PlanetEaterRightclicked"
+      "name": "PlanetEaterDestroyerRightclicked"
     },
     "onRightClickedOnBlock": {
-      "name": "PlanetEaterRightclicked"
+      "name": "PlanetEaterDestroyerRightclicked"
     },
     "onItemInUseTick": {
       "name": "Mend"
