@@ -1911,7 +1911,7 @@
       "type": "procedure",
       "sortid": 111,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "extreme_crafting_table_recipe_catalyst",
       "metadata": {
         "files": [
@@ -2207,7 +2207,7 @@
       "type": "procedure",
       "sortid": 130,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "extreme_crafting_table_recipe_cosmic_meatballs",
       "metadata": {
         "files": [
@@ -2226,7 +2226,7 @@
       "type": "procedure",
       "sortid": 131,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "extreme_crafting_table_recipe_ultimate_stew",
       "metadata": {
         "files": [
@@ -2526,6 +2526,58 @@
           "src/main/resources/data/avaritia/tags/blocks/netures_ruin_destroys.json"
         ]
       }
+    },
+    {
+      "name": "ExtremeCraftingTableRecipeShapeless",
+      "type": "code",
+      "sortid": 147,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "extreme_crafting_table_recipe_shapeless",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/ExtremeCraftingTableRecipeShapeless.java"
+        ]
+      }
+    },
+    {
+      "name": "ExtremeCraftingTableRecipeCatalystEvent",
+      "type": "code",
+      "sortid": 149,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "extreme_crafting_table_recipe_catalyst_event",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/ExtremeCraftingTableRecipeCatalystEvent.java"
+        ]
+      }
+    },
+    {
+      "name": "ExtremeCraftingTableRecipeCosmicMeatballsEvent",
+      "type": "code",
+      "sortid": 150,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "extreme_crafting_table_recipe_cosmic_meatballs_event",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/ExtremeCraftingTableRecipeCosmicMeatballsEvent.java"
+        ]
+      }
+    },
+    {
+      "name": "ExtremeCraftingTableRecipeUltimateStewEvent",
+      "type": "code",
+      "sortid": 151,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "extreme_crafting_table_recipe_ultimate_stew_event",
+      "metadata": {
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/ExtremeCraftingTableRecipeUltimateStewEvent.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -2702,7 +2754,7 @@
   "workspaceSettings": {
     "modid": "avaritia",
     "modName": "Avaritia Lite",
-    "version": "1.10.0",
+    "version": "1.10.1",
     "author": "Bullfighter, MCreator",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/avaritia-lite",
     "license": "Not specified",
