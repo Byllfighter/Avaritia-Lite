@@ -3,7 +3,7 @@ package net.bullfighter.avaritia.procedures;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraftforge.common.MinecraftForge;
+import net.neoforged.neoforge.common.NeoForge;
 import net.bullfighter.avaritia.ExtremeCraftingTableRecipeShapeless;
 import net.bullfighter.avaritia.ExtremeCraftingTableRecipeUltimateStewEvent;
 import net.bullfighter.avaritia.init.AvaritiaModItems;
@@ -38,7 +38,7 @@ public class ExtremeCraftingTableRecipeUltimateStewProcedure {
 		requiredItems.add(new ItemStack(Items.RED_MUSHROOM));
 		requiredItems.add(new ItemStack(Items.BROWN_MUSHROOM));
 		requiredItems.add(new ItemStack(Items.BROWN_MUSHROOM));
-        MinecraftForge.EVENT_BUS.post(new ExtremeCraftingTableRecipeUltimateStewEvent(entity, requiredItems));
+        NeoForge.EVENT_BUS.post(new ExtremeCraftingTableRecipeUltimateStewEvent(entity, requiredItems));
 
         ExtremeCraftingTableRecipeShapeless.execute(entity, requiredItems, new ItemStack(AvaritiaModItems.ULTIMATE_STEW.get(), 4));
     }

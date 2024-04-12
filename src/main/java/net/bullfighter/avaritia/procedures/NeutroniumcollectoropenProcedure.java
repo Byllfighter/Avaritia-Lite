@@ -9,25 +9,19 @@ public class NeutroniumcollectoropenProcedure {
 		if (entity == null)
 			return;
 		{
-			double _setval = x;
-			entity.getCapability(AvaritiaModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.neutroniumcollectorx = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			AvaritiaModVariables.PlayerVariables _vars = entity.getData(AvaritiaModVariables.PLAYER_VARIABLES);
+			_vars.neutroniumcollectorx = x;
+			_vars.syncPlayerVariables(entity);
 		}
 		{
-			double _setval = y;
-			entity.getCapability(AvaritiaModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.neutroniumcollectory = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			AvaritiaModVariables.PlayerVariables _vars = entity.getData(AvaritiaModVariables.PLAYER_VARIABLES);
+			_vars.neutroniumcollectory = y;
+			_vars.syncPlayerVariables(entity);
 		}
 		{
-			double _setval = z;
-			entity.getCapability(AvaritiaModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.neutroniumcollectorz = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			AvaritiaModVariables.PlayerVariables _vars = entity.getData(AvaritiaModVariables.PLAYER_VARIABLES);
+			_vars.neutroniumcollectorz = z;
+			_vars.syncPlayerVariables(entity);
 		}
 	}
 }

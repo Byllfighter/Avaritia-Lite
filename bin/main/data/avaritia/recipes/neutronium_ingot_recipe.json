@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "avaritia:neutronium_nugget"
+    },
+    {
+      "item": "avaritia:neutronium_nugget"
+    },
+    {
+      "item": "avaritia:neutronium_nugget"
+    },
+    {
+      "item": "avaritia:neutronium_nugget"
+    },
+    {
+      "item": "avaritia:neutronium_nugget"
+    },
+    {
+      "item": "avaritia:neutronium_nugget"
+    },
+    {
+      "item": "avaritia:neutronium_nugget"
+    },
+    {
+      "item": "avaritia:neutronium_nugget"
+    },
+    {
+      "item": "avaritia:neutronium_nugget"
+    }
+  ],
+  "result": {
+    "item": "avaritia:neutronium_ingot",
+    "count": 1
+  }
+}

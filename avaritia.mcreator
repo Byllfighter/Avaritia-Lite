@@ -102,6 +102,7 @@
       "registry_name": "neutron_collector",
       "metadata": {
         "files": [
+          "src/main/resources/data/avaritia/loot_tables/blocks/neutron_collector.json",
           "src/main/java/net/bullfighter/avaritia/block/NeutronCollectorBlock.java",
           "src/main/resources/assets/avaritia/models/block/neutron_collector.json",
           "src/main/resources/assets/avaritia/models/item/neutron_collector.json",
@@ -417,6 +418,7 @@
           "src/main/resources/assets/avaritia/models/block/neutronium_compressor.json",
           "src/main/java/net/bullfighter/avaritia/block/NeutroniumCompressorBlock.java",
           "src/main/resources/assets/avaritia/blockstates/neutronium_compressor.json",
+          "src/main/resources/data/avaritia/loot_tables/blocks/neutronium_compressor.json",
           "src/main/resources/assets/avaritia/models/item/neutronium_compressor.json"
         ]
       }
@@ -806,6 +808,7 @@
           "src/main/resources/assets/avaritia/blockstates/compressed_crafting_table.json",
           "src/main/java/net/bullfighter/avaritia/block/CompressedCraftingTableBlock.java",
           "src/main/resources/assets/avaritia/models/item/compressed_crafting_table.json",
+          "src/main/resources/data/avaritia/loot_tables/blocks/compressed_crafting_table.json",
           "src/main/resources/assets/avaritia/models/block/compressed_crafting_table.json"
         ]
       }
@@ -821,6 +824,7 @@
         "files": [
           "src/main/java/net/bullfighter/avaritia/block/DoubleCompressedCraftingTableBlock.java",
           "src/main/resources/assets/avaritia/models/block/double_compressed_crafting_table.json",
+          "src/main/resources/data/avaritia/loot_tables/blocks/double_compressed_crafting_table.json",
           "src/main/resources/assets/avaritia/blockstates/double_compressed_crafting_table.json",
           "src/main/resources/assets/avaritia/models/item/double_compressed_crafting_table.json"
         ]
@@ -864,6 +868,7 @@
           "src/main/resources/assets/avaritia/blockstates/extreme_crafting_table.json",
           "src/main/resources/assets/avaritia/models/item/extreme_crafting_table.json",
           "src/main/java/net/bullfighter/avaritia/block/ExtremeCraftingTableBlock.java",
+          "src/main/resources/data/avaritia/loot_tables/blocks/extreme_crafting_table.json",
           "src/main/java/net/bullfighter/avaritia/block/entity/ExtremeCraftingTableBlockEntity.java",
           "src/main/resources/assets/avaritia/models/block/extreme_crafting_table.json"
         ]
@@ -879,6 +884,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/bullfighter/avaritia/block/NeutroniumBlockBlock.java",
+          "src/main/resources/data/avaritia/loot_tables/blocks/neutronium_block.json",
           "src/main/resources/assets/avaritia/models/item/neutronium_block.json",
           "src/main/resources/assets/avaritia/blockstates/neutronium_block.json",
           "src/main/resources/assets/avaritia/models/block/neutronium_block.json"
@@ -897,7 +903,8 @@
           "src/main/resources/assets/avaritia/models/block/infinity_block.json",
           "src/main/java/net/bullfighter/avaritia/block/InfinityBlockBlock.java",
           "src/main/resources/assets/avaritia/blockstates/infinity_block.json",
-          "src/main/resources/assets/avaritia/models/item/infinity_block.json"
+          "src/main/resources/assets/avaritia/models/item/infinity_block.json",
+          "src/main/resources/data/avaritia/loot_tables/blocks/infinity_block.json"
         ]
       }
     },
@@ -912,6 +919,7 @@
         "files": [
           "src/main/java/net/bullfighter/avaritia/block/CrystalMatrixBlock.java",
           "src/main/resources/assets/avaritia/models/block/crystal_matrix.json",
+          "src/main/resources/data/avaritia/loot_tables/blocks/crystal_matrix.json",
           "src/main/resources/assets/avaritia/models/item/crystal_matrix.json",
           "src/main/resources/assets/avaritia/blockstates/crystal_matrix.json"
         ]
@@ -2261,15 +2269,7 @@
       "locked_code": false,
       "registry_name": "player_render",
       "metadata": {
-        "files": [
-          "src/main/java/net/bullfighter/avaritia/procedures/PlayerRenderProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       }
     },
     {
@@ -2358,6 +2358,10 @@
         ],
         "dependencies": [
           {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
             "name": "direction",
             "type": "direction"
           },
@@ -2376,6 +2380,10 @@
           {
             "name": "z",
             "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -2515,19 +2523,6 @@
       }
     },
     {
-      "name": "NeturesRuinDestroys",
-      "type": "tag",
-      "sortid": 146,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "netures_ruin_destroys",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/avaritia/tags/blocks/netures_ruin_destroys.json"
-        ]
-      }
-    },
-    {
       "name": "ExtremeCraftingTableRecipeShapeless",
       "type": "code",
       "sortid": 147,
@@ -2607,6 +2602,30 @@
     }
   ],
   "sound_elements": [],
+  "tag_elements": {
+    "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:NeutroniumBlock",
+      "~CUSTOM:ExtremeCraftingTable",
+      "~CUSTOM:NeutroniumCompressor"
+    ],
+    "BLOCKS:minecraft:mineable/axe": [
+      "~CUSTOM:DoubleCompressedCraftingTable",
+      "~CUSTOM:CompressedCraftingTable"
+    ],
+    "BLOCKS:mod:netures_ruin_destroys": [
+      "TAG:minecraft:saplings",
+      "TAG:minecraft:logs",
+      "TAG:minecraft:leaves",
+      "TAG:minecraft:flowers",
+      "Blocks.TALLGRASS#1",
+      "Blocks.TALLGRASS#2",
+      "Blocks.DOUBLE_PLANT#2",
+      "Blocks.TALL_SEAGRASS",
+      "Blocks.REEDS",
+      "Blocks.BAMBOO_SAPLING",
+      "Blocks.BAMBOO"
+    ]
+  },
   "language_map": {
     "ru_ru": {
       "gamerule.neutroniumCompressorAmount.description": "Number of resources for Neutronium Compressor",
@@ -2758,20 +2777,17 @@
     "author": "Bullfighter, MCreator",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/avaritia-lite",
     "license": "Not specified",
-    "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "modPicture": "infinity_catalyst",
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
-      "kleidersplayerrenderer",
       "jei"
     ],
-    "currentGenerator": "forge-1.20.1",
+    "currentGenerator": "neoforge-1.20.4",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
-    "modElementsPackage": "net.bullfighter.avaritia",
-    "lockBaseModFiles": false
+    "modElementsPackage": "net.bullfighter.avaritia"
   },
-  "mcreatorVersion": 202300452316
+  "mcreatorVersion": 202400115713
 }

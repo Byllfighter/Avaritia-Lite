@@ -1,10 +1,8 @@
 
 package net.bullfighter.avaritia.entity;
 
-import net.minecraftforge.network.PlayMessages;
-import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.BlockHitResult;
@@ -15,8 +13,6 @@ import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.util.RandomSource;
-import net.minecraft.network.protocol.game.ClientGamePacketListener;
-import net.minecraft.network.protocol.Packet;
 
 import net.bullfighter.avaritia.procedures.BlackHoleSpawnProcedure;
 import net.bullfighter.avaritia.init.AvaritiaModItems;
@@ -26,35 +22,21 @@ import net.bullfighter.avaritia.init.AvaritiaModEntities;
 public class EndestPearlProjectileEntity extends AbstractArrow implements ItemSupplier {
 	public static final ItemStack PROJECTILE_ITEM = new ItemStack(AvaritiaModItems.ENDEST_PEARL.get());
 
-	public EndestPearlProjectileEntity(PlayMessages.SpawnEntity packet, Level world) {
-		super(AvaritiaModEntities.ENDEST_PEARL_PROJECTILE.get(), world);
-	}
-
 	public EndestPearlProjectileEntity(EntityType<? extends EndestPearlProjectileEntity> type, Level world) {
-		super(type, world);
+		super(type, world, PROJECTILE_ITEM);
 	}
 
 	public EndestPearlProjectileEntity(EntityType<? extends EndestPearlProjectileEntity> type, double x, double y, double z, Level world) {
-		super(type, x, y, z, world);
+		super(type, x, y, z, world, PROJECTILE_ITEM);
 	}
 
 	public EndestPearlProjectileEntity(EntityType<? extends EndestPearlProjectileEntity> type, LivingEntity entity, Level world) {
-		super(type, entity, world);
-	}
-
-	@Override
-	public Packet<ClientGamePacketListener> getAddEntityPacket() {
-		return NetworkHooks.getEntitySpawningPacket(this);
+		super(type, entity, world, PROJECTILE_ITEM);
 	}
 
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public ItemStack getItem() {
-		return PROJECTILE_ITEM;
-	}
-
-	@Override
-	protected ItemStack getPickupItem() {
 		return PROJECTILE_ITEM;
 	}
 

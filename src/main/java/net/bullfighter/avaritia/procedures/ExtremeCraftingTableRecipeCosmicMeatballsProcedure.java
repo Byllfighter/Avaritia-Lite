@@ -3,7 +3,7 @@ package net.bullfighter.avaritia.procedures;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraftforge.common.MinecraftForge;
+import net.neoforged.neoforge.common.NeoForge;
 import net.bullfighter.avaritia.ExtremeCraftingTableRecipeCosmicMeatballsEvent;
 import net.bullfighter.avaritia.ExtremeCraftingTableRecipeShapeless;
 import net.bullfighter.avaritia.init.AvaritiaModItems;
@@ -32,7 +32,7 @@ public class ExtremeCraftingTableRecipeCosmicMeatballsProcedure {
         requiredItems.add(new ItemStack(Items.SALMON));
         requiredItems.add(new ItemStack(Items.MUTTON));
         requiredItems.add(new ItemStack(Items.MUTTON));
-        MinecraftForge.EVENT_BUS.post(new ExtremeCraftingTableRecipeCosmicMeatballsEvent(entity, requiredItems));
+        NeoForge.EVENT_BUS.post(new ExtremeCraftingTableRecipeCosmicMeatballsEvent(entity, requiredItems));
 
         ExtremeCraftingTableRecipeShapeless.execute(entity, requiredItems, new ItemStack(AvaritiaModItems.COSMIC_MEATBALLS.get(), 2));
     }

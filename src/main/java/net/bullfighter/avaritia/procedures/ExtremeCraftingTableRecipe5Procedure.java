@@ -164,7 +164,7 @@ public class ExtremeCraftingTableRecipe5Procedure {
 					}
 				}
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = new ItemStack(AvaritiaModItems.INFINITY_ARMOR_BOOTS.get());
+					ItemStack _setstack = new ItemStack(AvaritiaModItems.INFINITY_ARMOR_BOOTS.get()).copy();
 					_setstack.setCount((int) (new Object() {
 						public int getAmount(int sltid) {
 							if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
@@ -295,7 +295,7 @@ public class ExtremeCraftingTableRecipe5Procedure {
 					}
 				}
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = new ItemStack(AvaritiaModItems.SKULLFIRE_SWORD.get());
+					ItemStack _setstack = new ItemStack(AvaritiaModItems.SKULLFIRE_SWORD.get()).copy();
 					_setstack.setCount((int) (new Object() {
 						public int getAmount(int sltid) {
 							if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
@@ -418,7 +418,7 @@ public class ExtremeCraftingTableRecipe5Procedure {
 					}
 				}
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = new ItemStack(AvaritiaModItems.ENDEST_PEARL.get());
+					ItemStack _setstack = new ItemStack(AvaritiaModItems.ENDEST_PEARL.get()).copy();
 					_setstack.setCount((int) (new Object() {
 						public int getAmount(int sltid) {
 							if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {

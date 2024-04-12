@@ -1,13 +1,17 @@
 
 package net.bullfighter.avaritia.network;
 
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.neoforged.neoforge.network.handling.PlayPayloadContext;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
+import net.minecraft.network.protocol.PacketFlow;
+import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
@@ -15,45 +19,43 @@ import net.bullfighter.avaritia.world.inventory.ExtremeCraftingTableGuiMenu;
 import net.bullfighter.avaritia.procedures.ExtremeCraftingTableRecipesProcedure;
 import net.bullfighter.avaritia.AvaritiaMod;
 
-import java.util.function.Supplier;
 import java.util.HashMap;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class ExtremeCraftingTableGuiButtonMessage {
-	private final int buttonID, x, y, z;
+public record ExtremeCraftingTableGuiButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
+	public static final ResourceLocation ID = new ResourceLocation(AvaritiaMod.MODID, "extreme_crafting_table_gui_buttons");
 	public ExtremeCraftingTableGuiButtonMessage(FriendlyByteBuf buffer) {
-		this.buttonID = buffer.readInt();
-		this.x = buffer.readInt();
-		this.y = buffer.readInt();
-		this.z = buffer.readInt();
+		this(buffer.readInt(), buffer.readInt(), buffer.readInt(), buffer.readInt());
 	}
 
-	public ExtremeCraftingTableGuiButtonMessage(int buttonID, int x, int y, int z) {
-		this.buttonID = buttonID;
-		this.x = x;
-		this.y = y;
-		this.z = z;
+	@Override
+	public void write(final FriendlyByteBuf buffer) {
+		buffer.writeInt(buttonID);
+		buffer.writeInt(x);
+		buffer.writeInt(y);
+		buffer.writeInt(z);
 	}
 
-	public static void buffer(ExtremeCraftingTableGuiButtonMessage message, FriendlyByteBuf buffer) {
-		buffer.writeInt(message.buttonID);
-		buffer.writeInt(message.x);
-		buffer.writeInt(message.y);
-		buffer.writeInt(message.z);
+	@Override
+	public ResourceLocation id() {
+		return ID;
 	}
 
-	public static void handler(ExtremeCraftingTableGuiButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
-		NetworkEvent.Context context = contextSupplier.get();
-		context.enqueueWork(() -> {
-			Player entity = context.getSender();
-			int buttonID = message.buttonID;
-			int x = message.x;
-			int y = message.y;
-			int z = message.z;
-			handleButtonAction(entity, buttonID, x, y, z);
-		});
-		context.setPacketHandled(true);
+	public static void handleData(final ExtremeCraftingTableGuiButtonMessage message, final PlayPayloadContext context) {
+		if (context.flow() == PacketFlow.SERVERBOUND) {
+			context.workHandler().submitAsync(() -> {
+				Player entity = context.player().get();
+				int buttonID = message.buttonID;
+				int x = message.x;
+				int y = message.y;
+				int z = message.z;
+				handleButtonAction(entity, buttonID, x, y, z);
+			}).exceptionally(e -> {
+				context.packetHandler().disconnect(Component.literal(e.getMessage()));
+				return null;
+			});
+		}
 	}
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
@@ -70,6 +72,6 @@ public class ExtremeCraftingTableGuiButtonMessage {
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		AvaritiaMod.addNetworkMessage(ExtremeCraftingTableGuiButtonMessage.class, ExtremeCraftingTableGuiButtonMessage::buffer, ExtremeCraftingTableGuiButtonMessage::new, ExtremeCraftingTableGuiButtonMessage::handler);
+		AvaritiaMod.addNetworkMessage(ExtremeCraftingTableGuiButtonMessage.ID, ExtremeCraftingTableGuiButtonMessage::new, ExtremeCraftingTableGuiButtonMessage::handleData);
 	}
 }

@@ -1,5 +1,7 @@
 package net.bullfighter.avaritia.client.gui;
 
+import net.neoforged.neoforge.network.PacketDistributor;
+
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -13,7 +15,6 @@ import net.bullfighter.avaritia.world.inventory.NeutroniumCompressorGuiMenu;
 import net.bullfighter.avaritia.procedures.GetBNBTTextMaterialProcedure;
 import net.bullfighter.avaritia.procedures.GetBNBTNeutroniumCompressorProcedure;
 import net.bullfighter.avaritia.network.NeutroniumCompressorGuiButtonMessage;
-import net.bullfighter.avaritia.AvaritiaMod;
 
 import java.util.HashMap;
 
@@ -41,7 +42,7 @@ public class NeutroniumCompressorGuiScreen extends AbstractContainerScreen<Neutr
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -65,11 +66,6 @@ public class NeutroniumCompressorGuiScreen extends AbstractContainerScreen<Neutr
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.avaritia.neutronium_compressor_gui.label_neutronium_compressor"), 33, 7, -12829636, false);
 		guiGraphics.drawString(this.font,
@@ -90,7 +86,7 @@ public class NeutroniumCompressorGuiScreen extends AbstractContainerScreen<Neutr
 		super.init();
 		button_www = Button.builder(Component.translatable("gui.avaritia.neutronium_compressor_gui.button_www"), e -> {
 			if (true) {
-				AvaritiaMod.PACKET_HANDLER.sendToServer(new NeutroniumCompressorGuiButtonMessage(0, x, y, z));
+				PacketDistributor.SERVER.noArg().send(new NeutroniumCompressorGuiButtonMessage(0, x, y, z));
 				NeutroniumCompressorGuiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 24, this.topPos + 52, 40, 20).build();

@@ -127,7 +127,7 @@ public class ExtremeCraftingTableRecipe6Procedure {
 					}
 				}
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = new ItemStack(AvaritiaModBlocks.NEUTRON_COLLECTOR.get());
+					ItemStack _setstack = new ItemStack(AvaritiaModBlocks.NEUTRON_COLLECTOR.get()).copy();
 					_setstack.setCount((int) (new Object() {
 						public int getAmount(int sltid) {
 							if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
@@ -273,7 +273,7 @@ public class ExtremeCraftingTableRecipe6Procedure {
 					}
 				}
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = new ItemStack(AvaritiaModBlocks.NEUTRONIUM_COMPRESSOR.get());
+					ItemStack _setstack = new ItemStack(AvaritiaModBlocks.NEUTRONIUM_COMPRESSOR.get()).copy();
 					_setstack.setCount((int) (new Object() {
 						public int getAmount(int sltid) {
 							if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {

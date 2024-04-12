@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "avaritia:blocks/neutronium_compressor",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "avaritia:neutronium_compressor"
+        }
+      ]
+    }
+  ]
+}

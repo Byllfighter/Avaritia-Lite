@@ -156,7 +156,7 @@ public class ExtremeCraftingTableRecipe4Procedure {
 					}
 				}
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = new ItemStack(AvaritiaModItems.INFINITY_ARMOR_HELMET.get());
+					ItemStack _setstack = new ItemStack(AvaritiaModItems.INFINITY_ARMOR_HELMET.get()).copy();
 					_setstack.setCount((int) (new Object() {
 						public int getAmount(int sltid) {
 							if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
@@ -331,7 +331,7 @@ public class ExtremeCraftingTableRecipe4Procedure {
 					}
 				}
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = new ItemStack(AvaritiaModItems.INFINITY_ARMOR_CHESTPLATE.get());
+					ItemStack _setstack = new ItemStack(AvaritiaModItems.INFINITY_ARMOR_CHESTPLATE.get()).copy();
 					_setstack.setCount((int) (new Object() {
 						public int getAmount(int sltid) {
 							if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
@@ -512,7 +512,7 @@ public class ExtremeCraftingTableRecipe4Procedure {
 					}
 				}
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = new ItemStack(AvaritiaModItems.INFINITY_ARMOR_LEGGINGS.get());
+					ItemStack _setstack = new ItemStack(AvaritiaModItems.INFINITY_ARMOR_LEGGINGS.get()).copy();
 					_setstack.setCount((int) (new Object() {
 						public int getAmount(int sltid) {
 							if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {

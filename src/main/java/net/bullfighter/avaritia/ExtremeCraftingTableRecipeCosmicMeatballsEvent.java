@@ -1,7 +1,7 @@
 package net.bullfighter.avaritia;
 
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.fml.event.IModBusEvent;
+import net.neoforged.fml.event.IModBusEvent;
+import net.neoforged.bus.api.Event;
 
 import java.util.List;
 import net.minecraft.world.item.ItemStack;

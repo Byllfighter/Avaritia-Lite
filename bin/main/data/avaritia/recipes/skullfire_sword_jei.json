@@ -1,0 +1,252 @@
+{
+  "type": "avaritia:extreme_crafting_table_jei",
+  "ingredients": [
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "minecraft:blaze_powder"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "minecraft:blaze_powder"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "minecraft:blaze_powder"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "minecraft:blaze_powder"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "item": "minecraft:bone"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "minecraft:blaze_powder"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "item": "minecraft:bone"
+    },
+    {
+      "item": "minecraft:blaze_powder"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "minecraft:logs"
+    },
+    {
+      "item": "minecraft:bone"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "minecraft:logs"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "item": "minecraft:bone"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "item": "minecraft:nether_star"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    },
+    {
+      "tag": "avaritia:jei_empty_tag"
+    }
+  ],
+  "output": {
+    "item": "avaritia:skullfire_sword",
+    "count": 1
+  }
+}

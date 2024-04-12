@@ -4,12 +4,10 @@
  */
 package net.bullfighter.avaritia.init;
 
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.api.distmarker.Dist;
-
-import net.minecraft.client.gui.screens.MenuScreens;
+import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.api.distmarker.Dist;
 
 import net.bullfighter.avaritia.client.gui.NeutroniumCompressorGuiScreen;
 import net.bullfighter.avaritia.client.gui.NeutronCollectorGuiScreen;
@@ -18,11 +16,9 @@ import net.bullfighter.avaritia.client.gui.ExtremeCraftingTableGuiScreen;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class AvaritiaModScreens {
 	@SubscribeEvent
-	public static void clientLoad(FMLClientSetupEvent event) {
-		event.enqueueWork(() -> {
-			MenuScreens.register(AvaritiaModMenus.NEUTRON_COLLECTOR_GUI.get(), NeutronCollectorGuiScreen::new);
-			MenuScreens.register(AvaritiaModMenus.EXTREME_CRAFTING_TABLE_GUI.get(), ExtremeCraftingTableGuiScreen::new);
-			MenuScreens.register(AvaritiaModMenus.NEUTRONIUM_COMPRESSOR_GUI.get(), NeutroniumCompressorGuiScreen::new);
-		});
+	public static void clientLoad(RegisterMenuScreensEvent event) {
+		event.register(AvaritiaModMenus.NEUTRON_COLLECTOR_GUI.get(), NeutronCollectorGuiScreen::new);
+		event.register(AvaritiaModMenus.EXTREME_CRAFTING_TABLE_GUI.get(), ExtremeCraftingTableGuiScreen::new);
+		event.register(AvaritiaModMenus.NEUTRONIUM_COMPRESSOR_GUI.get(), NeutroniumCompressorGuiScreen::new);
 	}
 }

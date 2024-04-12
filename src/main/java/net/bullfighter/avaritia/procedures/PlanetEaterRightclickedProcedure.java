@@ -22,7 +22,7 @@ public class PlanetEaterRightclickedProcedure {
 		}
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == AvaritiaModItems.PLANET_EATER.get()) {
 			if (entity instanceof LivingEntity _entity) {
-				ItemStack _setstack = hammer;
+				ItemStack _setstack = hammer.copy();
 				_setstack.setCount(1);
 				_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 				if (_entity instanceof Player _player)
@@ -30,7 +30,7 @@ public class PlanetEaterRightclickedProcedure {
 			}
 		} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == AvaritiaModItems.PLANET_EATER.get()) {
 			if (entity instanceof LivingEntity _entity) {
-				ItemStack _setstack = hammer;
+				ItemStack _setstack = hammer.copy();
 				_setstack.setCount(1);
 				_entity.setItemInHand(InteractionHand.OFF_HAND, _setstack);
 				if (_entity instanceof Player _player)

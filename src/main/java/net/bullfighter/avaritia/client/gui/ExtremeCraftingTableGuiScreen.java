@@ -1,5 +1,7 @@
 package net.bullfighter.avaritia.client.gui;
 
+import net.neoforged.neoforge.network.PacketDistributor;
+
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -11,7 +13,6 @@ import net.minecraft.client.gui.GuiGraphics;
 
 import net.bullfighter.avaritia.world.inventory.ExtremeCraftingTableGuiMenu;
 import net.bullfighter.avaritia.network.ExtremeCraftingTableGuiButtonMessage;
-import net.bullfighter.avaritia.AvaritiaMod;
 
 import java.util.HashMap;
 
@@ -39,7 +40,7 @@ public class ExtremeCraftingTableGuiScreen extends AbstractContainerScreen<Extre
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -63,11 +64,6 @@ public class ExtremeCraftingTableGuiScreen extends AbstractContainerScreen<Extre
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.avaritia.extreme_crafting_table_gui.label_extreme_crafting_table"), 154, 6, -12829636, false);
 	}
@@ -82,7 +78,7 @@ public class ExtremeCraftingTableGuiScreen extends AbstractContainerScreen<Extre
 		super.init();
 		button_craft = Button.builder(Component.translatable("gui.avaritia.extreme_crafting_table_gui.button_craft"), e -> {
 			if (true) {
-				AvaritiaMod.PACKET_HANDLER.sendToServer(new ExtremeCraftingTableGuiButtonMessage(0, x, y, z));
+				PacketDistributor.SERVER.noArg().send(new ExtremeCraftingTableGuiButtonMessage(0, x, y, z));
 				ExtremeCraftingTableGuiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 244, this.topPos + 51, 50, 20).build();

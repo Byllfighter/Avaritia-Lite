@@ -2,7 +2,7 @@ package net.bullfighter.avaritia.procedures;
 
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.common.MinecraftForge;
+import net.neoforged.neoforge.common.NeoForge;
 import net.bullfighter.avaritia.ExtremeCraftingTableRecipeCatalystEvent;
 import net.bullfighter.avaritia.ExtremeCraftingTableRecipeShapeless;
 import net.bullfighter.avaritia.init.AvaritiaModItems;
@@ -35,7 +35,7 @@ public class ExtremeCraftingTableRecipeCatalystProcedure {
         requiredItems.add(new ItemStack(AvaritiaModItems.COPPER_SINGULARITY.get()));
         requiredItems.add(new ItemStack(AvaritiaModItems.AMETHYST_SINGULARITY.get()));
         requiredItems.add(new ItemStack(AvaritiaModItems.NETHERITE_SINGULARITY.get()));
-        MinecraftForge.EVENT_BUS.post(new ExtremeCraftingTableRecipeCatalystEvent(entity, requiredItems));
+        NeoForge.EVENT_BUS.post(new ExtremeCraftingTableRecipeCatalystEvent(entity, requiredItems));
 
         ExtremeCraftingTableRecipeShapeless.execute(entity, requiredItems, new ItemStack(AvaritiaModItems.INFINITY_CATALYST.get(), 1));
     }

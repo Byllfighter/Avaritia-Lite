@@ -143,7 +143,7 @@ public class ExtremeCraftingTableRecipeProcedure {
 					}
 				}
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = new ItemStack(AvaritiaModItems.SWORDOFTHE_COSMOS.get());
+					ItemStack _setstack = new ItemStack(AvaritiaModItems.SWORDOFTHE_COSMOS.get()).copy();
 					_setstack.setCount((int) (new Object() {
 						public int getAmount(int sltid) {
 							if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
@@ -273,7 +273,7 @@ public class ExtremeCraftingTableRecipeProcedure {
 					}
 				}
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = new ItemStack(AvaritiaModItems.LONGBOWOFTHE_HEAVENS.get());
+					ItemStack _setstack = new ItemStack(AvaritiaModItems.LONGBOWOFTHE_HEAVENS.get()).copy();
 					_setstack.setCount((int) (new Object() {
 						public int getAmount(int sltid) {
 							if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
@@ -419,7 +419,7 @@ public class ExtremeCraftingTableRecipeProcedure {
 					}
 				}
 				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = new ItemStack(AvaritiaModItems.WORLD_BREAKER.get());
+					ItemStack _setstack = new ItemStack(AvaritiaModItems.WORLD_BREAKER.get()).copy();
 					_setstack.setCount((int) (new Object() {
 						public int getAmount(int sltid) {
 							if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {

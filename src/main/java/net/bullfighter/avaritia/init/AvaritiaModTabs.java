@@ -4,8 +4,8 @@
  */
 package net.bullfighter.avaritia.init;
 
-import net.minecraftforge.registries.RegistryObject;
-import net.minecraftforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.CreativeModeTab;
@@ -16,7 +16,7 @@ import net.bullfighter.avaritia.AvaritiaMod;
 
 public class AvaritiaModTabs {
 	public static final DeferredRegister<CreativeModeTab> REGISTRY = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, AvaritiaMod.MODID);
-	public static final RegistryObject<CreativeModeTab> AVARITIATAB = REGISTRY.register("avaritiatab",
+	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> AVARITIATAB = REGISTRY.register("avaritiatab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.avaritia.avaritiatab")).icon(() -> new ItemStack(AvaritiaModItems.INFINITY_CATALYST.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(AvaritiaModItems.DIAMOND_LATTICE.get());
 				tabData.accept(AvaritiaModItems.CRYSTAL_MATRIX_INGOT.get());

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "avaritia:diamond_lattice"
+    },
+    "b": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "result": {
+    "item": "avaritia:crystal_matrix_ingot",
+    "count": 1
+  }
+}

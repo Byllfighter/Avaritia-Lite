@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[47,)"
+loaderVersion="[2,)"
 license="Not specified"
 
 [[mods]]
@@ -11,24 +11,27 @@ logoFile="logo.png"
 credits="Created using mod maker MCreator - https://mcreator.net/about"
 authors="Bullfighter, MCreator"
 
+# Start of user code block mod configuration
+# End of user code block mod configuration
+
+[[dependencies.avaritia]]
+    modId="neoforge"
+    type="required"
+    versionRange="[20.4.223,)"
+    ordering="NONE"
+    side="BOTH"
+
 [[dependencies.avaritia]]
     modId="minecraft"
-    mandatory=true
-    versionRange="[1.20.1]"
+    type="required"
+    versionRange="[1.20.4]"
     ordering="NONE"
     side="BOTH"
 
 
-
-[[dependencies.avaritia]]
-    modId="kleidersplayerrenderer"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
 [[dependencies.avaritia]]
     modId="jei"
-    mandatory=false
+    type="optional"
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"

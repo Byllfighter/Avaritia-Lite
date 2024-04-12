@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "avaritia:block/neutronium_compressor"
+    },
+    "facing=east": {
+      "model": "avaritia:block/neutronium_compressor",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "avaritia:block/neutronium_compressor",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "avaritia:block/neutronium_compressor",
+      "y": 270
+    }
+  }
+}

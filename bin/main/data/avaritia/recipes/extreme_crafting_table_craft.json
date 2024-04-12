@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    "b": {
+      "item": "avaritia:double_compressed_crafting_table"
+    }
+  },
+  "result": {
+    "item": "avaritia:extreme_crafting_table",
+    "count": 1
+  }
+}

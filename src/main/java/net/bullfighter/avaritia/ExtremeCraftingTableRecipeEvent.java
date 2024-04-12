@@ -1,8 +1,9 @@
 package net.bullfighter.avaritia;
 
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.fml.event.IModBusEvent;
 import net.minecraft.world.entity.Entity;
+
+import net.neoforged.fml.event.IModBusEvent;
+import net.neoforged.bus.api.Event;
 
 public class ExtremeCraftingTableRecipeEvent extends Event implements IModBusEvent {
     private final Entity entity;

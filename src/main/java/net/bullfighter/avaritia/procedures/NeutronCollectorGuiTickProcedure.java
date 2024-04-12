@@ -28,7 +28,7 @@ public class NeutronCollectorGuiTickProcedure {
 			}
 		}.getValue(world, BlockPos.containing(x, y, z), "process") >= 100) {
 			if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-				ItemStack _setstack = new ItemStack(AvaritiaModItems.PILEOF_NEUTRONS.get());
+				ItemStack _setstack = new ItemStack(AvaritiaModItems.PILEOF_NEUTRONS.get()).copy();
 				_setstack.setCount((int) (new Object() {
 					public int getAmount(int sltid) {
 						if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
