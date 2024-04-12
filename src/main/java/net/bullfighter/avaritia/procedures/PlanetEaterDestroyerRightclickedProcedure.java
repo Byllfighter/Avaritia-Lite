@@ -32,7 +32,7 @@ public class PlanetEaterDestroyerRightclickedProcedure {
 			if (entity instanceof LivingEntity _entity) {
 				ItemStack _setstack = hammer;
 				_setstack.setCount(1);
-				_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+				_entity.setItemInHand(InteractionHand.OFF_HAND, _setstack);
 				if (_entity instanceof Player _player)
 					_player.getInventory().setChanged();
 			}
