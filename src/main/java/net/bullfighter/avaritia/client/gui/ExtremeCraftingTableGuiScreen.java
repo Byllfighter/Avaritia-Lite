@@ -69,11 +69,6 @@ public class ExtremeCraftingTableGuiScreen extends AbstractContainerScreen<Extre
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		button_craft = Button.builder(Component.translatable("gui.avaritia.extreme_crafting_table_gui.button_craft"), e -> {

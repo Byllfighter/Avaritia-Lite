@@ -39,6 +39,8 @@ public class AvaritiaMod {
 	public static final String MODID = "avaritia";
 
 	public AvaritiaMod(IEventBus modEventBus) {
+		// Start of user code block mod constructor
+		// End of user code block mod constructor
 		NeoForge.EVENT_BUS.register(this);
 		modEventBus.addListener(this::registerNetworking);
 

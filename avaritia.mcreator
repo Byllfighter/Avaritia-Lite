@@ -2269,7 +2269,15 @@
       "locked_code": false,
       "registry_name": "player_render",
       "metadata": {
-        "dependencies": []
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/PlayerRenderProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       }
     },
     {
@@ -2504,6 +2512,10 @@
         ],
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -2611,6 +2623,13 @@
     "BLOCKS:minecraft:mineable/axe": [
       "~CUSTOM:DoubleCompressedCraftingTable",
       "~CUSTOM:CompressedCraftingTable"
+    ],
+    "BLOCKS:minecraft:needs_stone_tool": [
+      "~CUSTOM:NeutroniumBlock",
+      "~CUSTOM:ExtremeCraftingTable",
+      "~CUSTOM:DoubleCompressedCraftingTable",
+      "~CUSTOM:CompressedCraftingTable",
+      "~CUSTOM:NeutroniumCompressor"
     ],
     "BLOCKS:mod:netures_ruin_destroys": [
       "TAG:minecraft:saplings",
@@ -2773,7 +2792,7 @@
   "workspaceSettings": {
     "modid": "avaritia",
     "modName": "Avaritia Lite",
-    "version": "1.10.2",
+    "version": "1.10.3",
     "author": "Bullfighter, MCreator",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/avaritia-lite",
     "license": "Not specified",
@@ -2783,11 +2802,12 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
+      "kleidersplayerrenderer",
       "jei"
     ],
     "currentGenerator": "neoforge-1.20.4",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.bullfighter.avaritia"
   },
-  "mcreatorVersion": 202400115713
+  "mcreatorVersion": 202400118518
 }

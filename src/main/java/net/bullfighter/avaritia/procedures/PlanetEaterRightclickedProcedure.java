@@ -14,27 +14,29 @@ public class PlanetEaterRightclickedProcedure {
 		if (entity == null)
 			return;
 		ItemStack hammer = ItemStack.EMPTY;
-		hammer = new ItemStack(AvaritiaModItems.PLANET_EATER_DESTROYER.get());
-		{
-			CompoundTag _nbtTag = itemstack.getTag();
-			if (_nbtTag != null)
-				hammer.setTag(_nbtTag.copy());
-		}
-		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == AvaritiaModItems.PLANET_EATER.get()) {
-			if (entity instanceof LivingEntity _entity) {
-				ItemStack _setstack = hammer.copy();
-				_setstack.setCount(1);
-				_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
-				if (_entity instanceof Player _player)
-					_player.getInventory().setChanged();
+		if (entity.isShiftKeyDown()) {
+			hammer = new ItemStack(AvaritiaModItems.PLANET_EATER_DESTROYER.get());
+			{
+				CompoundTag _nbtTag = itemstack.getTag();
+				if (_nbtTag != null)
+					hammer.setTag(_nbtTag.copy());
 			}
-		} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == AvaritiaModItems.PLANET_EATER.get()) {
-			if (entity instanceof LivingEntity _entity) {
-				ItemStack _setstack = hammer.copy();
-				_setstack.setCount(1);
-				_entity.setItemInHand(InteractionHand.OFF_HAND, _setstack);
-				if (_entity instanceof Player _player)
-					_player.getInventory().setChanged();
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == AvaritiaModItems.PLANET_EATER.get()) {
+				if (entity instanceof LivingEntity _entity) {
+					ItemStack _setstack = hammer.copy();
+					_setstack.setCount(1);
+					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+					if (_entity instanceof Player _player)
+						_player.getInventory().setChanged();
+				}
+			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == AvaritiaModItems.PLANET_EATER.get()) {
+				if (entity instanceof LivingEntity _entity) {
+					ItemStack _setstack = hammer.copy();
+					_setstack.setCount(1);
+					_entity.setItemInHand(InteractionHand.OFF_HAND, _setstack);
+					if (_entity instanceof Player _player)
+						_player.getInventory().setChanged();
+				}
 			}
 		}
 	}

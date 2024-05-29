@@ -77,11 +77,6 @@ public class NeutroniumCompressorGuiScreen extends AbstractContainerScreen<Neutr
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		button_www = Button.builder(Component.translatable("gui.avaritia.neutronium_compressor_gui.button_www"), e -> {
