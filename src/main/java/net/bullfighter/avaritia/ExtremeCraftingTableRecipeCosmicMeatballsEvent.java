@@ -1,13 +1,12 @@
 package net.bullfighter.avaritia;
 
-import net.neoforged.fml.event.IModBusEvent;
 import net.neoforged.bus.api.Event;
 
 import java.util.List;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.Entity;
 
-public class ExtremeCraftingTableRecipeCosmicMeatballsEvent extends Event implements IModBusEvent {
+public class ExtremeCraftingTableRecipeCosmicMeatballsEvent extends Event {
     private final Entity entity;
 	private final List<ItemStack> requiredItems;
 

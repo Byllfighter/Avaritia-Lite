@@ -5,7 +5,11 @@
     "renderType": 0,
     "texture": "idle",
     "customModelName": "Ranged item",
-    "customProperties": {},
+    "customProperties": {
+      "pulling": {
+        "name": "LongbowoftheHeavensPropertyValueProvider"
+      }
+    },
     "states": [],
     "name": "Longbow of the Heavens",
     "rarity": "COMMON",

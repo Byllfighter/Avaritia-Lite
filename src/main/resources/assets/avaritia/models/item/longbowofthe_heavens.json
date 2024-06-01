@@ -72,5 +72,10 @@
         1
       ]
     }
-  }
+  },
+ 	"overrides": [
+		{"predicate": {"avaritia:longbowofthe_heavens_pulling": 1}, "model": "avaritia:item/longbowofthe_heavens_pulling_0"},
+		{"predicate": {"avaritia:longbowofthe_heavens_pulling": 2}, "model": "avaritia:item/longbowofthe_heavens_pulling_1"},
+		{"predicate": {"avaritia:longbowofthe_heavens_pulling": 3}, "model": "avaritia:item/longbowofthe_heavens_pulling_2"}
+	]
 }

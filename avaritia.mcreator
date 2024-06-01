@@ -1692,7 +1692,7 @@
       "type": "item",
       "sortid": 36,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "longbowofthe_heavens",
       "metadata": {
         "files": [
@@ -2585,6 +2585,26 @@
           "src/main/java/net/bullfighter/avaritia/ExtremeCraftingTableRecipeUltimateStewEvent.java"
         ]
       }
+    },
+    {
+      "name": "LongbowoftheHeavensPropertyValueProvider",
+      "type": "procedure",
+      "sortid": 153,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "longbowofthe_heavens_property_value_provider",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/LongbowoftheHeavensPropertyValueProviderProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -2792,7 +2812,7 @@
   "workspaceSettings": {
     "modid": "avaritia",
     "modName": "Avaritia Lite",
-    "version": "1.10.3",
+    "version": "1.10.4.1",
     "author": "Bullfighter, MCreator",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/avaritia-lite",
     "license": "Not specified",
