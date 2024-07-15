@@ -2591,7 +2591,7 @@
       "type": "procedure",
       "sortid": 153,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "longbowofthe_heavens_property_value_provider",
       "metadata": {
         "return_type": "number",
@@ -2602,6 +2602,34 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LongbowoftheHeavensPullPropertyValueProvider",
+      "type": "procedure",
+      "sortid": 154,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "longbowofthe_heavens_pull_property_value_provider",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/bullfighter/avaritia/procedures/LongbowoftheHeavensPullPropertyValueProviderProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
           }
         ]
       }
@@ -2812,7 +2840,7 @@
   "workspaceSettings": {
     "modid": "avaritia",
     "modName": "Avaritia Lite",
-    "version": "1.10.4.1",
+    "version": "1.10.6",
     "author": "Bullfighter, MCreator",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/avaritia-lite",
     "license": "Not specified",

@@ -20,6 +20,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.client.renderer.item.ItemProperties;
 
+import net.bullfighter.avaritia.procedures.LongbowoftheHeavensPullPropertyValueProviderProcedure;
 import net.bullfighter.avaritia.procedures.LongbowoftheHeavensPropertyValueProviderProcedure;
 import net.bullfighter.avaritia.item.WorldBreakerItem;
 import net.bullfighter.avaritia.item.WorldBreakerHammerItem;
@@ -118,7 +119,9 @@ public class AvaritiaModItems {
 		public static void clientLoad(FMLClientSetupEvent event) {
 			event.enqueueWork(() -> {
 				ItemProperties.register(LONGBOWOFTHE_HEAVENS.get(), new ResourceLocation("avaritia:longbowofthe_heavens_pulling"),
-						(itemStackToRender, clientWorld, entity, itemEntityId) -> (float) LongbowoftheHeavensPropertyValueProviderProcedure.execute(entity));
+						(itemStackToRender, clientWorld, entity, itemEntityId) -> (float) LongbowoftheHeavensPropertyValueProviderProcedure.execute(entity, itemStackToRender));
+				ItemProperties.register(LONGBOWOFTHE_HEAVENS.get(), new ResourceLocation("avaritia:longbowofthe_heavens_pull"),
+						(itemStackToRender, clientWorld, entity, itemEntityId) -> (float) LongbowoftheHeavensPullPropertyValueProviderProcedure.execute(entity, itemStackToRender));
 			});
 		}
 	}

@@ -8,6 +8,9 @@
     "customProperties": {
       "pulling": {
         "name": "LongbowoftheHeavensPropertyValueProvider"
+      },
+      "pull": {
+        "name": "LongbowoftheHeavensPullPropertyValueProvider"
       }
     },
     "states": [],

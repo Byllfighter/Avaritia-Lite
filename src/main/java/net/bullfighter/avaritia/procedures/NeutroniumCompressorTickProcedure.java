@@ -382,7 +382,7 @@ public class NeutroniumCompressorTickProcedure {
 					}
 					return ItemStack.EMPTY;
 				}
-			}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == Blocks.SMOOTH_QUARTZ.asItem()) {
+			}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == Blocks.QUARTZ_BLOCK.asItem()) {
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
