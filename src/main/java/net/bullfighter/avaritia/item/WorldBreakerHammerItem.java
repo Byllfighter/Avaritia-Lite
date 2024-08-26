@@ -5,6 +5,7 @@ import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.context.UseOnContext;
@@ -12,12 +13,15 @@ import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.DiggerItem;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.tags.TagKey;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.core.BlockPos;
 
 import net.bullfighter.avaritia.procedures.WorldBreakerTickProcedure;
@@ -26,32 +30,40 @@ import net.bullfighter.avaritia.procedures.NeverGlowProcedure;
 import net.bullfighter.avaritia.procedures.MendProcedure;
 
 public class WorldBreakerHammerItem extends PickaxeItem {
+	private static final Tier TOOL_TIER = new Tier() {
+		@Override
+		public int getUses() {
+			return (int) Double.POSITIVE_INFINITY;
+		}
+
+		@Override
+		public float getSpeed() {
+			return (float) Double.POSITIVE_INFINITY;
+		}
+
+		@Override
+		public float getAttackDamageBonus() {
+			return 0;
+		}
+
+		@Override
+		public TagKey<Block> getIncorrectBlocksForDrops() {
+			return BlockTags.INCORRECT_FOR_NETHERITE_TOOL;
+		}
+
+		@Override
+		public int getEnchantmentValue() {
+			return 99999;
+		}
+
+		@Override
+		public Ingredient getRepairIngredient() {
+			return Ingredient.of();
+		}
+	};
+
 	public WorldBreakerHammerItem() {
-		super(new Tier() {
-			public int getUses() {
-				return (int) Double.POSITIVE_INFINITY;
-			}
-
-			public float getSpeed() {
-				return (float) Double.POSITIVE_INFINITY;
-			}
-
-			public float getAttackDamageBonus() {
-				return 6f;
-			}
-
-			public int getLevel() {
-				return (int) Double.POSITIVE_INFINITY;
-			}
-
-			public int getEnchantmentValue() {
-				return 100;
-			}
-
-			public Ingredient getRepairIngredient() {
-				return Ingredient.of();
-			}
-		}, 1, -3f, new Item.Properties());
+		super(TOOL_TIER, new Item.Properties().attributes(DiggerItem.createAttributes(TOOL_TIER, 7f, -3f)));
 	}
 
 	@Override

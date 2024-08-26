@@ -13,11 +13,11 @@ import net.bullfighter.avaritia.procedures.CosmicMeatballsEatenProcedure;
 
 public class CosmicMeatballsItem extends Item {
 	public CosmicMeatballsItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(999).saturationMod(999f).alwaysEat().meat().build()));
+		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(999).saturationModifier(999f).alwaysEdible().build()));
 	}
 
 	@Override
-	public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
+	public float getDestroySpeed(ItemStack itemstack, BlockState state) {
 		return 0f;
 	}
 

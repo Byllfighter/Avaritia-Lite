@@ -246,7 +246,7 @@
     }
   ],
   "output": {
-    "item": "avaritia:infinity_catalyst",
+    "id": "avaritia:infinity_catalyst",
     "count": 1
   }
 }

@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -22,9 +22,11 @@
     "onBootsTick": {
       "name": "Mend"
     },
-    "creativeTab": {
-      "value": "CUSTOM:Avaritiatab"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Avaritiatab"
+      }
+    ],
     "armorTextureFile": "infinity",
     "helmetName": "§cInfinity Helmet§r",
     "bodyName": "§cInfinity Breastplate§r",

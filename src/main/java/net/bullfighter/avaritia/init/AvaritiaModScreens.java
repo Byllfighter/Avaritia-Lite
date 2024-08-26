@@ -5,7 +5,7 @@
 package net.bullfighter.avaritia.init;
 
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
@@ -13,7 +13,7 @@ import net.bullfighter.avaritia.client.gui.NeutroniumCompressorGuiScreen;
 import net.bullfighter.avaritia.client.gui.NeutronCollectorGuiScreen;
 import net.bullfighter.avaritia.client.gui.ExtremeCraftingTableGuiScreen;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class AvaritiaModScreens {
 	@SubscribeEvent
 	public static void clientLoad(RegisterMenuScreensEvent event) {

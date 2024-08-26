@@ -246,7 +246,7 @@
     }
   ],
   "output": {
-    "item": "avaritia:infinity_armor_leggings",
+    "id": "avaritia:infinity_armor_leggings",
     "count": 1
   }
 }

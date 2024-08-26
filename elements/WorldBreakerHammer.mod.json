@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "tool",
   "definition": {
     "toolType": "Pickaxe",
@@ -12,22 +12,20 @@
     "specialInformation": {
       "fixedValue": []
     },
-    "creativeTab": {
-      "value": "No creative tab entry"
-    },
-    "harvestLevel": 99999,
+    "creativeTabs": [],
     "efficiency": 99999.0,
     "attackSpeed": 1.0,
     "enchantability": 99999,
     "damageVsEntity": 8.0,
     "usageCount": 1000,
-    "blocksAffected": [],
     "glowCondition": {
       "fixedValue": true,
       "name": "NeverGlow"
     },
     "repairItems": [],
     "immuneToFire": false,
+    "blockDropsTier": "NETHERITE",
+    "blocksAffected": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "onRightClickedInAir": {

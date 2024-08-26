@@ -5,7 +5,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.nbt.CompoundTag;
 
 import net.bullfighter.avaritia.init.AvaritiaModItems;
 
@@ -16,11 +15,7 @@ public class WorldBreakerHammerRightclickedProcedure {
 		ItemStack hammer = ItemStack.EMPTY;
 		if (entity.isShiftKeyDown()) {
 			hammer = new ItemStack(AvaritiaModItems.WORLD_BREAKER.get());
-			{
-				CompoundTag _nbtTag = itemstack.getTag();
-				if (_nbtTag != null)
-					hammer.setTag(_nbtTag.copy());
-			}
+			hammer.applyComponents(itemstack.getComponents());
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == AvaritiaModItems.WORLD_BREAKER_HAMMER.get()) {
 				if (entity instanceof LivingEntity _entity) {
 					ItemStack _setstack = hammer.copy();

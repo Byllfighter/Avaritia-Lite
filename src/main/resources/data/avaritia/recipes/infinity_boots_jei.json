@@ -246,7 +246,7 @@
     }
   ],
   "output": {
-    "item": "avaritia:infinity_armor_boots",
+    "id": "avaritia:infinity_armor_boots",
     "count": 1
   }
 }

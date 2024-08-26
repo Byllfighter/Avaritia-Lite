@@ -73,7 +73,7 @@ public class ExtremeCraftingTableGuiScreen extends AbstractContainerScreen<Extre
 		super.init();
 		button_craft = Button.builder(Component.translatable("gui.avaritia.extreme_crafting_table_gui.button_craft"), e -> {
 			if (true) {
-				PacketDistributor.SERVER.noArg().send(new ExtremeCraftingTableGuiButtonMessage(0, x, y, z));
+				PacketDistributor.sendToServer(new ExtremeCraftingTableGuiButtonMessage(0, x, y, z));
 				ExtremeCraftingTableGuiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 244, this.topPos + 51, 50, 20).build();

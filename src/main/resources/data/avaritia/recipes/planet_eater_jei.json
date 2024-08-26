@@ -246,7 +246,7 @@
     }
   ],
   "output": {
-    "item": "avaritia:planet_eater",
+    "id": "avaritia:planet_eater",
     "count": 1
   }
 }

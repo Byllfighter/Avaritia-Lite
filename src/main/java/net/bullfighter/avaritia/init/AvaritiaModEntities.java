@@ -6,9 +6,9 @@ package net.bullfighter.avaritia.init;
 
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.event.entity.SpawnPlacementRegisterEvent;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
-import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.entity.MobCategory;
@@ -21,7 +21,7 @@ import net.bullfighter.avaritia.entity.EndestPearlProjectileEntity;
 import net.bullfighter.avaritia.entity.BlackHoleEntity;
 import net.bullfighter.avaritia.AvaritiaMod;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class AvaritiaModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(Registries.ENTITY_TYPE, AvaritiaMod.MODID);
 	public static final DeferredHolder<EntityType<?>, EntityType<BlackHoleEntity>> BLACK_HOLE = register("black_hole",
@@ -36,10 +36,8 @@ public class AvaritiaModEntities {
 	}
 
 	@SubscribeEvent
-	public static void init(FMLCommonSetupEvent event) {
-		event.enqueueWork(() -> {
-			BlackHoleEntity.init();
-		});
+	public static void init(SpawnPlacementRegisterEvent event) {
+		BlackHoleEntity.init(event);
 	}
 
 	@SubscribeEvent

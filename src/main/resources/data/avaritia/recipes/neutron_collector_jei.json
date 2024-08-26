@@ -246,7 +246,7 @@
     }
   ],
   "output": {
-    "item": "avaritia:neutron_collector",
+    "id": "avaritia:neutron_collector",
     "count": 1
   }
 }

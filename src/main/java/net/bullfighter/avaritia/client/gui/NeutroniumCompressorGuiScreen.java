@@ -81,7 +81,7 @@ public class NeutroniumCompressorGuiScreen extends AbstractContainerScreen<Neutr
 		super.init();
 		button_www = Button.builder(Component.translatable("gui.avaritia.neutronium_compressor_gui.button_www"), e -> {
 			if (true) {
-				PacketDistributor.SERVER.noArg().send(new NeutroniumCompressorGuiButtonMessage(0, x, y, z));
+				PacketDistributor.sendToServer(new NeutroniumCompressorGuiButtonMessage(0, x, y, z));
 				NeutroniumCompressorGuiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 24, this.topPos + 52, 40, 20).build();

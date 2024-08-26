@@ -246,7 +246,7 @@
     }
   ],
   "output": {
-    "item": "avaritia:skullfire_sword",
+    "id": "avaritia:skullfire_sword",
     "count": 1
   }
 }

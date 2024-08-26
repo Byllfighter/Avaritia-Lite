@@ -31,7 +31,7 @@
     }
   ],
   "result": {
-    "item": "avaritia:double_compressed_crafting_table",
+    "id": "avaritia:double_compressed_crafting_table",
     "count": 1
   }
 }

@@ -43,6 +43,11 @@ public class LongbowoftheHeavensProjectileEntity extends AbstractArrow implement
 	}
 
 	@Override
+	protected ItemStack getDefaultPickupItem() {
+		return new ItemStack(AvaritiaModItems.INFINITY_CATALYST.get());
+	}
+
+	@Override
 	protected void doPostHurtEffects(LivingEntity entity) {
 		super.doPostHurtEffects(entity);
 		entity.setArrowCount(entity.getArrowCount() - 1);
@@ -63,6 +68,10 @@ public class LongbowoftheHeavensProjectileEntity extends AbstractArrow implement
 
 	public static LongbowoftheHeavensProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source) {
 		return shoot(world, entity, source, 5f, 9999, 5);
+	}
+
+	public static LongbowoftheHeavensProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 5f, 9999, 5);
 	}
 
 	public static LongbowoftheHeavensProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {

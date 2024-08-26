@@ -246,7 +246,7 @@
     }
   ],
   "output": {
-    "item": "avaritia:infinity_armor_chestplate",
+    "id": "avaritia:infinity_armor_chestplate",
     "count": 1
   }
 }

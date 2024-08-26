@@ -19,12 +19,12 @@ public class AvaritiaModTabs {
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> AVARITIATAB = REGISTRY.register("avaritiatab",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.avaritia.avaritiatab")).icon(() -> new ItemStack(AvaritiaModItems.INFINITY_CATALYST.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(AvaritiaModItems.DIAMOND_LATTICE.get());
+				tabData.accept(AvaritiaModItems.INFINITY_CATALYST.get());
 				tabData.accept(AvaritiaModItems.CRYSTAL_MATRIX_INGOT.get());
 				tabData.accept(AvaritiaModItems.PILEOF_NEUTRONS.get());
+				tabData.accept(AvaritiaModBlocks.NEUTRON_COLLECTOR.get().asItem());
 				tabData.accept(AvaritiaModItems.NEUTRONIUM_NUGGET.get());
 				tabData.accept(AvaritiaModItems.NEUTRONIUM_INGOT.get());
-				tabData.accept(AvaritiaModItems.INFINITY_CATALYST.get());
-				tabData.accept(AvaritiaModBlocks.NEUTRON_COLLECTOR.get().asItem());
 				tabData.accept(AvaritiaModItems.INFINITY_INGOT.get());
 				tabData.accept(AvaritiaModItems.RECORD_FRAGMENT.get());
 				tabData.accept(AvaritiaModItems.IRON_SINGULARITY.get());
@@ -34,9 +34,6 @@ public class AvaritiaModTabs {
 				tabData.accept(AvaritiaModItems.NETHER_QUARTZ_SINGULARITY.get());
 				tabData.accept(AvaritiaModItems.DIAMOND_SINGULARITY.get());
 				tabData.accept(AvaritiaModItems.EMERALD_SINGULARITY.get());
-				tabData.accept(AvaritiaModItems.COPPER_SINGULARITY.get());
-				tabData.accept(AvaritiaModItems.AMETHYST_SINGULARITY.get());
-				tabData.accept(AvaritiaModItems.NETHERITE_SINGULARITY.get());
 				tabData.accept(AvaritiaModBlocks.NEUTRONIUM_COMPRESSOR.get().asItem());
 				tabData.accept(AvaritiaModItems.SWORDOFTHE_COSMOS.get());
 				tabData.accept(AvaritiaModItems.PLANET_EATER.get());
@@ -58,6 +55,9 @@ public class AvaritiaModTabs {
 				tabData.accept(AvaritiaModItems.COSMIC_MEATBALLS.get());
 				tabData.accept(AvaritiaModItems.LONGBOWOFTHE_HEAVENS.get());
 				tabData.accept(AvaritiaModItems.ENDEST_PEARL.get());
+				tabData.accept(AvaritiaModItems.COPPER_SINGULARITY.get());
+				tabData.accept(AvaritiaModItems.AMETHYST_SINGULARITY.get());
+				tabData.accept(AvaritiaModItems.NETHERITE_SINGULARITY.get());
 			})
 
 					.build());

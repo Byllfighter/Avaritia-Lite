@@ -246,7 +246,7 @@
     }
   ],
   "output": {
-    "item": "avaritia:longbowofthe_heavens",
+    "id": "avaritia:longbowofthe_heavens",
     "count": 1
   }
 }

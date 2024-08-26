@@ -246,7 +246,7 @@
     }
   ],
   "output": {
-    "item": "avaritia:natures_ruin",
+    "id": "avaritia:natures_ruin",
     "count": 1
   }
 }

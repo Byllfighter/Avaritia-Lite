@@ -246,7 +246,7 @@
     }
   ],
   "output": {
-    "item": "avaritia:infinity_armor_helmet",
+    "id": "avaritia:infinity_armor_helmet",
     "count": 1
   }
 }

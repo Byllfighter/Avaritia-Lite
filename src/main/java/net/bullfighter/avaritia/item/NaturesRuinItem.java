@@ -1,47 +1,59 @@
 
 package net.bullfighter.avaritia.item;
 
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.DiggerItem;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.tags.TagKey;
+import net.minecraft.tags.BlockTags;
 
 import net.bullfighter.avaritia.procedures.NaturesRuinRightclickedProcedure;
 import net.bullfighter.avaritia.procedures.MendProcedure;
 
 public class NaturesRuinItem extends AxeItem {
+	private static final Tier TOOL_TIER = new Tier() {
+		@Override
+		public int getUses() {
+			return (int) Double.POSITIVE_INFINITY;
+		}
+
+		@Override
+		public float getSpeed() {
+			return (float) Double.POSITIVE_INFINITY;
+		}
+
+		@Override
+		public float getAttackDamageBonus() {
+			return 0;
+		}
+
+		@Override
+		public TagKey<Block> getIncorrectBlocksForDrops() {
+			return BlockTags.INCORRECT_FOR_NETHERITE_TOOL;
+		}
+
+		@Override
+		public int getEnchantmentValue() {
+			return 100;
+		}
+
+		@Override
+		public Ingredient getRepairIngredient() {
+			return Ingredient.of();
+		}
+	};
+
 	public NaturesRuinItem() {
-		super(new Tier() {
-			public int getUses() {
-				return (int) Double.POSITIVE_INFINITY;
-			}
-
-			public float getSpeed() {
-				return (float) Double.POSITIVE_INFINITY;
-			}
-
-			public float getAttackDamageBonus() {
-				return 19f;
-			}
-
-			public int getLevel() {
-				return (int) Double.POSITIVE_INFINITY;
-			}
-
-			public int getEnchantmentValue() {
-				return 100;
-			}
-
-			public Ingredient getRepairIngredient() {
-				return Ingredient.of();
-			}
-		}, 1, -3f, new Item.Properties());
+		super(TOOL_TIER, new Item.Properties().attributes(DiggerItem.createAttributes(TOOL_TIER, 20f, -3f)));
 	}
 
 	@Override

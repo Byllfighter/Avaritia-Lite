@@ -5,12 +5,12 @@
 package net.bullfighter.avaritia.init;
 
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.GameRules;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class AvaritiaModGameRules {
 	public static GameRules.Key<GameRules.BooleanValue> WORLD_BREAKER_BEDROCK_BREAK;
 	public static GameRules.Key<GameRules.IntegerValue> NEUTRONIUMCOMPRESSORAMOUNT;

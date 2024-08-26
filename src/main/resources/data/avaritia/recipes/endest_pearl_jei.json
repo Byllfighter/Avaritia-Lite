@@ -246,7 +246,7 @@
     }
   ],
   "output": {
-    "item": "avaritia:endest_pearl",
+    "id": "avaritia:endest_pearl",
     "count": 1
   }
 }

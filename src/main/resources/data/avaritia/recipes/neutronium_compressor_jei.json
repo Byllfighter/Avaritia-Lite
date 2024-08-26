@@ -246,7 +246,7 @@
     }
   ],
   "output": {
-    "item": "avaritia:neutronium_compressor",
+    "id": "avaritia:neutronium_compressor",
     "count": 1
   }
 }

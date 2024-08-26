@@ -7,10 +7,10 @@ public class MendProcedure {
 	public static void execute(ItemStack itemstack) {
 		{
 			ItemStack _ist = itemstack;
-			if (_ist.hurt(-1000, RandomSource.create(), null)) {
+			_ist.hurtAndBreak(-1000, RandomSource.create(), null, () -> {
 				_ist.shrink(1);
 				_ist.setDamageValue(0);
-			}
+			});
 		}
 	}
 }

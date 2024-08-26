@@ -20,7 +20,7 @@ import net.bullfighter.avaritia.entity.LongbowoftheHeavensProjectileEntity;
 
 public class LongbowoftheHeavensItem extends Item {
 	public LongbowoftheHeavensItem() {
-		super(new Item.Properties().durability(100).rarity(Rarity.COMMON));
+		super(new Item.Properties().rarity(Rarity.COMMON));
 	}
 
 	@Override
@@ -34,6 +34,11 @@ public class LongbowoftheHeavensItem extends Item {
 	}
 
 	@Override
+	public float getDestroySpeed(ItemStack itemstack, BlockState state) {
+		return 0f;
+	}
+
+	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = InteractionResultHolder.success(entity.getItemInHand(hand));
 		entity.startUsingItem(hand);
@@ -42,9 +47,8 @@ public class LongbowoftheHeavensItem extends Item {
 
 	@Override
 	public void releaseUsing(ItemStack itemstack, Level world, LivingEntity entity, int time) {
-		if (!world.isClientSide() && entity instanceof ServerPlayer player) {
+		if (!world.isClientSide() && entity instanceof ServerPlayer) {
 			LongbowoftheHeavensProjectileEntity projectile = LongbowoftheHeavensProjectileEntity.shoot(world, entity, world.getRandom());
-			itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 			projectile.pickup = AbstractArrow.Pickup.DISALLOWED;
 			MendProcedure.execute(itemstack);
 		}

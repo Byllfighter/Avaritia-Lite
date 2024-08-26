@@ -246,7 +246,7 @@
     }
   ],
   "output": {
-    "item": "avaritia:cosmic_meatballs",
+    "id": "avaritia:cosmic_meatballs",
     "count": 1
   }
 }

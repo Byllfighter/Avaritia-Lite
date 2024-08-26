@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "tool",
   "definition": {
     "toolType": "Sword",
@@ -13,21 +13,23 @@
       "fixedValue": [],
       "name": "SkullfireSwordSpecialInformation"
     },
-    "creativeTab": {
-      "value": "CUSTOM:Avaritiatab"
-    },
-    "harvestLevel": 1,
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Avaritiatab"
+      }
+    ],
     "efficiency": 2.0,
     "attackSpeed": 1.6,
     "enchantability": 99999,
     "damageVsEntity": 7.0,
     "usageCount": 1561,
-    "blocksAffected": [],
     "glowCondition": {
       "fixedValue": false
     },
     "repairItems": [],
     "immuneToFire": false,
+    "blockDropsTier": "STONE",
+    "blocksAffected": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false
   }

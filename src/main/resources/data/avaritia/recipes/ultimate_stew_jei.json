@@ -246,7 +246,7 @@
     }
   ],
   "output": {
-    "item": "avaritia:ultimate_stew",
+    "id": "avaritia:ultimate_stew",
     "count": 1
   }
 }

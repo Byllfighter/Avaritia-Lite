@@ -246,7 +246,7 @@
     }
   ],
   "output": {
-    "item": "avaritia:world_breaker",
+    "id": "avaritia:world_breaker",
     "count": 1
   }
 }

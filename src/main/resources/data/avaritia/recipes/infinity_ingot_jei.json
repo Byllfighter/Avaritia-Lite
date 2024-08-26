@@ -246,7 +246,7 @@
     }
   ],
   "output": {
-    "item": "avaritia:infinity_ingot",
+    "id": "avaritia:infinity_ingot",
     "count": 1
   }
 }

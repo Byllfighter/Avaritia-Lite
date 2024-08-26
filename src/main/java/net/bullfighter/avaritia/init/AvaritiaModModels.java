@@ -5,7 +5,7 @@
 package net.bullfighter.avaritia.init;
 
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
@@ -13,7 +13,7 @@ import net.bullfighter.avaritia.client.model.Modellongbowoftheheavensprojectile;
 import net.bullfighter.avaritia.client.model.Modelinfinitywings;
 import net.bullfighter.avaritia.client.model.Modelinfinityeyes;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class AvaritiaModModels {
 	@SubscribeEvent
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {

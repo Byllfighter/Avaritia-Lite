@@ -246,7 +246,7 @@
     }
   ],
   "output": {
-    "item": "avaritia:swordofthe_cosmos",
+    "id": "avaritia:swordofthe_cosmos",
     "count": 1
   }
 }
