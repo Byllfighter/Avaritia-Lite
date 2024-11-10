@@ -38,7 +38,7 @@ public class PlanetEaterDestroyerBlockDestroyProcedure {
 		double starty = 0;
 		double startz = 0;
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == AvaritiaModItems.PLANET_EATER_DESTROYER.get()) {
-			if (blockstate.is(BlockTags.create(new ResourceLocation("minecraft:mineable/shovel")))) {
+			if (blockstate.is(BlockTags.create(ResourceLocation.parse("minecraft:mineable/shovel")))) {
 				startx = x - 8;
 				startz = z - 8;
 				if (direction == Direction.DOWN || direction == Direction.UP) {
@@ -49,7 +49,7 @@ public class PlanetEaterDestroyerBlockDestroyProcedure {
 				for (int index0 = 0; index0 < 17; index0++) {
 					for (int index1 = 0; index1 < 17; index1++) {
 						for (int index2 = 0; index2 < 17; index2++) {
-							if ((world.getBlockState(BlockPos.containing(startx, starty, startz))).is(BlockTags.create(new ResourceLocation("minecraft:mineable/shovel")))) {
+							if ((world.getBlockState(BlockPos.containing(startx, starty, startz))).is(BlockTags.create(ResourceLocation.parse("minecraft:mineable/shovel")))) {
 								{
 									BlockPos _pos = BlockPos.containing(startx, starty, startz);
 									Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(startx, starty, startz), null);

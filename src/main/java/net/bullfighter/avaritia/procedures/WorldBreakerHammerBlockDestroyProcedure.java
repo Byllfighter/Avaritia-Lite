@@ -38,7 +38,7 @@ public class WorldBreakerHammerBlockDestroyProcedure {
 		double starty = 0;
 		double startx = 0;
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == AvaritiaModItems.WORLD_BREAKER_HAMMER.get()) {
-			if (blockstate.is(BlockTags.create(new ResourceLocation("minecraft:mineable/pickaxe")))) {
+			if (blockstate.is(BlockTags.create(ResourceLocation.parse("minecraft:mineable/pickaxe")))) {
 				startx = x - 8;
 				startz = z - 8;
 				if (direction == Direction.DOWN || direction == Direction.UP) {

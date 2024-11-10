@@ -18,6 +18,6 @@ public class BlackHoleRenderer extends HumanoidMobRenderer<BlackHoleEntity, Huma
 
 	@Override
 	public ResourceLocation getTextureLocation(BlackHoleEntity entity) {
-		return new ResourceLocation("avaritia:textures/entities/null.png");
+		return ResourceLocation.parse("avaritia:textures/entities/null.png");
 	}
 }

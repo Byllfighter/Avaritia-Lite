@@ -25,7 +25,7 @@ import java.util.HashMap;
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public record ExtremeCraftingTableGuiButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
-	public static final Type<ExtremeCraftingTableGuiButtonMessage> TYPE = new Type<>(new ResourceLocation(AvaritiaMod.MODID, "extreme_crafting_table_gui_buttons"));
+	public static final Type<ExtremeCraftingTableGuiButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(AvaritiaMod.MODID, "extreme_crafting_table_gui_buttons"));
 	public static final StreamCodec<RegistryFriendlyByteBuf, ExtremeCraftingTableGuiButtonMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, ExtremeCraftingTableGuiButtonMessage message) -> {
 		buffer.writeInt(message.buttonID);
 		buffer.writeInt(message.x);

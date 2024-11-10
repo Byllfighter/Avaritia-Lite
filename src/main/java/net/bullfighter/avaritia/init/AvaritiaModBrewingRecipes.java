@@ -19,7 +19,7 @@ import java.util.ArrayList;
 public class AvaritiaModBrewingRecipes implements IModPlugin {
 	@Override
 	public ResourceLocation getPluginUid() {
-		return new ResourceLocation("avaritia:brewing_recipes");
+		return ResourceLocation.parse("avaritia:brewing_recipes");
 	}
 
 	@Override

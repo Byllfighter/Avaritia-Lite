@@ -38,7 +38,7 @@ public class NeutroniumCompressorGuiScreen extends AbstractContainerScreen<Neutr
 		this.imageHeight = 166;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("avaritia:textures/screens/neutronium_compressor_gui.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("avaritia:textures/screens/neutronium_compressor_gui.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {

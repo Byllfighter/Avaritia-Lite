@@ -5,7 +5,7 @@ repositories {
 }
       
 dependencies {
-    implementation 'curse.maven:kleidersplayerrenderer-682065:5654805'
+    implementation 'curse.maven:kleidersplayerrenderer-682065:5675429'
 }
 
 
@@ -25,9 +25,9 @@ repositories {
 }
 
 dependencies {
-    compileOnly("mezz.jei:jei-1.20.6-common-api:18.0.0.65")
-    compileOnly("mezz.jei:jei-1.20.6-neoforge-api:18.0.0.65")
-    runtimeOnly("mezz.jei:jei-1.20.6-neoforge:18.0.0.65")
+    compileOnly("mezz.jei:jei-1.21.1-common-api:19.21.0.247")
+    compileOnly("mezz.jei:jei-1.21.1-neoforge-api:19.21.0.247")
+    runtimeOnly("mezz.jei:jei-1.21.1-neoforge:19.21.0.247")
 }
 
 

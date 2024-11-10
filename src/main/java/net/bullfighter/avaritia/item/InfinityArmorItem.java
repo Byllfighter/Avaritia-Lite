@@ -40,8 +40,8 @@ public abstract class InfinityArmorItem extends ArmorItem {
 				map.put(ArmorItem.Type.CHESTPLATE, 1024);
 				map.put(ArmorItem.Type.HELMET, 1024);
 				map.put(ArmorItem.Type.BODY, 1024);
-			}), 100, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), () -> Ingredient.of(), List.of(new ArmorMaterial.Layer(new ResourceLocation("avaritia:infinity"))), 5f, 0f);
-			registerHelper.register(new ResourceLocation("avaritia:infinity_armor"), armorMaterial);
+			}), 100, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), () -> Ingredient.of(), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("avaritia:infinity"))), 5f, 5f);
+			registerHelper.register(ResourceLocation.parse("avaritia:infinity_armor"), armorMaterial);
 			ARMOR_MATERIAL = BuiltInRegistries.ARMOR_MATERIAL.wrapAsHolder(armorMaterial);
 		});
 	}
@@ -59,7 +59,7 @@ public abstract class InfinityArmorItem extends ArmorItem {
 		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 			super.inventoryTick(itemstack, world, entity, slot, selected);
 			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
-				MendProcedure.execute(itemstack);
+				MendProcedure.execute(world, itemstack);
 			}
 		}
 	}
@@ -73,7 +73,7 @@ public abstract class InfinityArmorItem extends ArmorItem {
 		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 			super.inventoryTick(itemstack, world, entity, slot, selected);
 			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
-				MendProcedure.execute(itemstack);
+				MendProcedure.execute(world, itemstack);
 			}
 		}
 	}
@@ -87,7 +87,7 @@ public abstract class InfinityArmorItem extends ArmorItem {
 		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 			super.inventoryTick(itemstack, world, entity, slot, selected);
 			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
-				MendProcedure.execute(itemstack);
+				MendProcedure.execute(world, itemstack);
 			}
 		}
 	}
@@ -101,7 +101,7 @@ public abstract class InfinityArmorItem extends ArmorItem {
 		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 			super.inventoryTick(itemstack, world, entity, slot, selected);
 			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
-				MendProcedure.execute(itemstack);
+				MendProcedure.execute(world, itemstack);
 			}
 		}
 	}

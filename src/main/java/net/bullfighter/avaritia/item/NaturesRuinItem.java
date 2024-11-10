@@ -67,6 +67,6 @@ public class NaturesRuinItem extends AxeItem {
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
 		if (selected)
-			MendProcedure.execute(itemstack);
+			MendProcedure.execute(world, itemstack);
 	}
 }

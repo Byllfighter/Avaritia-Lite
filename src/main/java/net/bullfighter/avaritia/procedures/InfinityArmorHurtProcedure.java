@@ -12,7 +12,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.client.Minecraft;
 
 import net.bullfighter.avaritia.init.AvaritiaModItems;
@@ -102,7 +101,7 @@ public class InfinityArmorHurtProcedure {
 						_player.getAbilities().invulnerable = false;
 						_player.onUpdateAbilities();
 					}
-					entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.PLAYER_EXPLOSION), sourceentity), 4);
+					entity.hurt(new DamageSource(world.holderOrThrow(DamageTypes.PLAYER_EXPLOSION), sourceentity), 4);
 					if (entity instanceof Player _player) {
 						_player.getAbilities().invulnerable = true;
 						_player.onUpdateAbilities();

@@ -44,7 +44,7 @@
       "registry_name": "diamond_lattice_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/recipes/diamond_lattice_recipe.json"
+          "src/main/resources/data/avaritia/recipe/diamond_lattice_recipe.json"
         ]
       }
     },
@@ -69,7 +69,7 @@
       "registry_name": "crystal_matrix_ingot_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/recipes/crystal_matrix_ingot_recipe.json"
+          "src/main/resources/data/avaritia/recipe/crystal_matrix_ingot_recipe.json"
         ]
       }
     },
@@ -94,9 +94,9 @@
       "registry_name": "neutron_collector",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/loot_tables/blocks/neutron_collector.json",
           "src/main/java/net/bullfighter/avaritia/block/NeutronCollectorBlock.java",
           "src/main/resources/assets/avaritia/models/block/neutron_collector.json",
+          "src/main/resources/data/avaritia/loot_table/blocks/neutron_collector.json",
           "src/main/resources/assets/avaritia/models/item/neutron_collector.json",
           "src/main/java/net/bullfighter/avaritia/block/entity/NeutronCollectorBlockEntity.java",
           "src/main/resources/assets/avaritia/blockstates/neutron_collector.json"
@@ -180,7 +180,7 @@
       "registry_name": "neutronium_nugget_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/recipes/neutronium_nugget_recipe.json"
+          "src/main/resources/data/avaritia/recipe/neutronium_nugget_recipe.json"
         ]
       }
     },
@@ -192,7 +192,7 @@
       "registry_name": "pileof_neutronium_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/recipes/pileof_neutronium_recipe.json"
+          "src/main/resources/data/avaritia/recipe/pileof_neutronium_recipe.json"
         ]
       }
     },
@@ -204,7 +204,7 @@
       "registry_name": "neutronium_nugget_recipe_2",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/recipes/neutronium_nugget_recipe_2.json"
+          "src/main/resources/data/avaritia/recipe/neutronium_nugget_recipe_2.json"
         ]
       }
     },
@@ -216,7 +216,7 @@
       "registry_name": "neutronium_ingot_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/recipes/neutronium_ingot_recipe.json"
+          "src/main/resources/data/avaritia/recipe/neutronium_ingot_recipe.json"
         ]
       }
     },
@@ -268,7 +268,7 @@
       "registry_name": "record_fragment_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/recipes/record_fragment_recipe.json"
+          "src/main/resources/data/avaritia/recipe/record_fragment_recipe.json"
         ]
       }
     },
@@ -386,10 +386,10 @@
       "metadata": {
         "files": [
           "src/main/java/net/bullfighter/avaritia/block/entity/NeutroniumCompressorBlockEntity.java",
+          "src/main/resources/data/avaritia/loot_table/blocks/neutronium_compressor.json",
           "src/main/resources/assets/avaritia/models/block/neutronium_compressor.json",
           "src/main/java/net/bullfighter/avaritia/block/NeutroniumCompressorBlock.java",
           "src/main/resources/assets/avaritia/blockstates/neutronium_compressor.json",
-          "src/main/resources/data/avaritia/loot_tables/blocks/neutronium_compressor.json",
           "src/main/resources/assets/avaritia/models/item/neutronium_compressor.json"
         ]
       }
@@ -408,6 +408,10 @@
           {
             "name": "itemstack",
             "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -585,6 +589,10 @@
           {
             "name": "itemstack",
             "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -760,8 +768,8 @@
           "src/main/resources/assets/avaritia/blockstates/compressed_crafting_table.json",
           "src/main/java/net/bullfighter/avaritia/block/CompressedCraftingTableBlock.java",
           "src/main/resources/assets/avaritia/models/item/compressed_crafting_table.json",
-          "src/main/resources/data/avaritia/loot_tables/blocks/compressed_crafting_table.json",
-          "src/main/resources/assets/avaritia/models/block/compressed_crafting_table.json"
+          "src/main/resources/assets/avaritia/models/block/compressed_crafting_table.json",
+          "src/main/resources/data/avaritia/loot_table/blocks/compressed_crafting_table.json"
         ]
       }
     },
@@ -773,9 +781,9 @@
       "registry_name": "double_compressed_crafting_table",
       "metadata": {
         "files": [
+          "src/main/resources/data/avaritia/loot_table/blocks/double_compressed_crafting_table.json",
           "src/main/java/net/bullfighter/avaritia/block/DoubleCompressedCraftingTableBlock.java",
           "src/main/resources/assets/avaritia/models/block/double_compressed_crafting_table.json",
-          "src/main/resources/data/avaritia/loot_tables/blocks/double_compressed_crafting_table.json",
           "src/main/resources/assets/avaritia/blockstates/double_compressed_crafting_table.json",
           "src/main/resources/assets/avaritia/models/item/double_compressed_crafting_table.json"
         ]
@@ -789,7 +797,7 @@
       "registry_name": "compressed_crafting_table_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/recipes/compressed_crafting_table_recipe.json"
+          "src/main/resources/data/avaritia/recipe/compressed_crafting_table_recipe.json"
         ]
       }
     },
@@ -801,7 +809,7 @@
       "registry_name": "double_compressed_crafting_table_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/recipes/double_compressed_crafting_table_recipe.json"
+          "src/main/resources/data/avaritia/recipe/double_compressed_crafting_table_recipe.json"
         ]
       }
     },
@@ -816,7 +824,7 @@
           "src/main/resources/assets/avaritia/blockstates/extreme_crafting_table.json",
           "src/main/resources/assets/avaritia/models/item/extreme_crafting_table.json",
           "src/main/java/net/bullfighter/avaritia/block/ExtremeCraftingTableBlock.java",
-          "src/main/resources/data/avaritia/loot_tables/blocks/extreme_crafting_table.json",
+          "src/main/resources/data/avaritia/loot_table/blocks/extreme_crafting_table.json",
           "src/main/java/net/bullfighter/avaritia/block/entity/ExtremeCraftingTableBlockEntity.java",
           "src/main/resources/assets/avaritia/models/block/extreme_crafting_table.json"
         ]
@@ -831,9 +839,9 @@
       "metadata": {
         "files": [
           "src/main/java/net/bullfighter/avaritia/block/NeutroniumBlockBlock.java",
-          "src/main/resources/data/avaritia/loot_tables/blocks/neutronium_block.json",
           "src/main/resources/assets/avaritia/models/item/neutronium_block.json",
           "src/main/resources/assets/avaritia/blockstates/neutronium_block.json",
+          "src/main/resources/data/avaritia/loot_table/blocks/neutronium_block.json",
           "src/main/resources/assets/avaritia/models/block/neutronium_block.json"
         ]
       }
@@ -847,10 +855,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/avaritia/models/block/infinity_block.json",
+          "src/main/resources/data/avaritia/loot_table/blocks/infinity_block.json",
           "src/main/java/net/bullfighter/avaritia/block/InfinityBlockBlock.java",
           "src/main/resources/assets/avaritia/blockstates/infinity_block.json",
-          "src/main/resources/assets/avaritia/models/item/infinity_block.json",
-          "src/main/resources/data/avaritia/loot_tables/blocks/infinity_block.json"
+          "src/main/resources/assets/avaritia/models/item/infinity_block.json"
         ]
       }
     },
@@ -862,9 +870,9 @@
       "registry_name": "crystal_matrix",
       "metadata": {
         "files": [
+          "src/main/resources/data/avaritia/loot_table/blocks/crystal_matrix.json",
           "src/main/java/net/bullfighter/avaritia/block/CrystalMatrixBlock.java",
           "src/main/resources/assets/avaritia/models/block/crystal_matrix.json",
-          "src/main/resources/data/avaritia/loot_tables/blocks/crystal_matrix.json",
           "src/main/resources/assets/avaritia/models/item/crystal_matrix.json",
           "src/main/resources/assets/avaritia/blockstates/crystal_matrix.json"
         ]
@@ -878,7 +886,7 @@
       "registry_name": "neutronium_block_uncraft",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/recipes/neutronium_block_uncraft.json"
+          "src/main/resources/data/avaritia/recipe/neutronium_block_uncraft.json"
         ]
       }
     },
@@ -890,7 +898,7 @@
       "registry_name": "neutronium_block_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/recipes/neutronium_block_craft.json"
+          "src/main/resources/data/avaritia/recipe/neutronium_block_craft.json"
         ]
       }
     },
@@ -902,7 +910,7 @@
       "registry_name": "infinity_block_uncraft",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/recipes/infinity_block_uncraft.json"
+          "src/main/resources/data/avaritia/recipe/infinity_block_uncraft.json"
         ]
       }
     },
@@ -914,7 +922,7 @@
       "registry_name": "infinity_block_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/recipes/infinity_block_craft.json"
+          "src/main/resources/data/avaritia/recipe/infinity_block_craft.json"
         ]
       }
     },
@@ -926,7 +934,7 @@
       "registry_name": "crystal_matix_uncraft",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/recipes/crystal_matix_uncraft.json"
+          "src/main/resources/data/avaritia/recipe/crystal_matix_uncraft.json"
         ]
       }
     },
@@ -938,7 +946,7 @@
       "registry_name": "crystal_matix_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/recipes/crystal_matix_craft.json"
+          "src/main/resources/data/avaritia/recipe/crystal_matix_craft.json"
         ]
       }
     },
@@ -1449,7 +1457,7 @@
       "registry_name": "extreme_crafting_table_craft",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/recipes/extreme_crafting_table_craft.json"
+          "src/main/resources/data/avaritia/recipe/extreme_crafting_table_craft.json"
         ]
       }
     },
@@ -1872,7 +1880,7 @@
       "registry_name": "swordofthe_cosmos_jei",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/recipes/swordofthe_cosmos_jei.json"
+          "src/main/resources/data/avaritia/recipe/swordofthe_cosmos_jei.json"
         ]
       }
     },
@@ -1884,7 +1892,7 @@
       "registry_name": "longbowofthe_heavens_jei",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/recipes/longbowofthe_heavens_jei.json"
+          "src/main/resources/data/avaritia/recipe/longbowofthe_heavens_jei.json"
         ]
       }
     },
@@ -1896,7 +1904,7 @@
       "registry_name": "world_breaker_jei",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/recipes/world_breaker_jei.json"
+          "src/main/resources/data/avaritia/recipe/world_breaker_jei.json"
         ]
       }
     },
@@ -1908,7 +1916,7 @@
       "registry_name": "infinity_ingot_jei",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/recipes/infinity_ingot_jei.json"
+          "src/main/resources/data/avaritia/recipe/infinity_ingot_jei.json"
         ]
       }
     },
@@ -1920,7 +1928,7 @@
       "registry_name": "planet_eater_jei",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/recipes/planet_eater_jei.json"
+          "src/main/resources/data/avaritia/recipe/planet_eater_jei.json"
         ]
       }
     },
@@ -1932,7 +1940,7 @@
       "registry_name": "natures_ruin_jei",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/recipes/natures_ruin_jei.json"
+          "src/main/resources/data/avaritia/recipe/natures_ruin_jei.json"
         ]
       }
     },
@@ -1944,7 +1952,7 @@
       "registry_name": "hoeofthe_green_earth_jei",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/recipes/hoeofthe_green_earth_jei.json"
+          "src/main/resources/data/avaritia/recipe/hoeofthe_green_earth_jei.json"
         ]
       }
     },
@@ -1956,7 +1964,7 @@
       "registry_name": "infinity_helmet_jei",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/recipes/infinity_helmet_jei.json"
+          "src/main/resources/data/avaritia/recipe/infinity_helmet_jei.json"
         ]
       }
     },
@@ -1968,7 +1976,7 @@
       "registry_name": "infinity_chestplate_jei",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/recipes/infinity_chestplate_jei.json"
+          "src/main/resources/data/avaritia/recipe/infinity_chestplate_jei.json"
         ]
       }
     },
@@ -1980,7 +1988,7 @@
       "registry_name": "infinity_leggings_jei",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/recipes/infinity_leggings_jei.json"
+          "src/main/resources/data/avaritia/recipe/infinity_leggings_jei.json"
         ]
       }
     },
@@ -1992,7 +2000,7 @@
       "registry_name": "infinity_boots_jei",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/recipes/infinity_boots_jei.json"
+          "src/main/resources/data/avaritia/recipe/infinity_boots_jei.json"
         ]
       }
     },
@@ -2004,7 +2012,7 @@
       "registry_name": "skullfire_sword_jei",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/recipes/skullfire_sword_jei.json"
+          "src/main/resources/data/avaritia/recipe/skullfire_sword_jei.json"
         ]
       }
     },
@@ -2016,7 +2024,7 @@
       "registry_name": "endest_pearl_jei",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/recipes/endest_pearl_jei.json"
+          "src/main/resources/data/avaritia/recipe/endest_pearl_jei.json"
         ]
       }
     },
@@ -2028,7 +2036,7 @@
       "registry_name": "cosmic_meatballs_jei",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/recipes/cosmic_meatballs_jei.json"
+          "src/main/resources/data/avaritia/recipe/cosmic_meatballs_jei.json"
         ]
       }
     },
@@ -2040,7 +2048,7 @@
       "registry_name": "neutron_collector_jei",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/recipes/neutron_collector_jei.json"
+          "src/main/resources/data/avaritia/recipe/neutron_collector_jei.json"
         ]
       }
     },
@@ -2052,7 +2060,7 @@
       "registry_name": "neutronium_compressor_jei",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/recipes/neutronium_compressor_jei.json"
+          "src/main/resources/data/avaritia/recipe/neutronium_compressor_jei.json"
         ]
       }
     },
@@ -2064,7 +2072,7 @@
       "registry_name": "infinity_catalyst_jei",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/recipes/infinity_catalyst_jei.json"
+          "src/main/resources/data/avaritia/recipe/infinity_catalyst_jei.json"
         ]
       }
     },
@@ -2112,7 +2120,7 @@
       "registry_name": "ultimate_stew_jei",
       "metadata": {
         "files": [
-          "src/main/resources/data/avaritia/recipes/ultimate_stew_jei.json"
+          "src/main/resources/data/avaritia/recipe/ultimate_stew_jei.json"
         ]
       }
     },
@@ -2519,6 +2527,9 @@
     "ENTITIES:minecraft:undead": [
       "~CUSTOM:BlackHole"
     ],
+    "ITEMS:minecraft:enchantable/durability": [
+      "~CUSTOM:LongbowoftheHeavens"
+    ],
     "ITEMS:minecraft:meat": [
       "~CUSTOM:CosmicMeatballs"
     ],
@@ -2715,22 +2726,24 @@
   "workspaceSettings": {
     "modid": "avaritia",
     "modName": "Avaritia Lite",
-    "version": "1.10.6",
+    "version": "1.10.7",
     "author": "Bullfighter, MCreator",
     "websiteURL": "https://www.curseforge.com/minecraft/mc-mods/avaritia-lite",
     "license": "Not specified",
     "serverSideOnly": false,
     "modPicture": "infinity_catalyst",
-    "requiredMods": [],
+    "requiredMods": [
+      "kleiders_custom_renderer"
+    ],
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
       "kleidersplayerrenderer",
       "jei"
     ],
-    "currentGenerator": "neoforge-1.20.6",
+    "currentGenerator": "neoforge-1.21.1",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.bullfighter.avaritia"
   },
-  "mcreatorVersion": 202400232117
+  "mcreatorVersion": 202400342716
 }

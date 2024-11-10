@@ -1,10 +1,10 @@
 modLoader="javafml"
-loaderVersion="[2,)"
+loaderVersion="[4,)"
 license="Not specified"
 
 [[mods]]
 modId="avaritia"
-version="1.10.6"
+version="1.10.7"
 displayName="Avaritia Lite"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/avaritia-lite"
 logoFile="logo.png"
@@ -17,17 +17,23 @@ authors="Bullfighter, MCreator"
 [[dependencies.avaritia]]
     modId="neoforge"
     type="required"
-    versionRange="[20.6.117,)"
+    versionRange="[21.1.65,)"
     ordering="AFTER"
     side="BOTH"
 
 [[dependencies.avaritia]]
     modId="minecraft"
     type="required"
-    versionRange="[1.20.6]"
+    versionRange="[1.21.1]"
     ordering="AFTER"
     side="BOTH"
 
+[[dependencies.avaritia]]
+    modId="kleiders_custom_renderer"
+    type="required"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 
 [[dependencies.avaritia]]
     modId="kleidersplayerrenderer"

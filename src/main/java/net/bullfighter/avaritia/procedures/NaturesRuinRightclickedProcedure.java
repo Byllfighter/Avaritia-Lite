@@ -57,7 +57,7 @@ public class NaturesRuinRightclickedProcedure {
 								}
 							}
 						}
-						if ((world.getBlockState(BlockPos.containing(startx, starty, startz))).is(BlockTags.create(new ResourceLocation("avaritia:netures_ruin_destroys")))) {
+						if ((world.getBlockState(BlockPos.containing(startx, starty, startz))).is(BlockTags.create(ResourceLocation.parse("avaritia:netures_ruin_destroys")))) {
 							{
 								BlockPos _pos = BlockPos.containing(startx, starty, startz);
 								Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(startx, starty, startz), null);

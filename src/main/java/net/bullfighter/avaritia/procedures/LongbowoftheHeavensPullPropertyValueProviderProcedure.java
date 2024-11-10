@@ -9,7 +9,7 @@ public class LongbowoftheHeavensPullPropertyValueProviderProcedure {
 		if (entity == null) {
 			return 0.0F;
 		} else {
-			return ((LivingEntity)entity).getUseItem() != itemstack ? 0.0F : (float)(itemstack.getUseDuration() - ((LivingEntity)entity).getUseItemRemainingTicks()) / 10.0F;
+			return ((LivingEntity)entity).getUseItem() != itemstack ? 0.0F : (float)(itemstack.getUseDuration((LivingEntity) entity) - ((LivingEntity)entity).getUseItemRemainingTicks()) / 10.0F;
 		}
 	}
 }

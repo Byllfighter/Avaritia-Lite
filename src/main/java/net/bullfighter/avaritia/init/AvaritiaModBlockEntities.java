@@ -27,6 +27,8 @@ public class AvaritiaModBlockEntities {
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> NEUTRONIUM_COMPRESSOR = register("neutronium_compressor", AvaritiaModBlocks.NEUTRONIUM_COMPRESSOR, NeutroniumCompressorBlockEntity::new);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> EXTREME_CRAFTING_TABLE = register("extreme_crafting_table", AvaritiaModBlocks.EXTREME_CRAFTING_TABLE, ExtremeCraftingTableBlockEntity::new);
 
+	// Start of user code block custom block entities
+	// End of user code block custom block entities
 	private static DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> register(String registryname, DeferredHolder<Block, Block> block, BlockEntityType.BlockEntitySupplier<?> supplier) {
 		return REGISTRY.register(registryname, () -> BlockEntityType.Builder.of(supplier, block.get()).build(null));
 	}

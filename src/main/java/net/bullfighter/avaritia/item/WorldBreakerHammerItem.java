@@ -69,14 +69,14 @@ public class WorldBreakerHammerItem extends PickaxeItem {
 	@Override
 	public boolean mineBlock(ItemStack itemstack, Level world, BlockState blockstate, BlockPos pos, LivingEntity entity) {
 		boolean retval = super.mineBlock(itemstack, world, blockstate, pos, entity);
-		MendProcedure.execute(itemstack);
+		MendProcedure.execute(world, itemstack);
 		return retval;
 	}
 
 	@Override
 	public boolean hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
 		boolean retval = super.hurtEnemy(itemstack, entity, sourceentity);
-		MendProcedure.execute(itemstack);
+		MendProcedure.execute(entity.level(), itemstack);
 		return retval;
 	}
 
@@ -97,7 +97,7 @@ public class WorldBreakerHammerItem extends PickaxeItem {
 	@Override
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
-		WorldBreakerTickProcedure.execute(itemstack);
+		WorldBreakerTickProcedure.execute(world, itemstack);
 	}
 
 	@Override

@@ -13,6 +13,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
 
 import net.bullfighter.avaritia.procedures.MendProcedure;
 import net.bullfighter.avaritia.entity.EndestPearlProjectileEntity;
@@ -23,7 +24,7 @@ public class EndestPearlItem extends Item {
 	}
 
 	@Override
-	public int getUseDuration(ItemStack itemstack) {
+	public int getUseDuration(ItemStack itemstack, LivingEntity livingEntity) {
 		return 72000;
 	}
 
@@ -43,9 +44,9 @@ public class EndestPearlItem extends Item {
 	}
 
 	@Override
-	public boolean onEntitySwing(ItemStack itemstack, LivingEntity entity) {
-		boolean retval = super.onEntitySwing(itemstack, entity);
-		MendProcedure.execute(itemstack);
+	public boolean onEntitySwing(ItemStack itemstack, LivingEntity entity, InteractionHand hand) {
+		boolean retval = super.onEntitySwing(itemstack, entity, hand);
+		MendProcedure.execute(entity.level(), itemstack);
 		return retval;
 	}
 
@@ -59,15 +60,14 @@ public class EndestPearlItem extends Item {
 					projectile.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;
 				} else {
 					if (stack.isDamageableItem()) {
-						stack.hurtAndBreak(1, world.getRandom(), player, () -> {
-							stack.shrink(1);
-							stack.setDamageValue(0);
-						});
+						if (world instanceof ServerLevel serverLevel)
+							stack.hurtAndBreak(1, serverLevel, player, _stkprov -> {
+							});
 					} else {
 						stack.shrink(1);
 					}
 				}
-				MendProcedure.execute(itemstack);
+				MendProcedure.execute(world, itemstack);
 			}
 		}
 	}

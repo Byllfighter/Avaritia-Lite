@@ -36,7 +36,7 @@ public class ExtremeCraftingTableGuiScreen extends AbstractContainerScreen<Extre
 		this.imageHeight = 200;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("avaritia:textures/screens/extreme_crafting_table_gui.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("avaritia:textures/screens/extreme_crafting_table_gui.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
