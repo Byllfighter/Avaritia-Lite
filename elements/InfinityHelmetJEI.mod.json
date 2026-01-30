@@ -1,5 +1,5 @@
 {
-  "_fv": 69,
+  "_fv": 79,
   "_type": "jeirecipe",
   "definition": {
     "category": "extreme_crafting_table_jei",
@@ -251,6 +251,9 @@
       {
         "value": "Blocks.AIR"
       }
-    ]
+    ],
+    "integers": [],
+    "strings": [],
+    "recipetype": "ExtremeCraftingTableJEI"
   }
 }

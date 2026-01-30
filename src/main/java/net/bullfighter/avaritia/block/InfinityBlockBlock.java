@@ -1,21 +1,17 @@
-
 package net.bullfighter.avaritia.block;
 
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.core.BlockPos;
 
 public class InfinityBlockBlock extends Block {
-	public InfinityBlockBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(1f, 10f));
+	public InfinityBlockBlock(BlockBehaviour.Properties properties) {
+		super(properties.strength(1f, 10f).instrument(NoteBlockInstrument.BASEDRUM));
 	}
 
 	@Override
-	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+	public int getLightBlock(BlockState state) {
 		return 15;
 	}
 }

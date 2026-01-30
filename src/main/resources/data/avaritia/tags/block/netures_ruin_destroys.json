@@ -1,16 +1,28 @@
 {
   "replace": false,
   "values": [
-    "#minecraft:saplings",
-    "#minecraft:logs",
-    "#minecraft:leaves",
-    "#minecraft:flowers",
-    "minecraft:short_grass",
+    {
+      "id": "#minecraft:flowers",
+      "required": false
+    },
+    {
+      "id": "#minecraft:logs",
+      "required": false
+    },
     "minecraft:fern",
-    "minecraft:tall_grass",
+    "minecraft:short_grass",
     "minecraft:tall_seagrass",
-    "minecraft:sugar_cane",
     "minecraft:bamboo_sapling",
-    "minecraft:bamboo"
+    {
+      "id": "#minecraft:leaves",
+      "required": false
+    },
+    "minecraft:tall_grass",
+    "minecraft:sugar_cane",
+    "minecraft:bamboo",
+    {
+      "id": "#minecraft:saplings",
+      "required": false
+    }
   ]
 }

@@ -14,7 +14,7 @@ public class WorldBreakerHammerRightclickedProcedure {
 			return;
 		ItemStack hammer = ItemStack.EMPTY;
 		if (entity.isShiftKeyDown()) {
-			hammer = new ItemStack(AvaritiaModItems.WORLD_BREAKER.get());
+			hammer = new ItemStack(AvaritiaModItems.WORLD_BREAKER.get()).copy();
 			hammer.applyComponents(itemstack.getComponents());
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == AvaritiaModItems.WORLD_BREAKER_HAMMER.get()) {
 				if (entity instanceof LivingEntity _entity) {

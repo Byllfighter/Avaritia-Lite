@@ -1,5 +1,5 @@
 {
-  "_fv": 69,
+  "_fv": 79,
   "_type": "projectile",
   "definition": {
     "projectileItem": {
@@ -10,6 +10,7 @@
       "value": "entity.arrow.shoot"
     },
     "igniteFire": false,
+    "disableGravity": false,
     "power": 5.0,
     "damage": 9999.0,
     "knockback": 5,

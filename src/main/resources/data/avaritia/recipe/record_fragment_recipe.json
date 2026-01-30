@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "minecraft:music_discs"
-    }
+    "#minecraft:music_discs"
   ],
   "result": {
     "id": "avaritia:record_fragment",

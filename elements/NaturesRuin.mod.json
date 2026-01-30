@@ -1,5 +1,5 @@
 {
-  "_fv": 69,
+  "_fv": 79,
   "_type": "tool",
   "definition": {
     "toolType": "Axe",
@@ -8,6 +8,7 @@
     "texture": "layer_6",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§cNature's Ruin§r",
     "specialInformation": {
       "fixedValue": []
@@ -21,7 +22,7 @@
     "attackSpeed": 1.0,
     "enchantability": 100,
     "damageVsEntity": 21.0,
-    "usageCount": 100,
+    "usageCount": 5,
     "glowCondition": {
       "fixedValue": false
     },

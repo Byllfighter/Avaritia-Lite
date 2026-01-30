@@ -6,12 +6,8 @@
     "aba"
   ],
   "key": {
-    "a": {
-      "item": "avaritia:diamond_lattice"
-    },
-    "b": {
-      "item": "minecraft:nether_star"
-    }
+    "a": "avaritia:diamond_lattice",
+    "b": "minecraft:nether_star"
   },
   "result": {
     "id": "avaritia:crystal_matrix_ingot",

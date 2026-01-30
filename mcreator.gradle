@@ -1,16 +1,5 @@
 repositories {
   maven {
-    url = "https://cursemaven.com"
-  }
-}
-      
-dependencies {
-    implementation 'curse.maven:kleidersplayerrenderer-682065:5675429'
-}
-
-
-repositories {
-  maven {
     name = "Progwml6's maven"
     url = "https://dvs1.progwml6.com/files/maven/"
   }
@@ -25,9 +14,9 @@ repositories {
 }
 
 dependencies {
-    compileOnly("mezz.jei:jei-1.21.1-common-api:19.21.0.247")
-    compileOnly("mezz.jei:jei-1.21.1-neoforge-api:19.21.0.247")
-    runtimeOnly("mezz.jei:jei-1.21.1-neoforge:19.21.0.247")
+    compileOnly("mezz.jei:jei-1.21.4-common-api:20.0.0.4")
+    compileOnly("mezz.jei:jei-1.21.4-neoforge-api:20.0.0.4")
+    runtimeOnly("mezz.jei:jei-1.21.4-neoforge:20.0.0.4")
 }
 
 

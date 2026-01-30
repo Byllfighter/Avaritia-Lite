@@ -7,12 +7,8 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "avaritia:crystal_matrix_ingot"
-    },
-    "b": {
-      "item": "avaritia:double_compressed_crafting_table"
-    }
+    "a": "avaritia:crystal_matrix_ingot",
+    "b": "avaritia:double_compressed_crafting_table"
   },
   "result": {
     "id": "avaritia:extreme_crafting_table",

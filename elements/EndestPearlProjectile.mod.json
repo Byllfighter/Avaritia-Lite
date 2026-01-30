@@ -1,5 +1,5 @@
 {
-  "_fv": 69,
+  "_fv": 79,
   "_type": "projectile",
   "definition": {
     "projectileItem": {
@@ -10,6 +10,7 @@
       "value": ""
     },
     "igniteFire": false,
+    "disableGravity": false,
     "power": 1.0,
     "damage": 0.0,
     "knockback": 0,

@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "avaritia:neutronium_ingot"
-    }
+    "avaritia:neutronium_ingot"
   ],
   "result": {
     "id": "avaritia:neutronium_nugget",

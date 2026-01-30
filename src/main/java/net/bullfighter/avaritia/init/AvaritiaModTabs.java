@@ -1,4 +1,3 @@
-
 /*
  *    MCreator note: This file will be REGENERATED on each build.
  */
@@ -58,7 +57,5 @@ public class AvaritiaModTabs {
 				tabData.accept(AvaritiaModItems.COPPER_SINGULARITY.get());
 				tabData.accept(AvaritiaModItems.AMETHYST_SINGULARITY.get());
 				tabData.accept(AvaritiaModItems.NETHERITE_SINGULARITY.get());
-			})
-
-					.build());
+			}).build());
 }

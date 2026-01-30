@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "avaritia:neutronium_nugget"
-    }
+    "avaritia:neutronium_nugget"
   ],
   "result": {
     "id": "avaritia:pileof_neutrons",

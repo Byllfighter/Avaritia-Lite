@@ -18,232 +18,65 @@ import net.bullfighter.avaritia.init.AvaritiaModItems;
 
 public class NeutroniumCompressorTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
-		if (new Object() {
-			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "process") >= AvaritiaModVariables.MapVariables.get(world).MaxCompressorResources) {
-			if ((new Object() {
-				public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getString(tag);
-					return "";
-				}
-			}.getValue(world, BlockPos.containing(x, y, z), "material")).equals("Gold")) {
+		if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "process") >= AvaritiaModVariables.MapVariables.get(world).MaxCompressorResources) {
+			if ((getBlockNBTString(world, BlockPos.containing(x, y, z), "material")).equals("Gold")) {
 				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 					ItemStack _setstack = new ItemStack(AvaritiaModItems.GOLDEN_SINGULARITY.get()).copy();
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).getCount();
-							}
-							return 0;
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 1) + 1));
+					_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).getCount() + 1);
 					_itemHandlerModifiable.setStackInSlot(1, _setstack);
 				}
-			} else if ((new Object() {
-				public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getString(tag);
-					return "";
-				}
-			}.getValue(world, BlockPos.containing(x, y, z), "material")).equals("Lapis")) {
+			} else if ((getBlockNBTString(world, BlockPos.containing(x, y, z), "material")).equals("Lapis")) {
 				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 					ItemStack _setstack = new ItemStack(AvaritiaModItems.LAPIS_SINGULARITY.get()).copy();
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).getCount();
-							}
-							return 0;
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 1) + 1));
+					_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).getCount() + 1);
 					_itemHandlerModifiable.setStackInSlot(1, _setstack);
 				}
-			} else if ((new Object() {
-				public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getString(tag);
-					return "";
-				}
-			}.getValue(world, BlockPos.containing(x, y, z), "material")).equals("Redstone")) {
+			} else if ((getBlockNBTString(world, BlockPos.containing(x, y, z), "material")).equals("Redstone")) {
 				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 					ItemStack _setstack = new ItemStack(AvaritiaModItems.REDSTONE_SINGULARITY.get()).copy();
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).getCount();
-							}
-							return 0;
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 1) + 1));
+					_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).getCount() + 1);
 					_itemHandlerModifiable.setStackInSlot(1, _setstack);
 				}
-			} else if ((new Object() {
-				public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getString(tag);
-					return "";
-				}
-			}.getValue(world, BlockPos.containing(x, y, z), "material")).equals("Quartz")) {
+			} else if ((getBlockNBTString(world, BlockPos.containing(x, y, z), "material")).equals("Quartz")) {
 				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 					ItemStack _setstack = new ItemStack(AvaritiaModItems.NETHER_QUARTZ_SINGULARITY.get()).copy();
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).getCount();
-							}
-							return 0;
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 1) + 1));
+					_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).getCount() + 1);
 					_itemHandlerModifiable.setStackInSlot(1, _setstack);
 				}
-			} else if ((new Object() {
-				public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getString(tag);
-					return "";
-				}
-			}.getValue(world, BlockPos.containing(x, y, z), "material")).equals("Diamond")) {
+			} else if ((getBlockNBTString(world, BlockPos.containing(x, y, z), "material")).equals("Diamond")) {
 				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 					ItemStack _setstack = new ItemStack(AvaritiaModItems.DIAMOND_SINGULARITY.get()).copy();
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).getCount();
-							}
-							return 0;
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 1) + 1));
+					_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).getCount() + 1);
 					_itemHandlerModifiable.setStackInSlot(1, _setstack);
 				}
-			} else if ((new Object() {
-				public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getString(tag);
-					return "";
-				}
-			}.getValue(world, BlockPos.containing(x, y, z), "material")).equals("Emerald")) {
+			} else if ((getBlockNBTString(world, BlockPos.containing(x, y, z), "material")).equals("Emerald")) {
 				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 					ItemStack _setstack = new ItemStack(AvaritiaModItems.EMERALD_SINGULARITY.get()).copy();
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).getCount();
-							}
-							return 0;
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 1) + 1));
+					_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).getCount() + 1);
 					_itemHandlerModifiable.setStackInSlot(1, _setstack);
 				}
-			} else if ((new Object() {
-				public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getString(tag);
-					return "";
-				}
-			}.getValue(world, BlockPos.containing(x, y, z), "material")).equals("Iron")) {
+			} else if ((getBlockNBTString(world, BlockPos.containing(x, y, z), "material")).equals("Iron")) {
 				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 					ItemStack _setstack = new ItemStack(AvaritiaModItems.IRON_SINGULARITY.get()).copy();
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).getCount();
-							}
-							return 0;
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 1) + 1));
+					_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).getCount() + 1);
 					_itemHandlerModifiable.setStackInSlot(1, _setstack);
 				}
-			} else if ((new Object() {
-				public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getString(tag);
-					return "";
-				}
-			}.getValue(world, BlockPos.containing(x, y, z), "material")).equals("Copper")) {
+			} else if ((getBlockNBTString(world, BlockPos.containing(x, y, z), "material")).equals("Copper")) {
 				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 					ItemStack _setstack = new ItemStack(AvaritiaModItems.COPPER_SINGULARITY.get()).copy();
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).getCount();
-							}
-							return 0;
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 1) + 1));
+					_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).getCount() + 1);
 					_itemHandlerModifiable.setStackInSlot(1, _setstack);
 				}
-			} else if ((new Object() {
-				public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getString(tag);
-					return "";
-				}
-			}.getValue(world, BlockPos.containing(x, y, z), "material")).equals("Amethyst")) {
+			} else if ((getBlockNBTString(world, BlockPos.containing(x, y, z), "material")).equals("Amethyst")) {
 				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 					ItemStack _setstack = new ItemStack(AvaritiaModItems.AMETHYST_SINGULARITY.get()).copy();
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).getCount();
-							}
-							return 0;
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 1) + 1));
+					_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).getCount() + 1);
 					_itemHandlerModifiable.setStackInSlot(1, _setstack);
 				}
-			} else if ((new Object() {
-				public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getString(tag);
-					return "";
-				}
-			}.getValue(world, BlockPos.containing(x, y, z), "material")).equals("Netherite")) {
+			} else if ((getBlockNBTString(world, BlockPos.containing(x, y, z), "material")).equals("Netherite")) {
 				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 					ItemStack _setstack = new ItemStack(AvaritiaModItems.NETHERITE_SINGULARITY.get()).copy();
-					_setstack.setCount((int) (new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).getCount();
-							}
-							return 0;
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 1) + 1));
+					_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 1).getCount() + 1);
 					_itemHandlerModifiable.setStackInSlot(1, _setstack);
 				}
 			}
@@ -252,25 +85,11 @@ public class NeutroniumCompressorTickProcedure {
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putDouble("process", ((new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "process")) - AvaritiaModVariables.MapVariables.get(world).MaxCompressorResources));
+					_blockEntity.getPersistentData().putDouble("process", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "process") - AvaritiaModVariables.MapVariables.get(world).MaxCompressorResources));
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
-			if (new Object() {
-				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getDouble(tag);
-					return -1;
-				}
-			}.getValue(world, BlockPos.containing(x, y, z), "process") == 0) {
+			if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "process") == 0) {
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -282,31 +101,8 @@ public class NeutroniumCompressorTickProcedure {
 				}
 			}
 		}
-		if ((new Object() {
-			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getString(tag);
-				return "";
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "material")).equals("Iron") || (new Object() {
-			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getString(tag);
-				return "";
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "material")).equals("")) {
-			if ((new Object() {
-				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-					if (world instanceof ILevelExtension _ext) {
-						IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-						if (_itemHandler != null)
-							return _itemHandler.getStackInSlot(slotid).copy();
-					}
-					return ItemStack.EMPTY;
-				}
-			}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == Blocks.IRON_BLOCK.asItem()) {
+		if ((getBlockNBTString(world, BlockPos.containing(x, y, z), "material")).equals("Iron") || (getBlockNBTString(world, BlockPos.containing(x, y, z), "material")).equals("")) {
+			if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == Blocks.IRON_BLOCK.asItem()) {
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -321,68 +117,20 @@ public class NeutroniumCompressorTickProcedure {
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_blockEntity != null)
-						_blockEntity.getPersistentData().putDouble("process", (new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "process") + new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 0)));
+						_blockEntity.getPersistentData().putDouble("process", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "process") + itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).getCount()));
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
 				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 					int _slotid = 0;
 					ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-					_stk.shrink(new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).getCount();
-							}
-							return 0;
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 0));
+					_stk.shrink(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).getCount());
 					_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 				}
 			}
 		}
-		if ((new Object() {
-			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getString(tag);
-				return "";
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "material")).equals("Quartz") || (new Object() {
-			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getString(tag);
-				return "";
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "material")).equals("")) {
-			if ((new Object() {
-				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-					if (world instanceof ILevelExtension _ext) {
-						IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-						if (_itemHandler != null)
-							return _itemHandler.getStackInSlot(slotid).copy();
-					}
-					return ItemStack.EMPTY;
-				}
-			}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == Blocks.QUARTZ_BLOCK.asItem()) {
+		if ((getBlockNBTString(world, BlockPos.containing(x, y, z), "material")).equals("Quartz") || (getBlockNBTString(world, BlockPos.containing(x, y, z), "material")).equals("")) {
+			if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == Blocks.QUARTZ_BLOCK.asItem()) {
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -397,68 +145,20 @@ public class NeutroniumCompressorTickProcedure {
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_blockEntity != null)
-						_blockEntity.getPersistentData().putDouble("process", (new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "process") + new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 0)));
+						_blockEntity.getPersistentData().putDouble("process", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "process") + itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).getCount()));
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
 				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 					int _slotid = 0;
 					ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-					_stk.shrink(new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).getCount();
-							}
-							return 0;
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 0));
+					_stk.shrink(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).getCount());
 					_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 				}
 			}
 		}
-		if ((new Object() {
-			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getString(tag);
-				return "";
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "material")).equals("Emerald") || (new Object() {
-			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getString(tag);
-				return "";
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "material")).equals("")) {
-			if ((new Object() {
-				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-					if (world instanceof ILevelExtension _ext) {
-						IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-						if (_itemHandler != null)
-							return _itemHandler.getStackInSlot(slotid).copy();
-					}
-					return ItemStack.EMPTY;
-				}
-			}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == Blocks.EMERALD_BLOCK.asItem()) {
+		if ((getBlockNBTString(world, BlockPos.containing(x, y, z), "material")).equals("Emerald") || (getBlockNBTString(world, BlockPos.containing(x, y, z), "material")).equals("")) {
+			if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == Blocks.EMERALD_BLOCK.asItem()) {
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -473,68 +173,20 @@ public class NeutroniumCompressorTickProcedure {
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_blockEntity != null)
-						_blockEntity.getPersistentData().putDouble("process", (new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "process") + new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 0)));
+						_blockEntity.getPersistentData().putDouble("process", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "process") + itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).getCount()));
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
 				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 					int _slotid = 0;
 					ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-					_stk.shrink(new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).getCount();
-							}
-							return 0;
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 0));
+					_stk.shrink(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).getCount());
 					_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 				}
 			}
 		}
-		if ((new Object() {
-			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getString(tag);
-				return "";
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "material")).equals("Lapis") || (new Object() {
-			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getString(tag);
-				return "";
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "material")).equals("")) {
-			if ((new Object() {
-				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-					if (world instanceof ILevelExtension _ext) {
-						IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-						if (_itemHandler != null)
-							return _itemHandler.getStackInSlot(slotid).copy();
-					}
-					return ItemStack.EMPTY;
-				}
-			}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == Blocks.LAPIS_BLOCK.asItem()) {
+		if ((getBlockNBTString(world, BlockPos.containing(x, y, z), "material")).equals("Lapis") || (getBlockNBTString(world, BlockPos.containing(x, y, z), "material")).equals("")) {
+			if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == Blocks.LAPIS_BLOCK.asItem()) {
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -549,68 +201,20 @@ public class NeutroniumCompressorTickProcedure {
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_blockEntity != null)
-						_blockEntity.getPersistentData().putDouble("process", (new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "process") + new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 0)));
+						_blockEntity.getPersistentData().putDouble("process", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "process") + itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).getCount()));
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
 				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 					int _slotid = 0;
 					ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-					_stk.shrink(new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).getCount();
-							}
-							return 0;
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 0));
+					_stk.shrink(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).getCount());
 					_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 				}
 			}
 		}
-		if ((new Object() {
-			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getString(tag);
-				return "";
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "material")).equals("Redstone") || (new Object() {
-			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getString(tag);
-				return "";
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "material")).equals("")) {
-			if ((new Object() {
-				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-					if (world instanceof ILevelExtension _ext) {
-						IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-						if (_itemHandler != null)
-							return _itemHandler.getStackInSlot(slotid).copy();
-					}
-					return ItemStack.EMPTY;
-				}
-			}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == Blocks.REDSTONE_BLOCK.asItem()) {
+		if ((getBlockNBTString(world, BlockPos.containing(x, y, z), "material")).equals("Redstone") || (getBlockNBTString(world, BlockPos.containing(x, y, z), "material")).equals("")) {
+			if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == Blocks.REDSTONE_BLOCK.asItem()) {
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -625,68 +229,20 @@ public class NeutroniumCompressorTickProcedure {
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_blockEntity != null)
-						_blockEntity.getPersistentData().putDouble("process", (new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "process") + new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 0)));
+						_blockEntity.getPersistentData().putDouble("process", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "process") + itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).getCount()));
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
 				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 					int _slotid = 0;
 					ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-					_stk.shrink(new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).getCount();
-							}
-							return 0;
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 0));
+					_stk.shrink(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).getCount());
 					_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 				}
 			}
 		}
-		if ((new Object() {
-			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getString(tag);
-				return "";
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "material")).equals("Gold") || (new Object() {
-			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getString(tag);
-				return "";
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "material")).equals("")) {
-			if ((new Object() {
-				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-					if (world instanceof ILevelExtension _ext) {
-						IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-						if (_itemHandler != null)
-							return _itemHandler.getStackInSlot(slotid).copy();
-					}
-					return ItemStack.EMPTY;
-				}
-			}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == Blocks.GOLD_BLOCK.asItem()) {
+		if ((getBlockNBTString(world, BlockPos.containing(x, y, z), "material")).equals("Gold") || (getBlockNBTString(world, BlockPos.containing(x, y, z), "material")).equals("")) {
+			if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == Blocks.GOLD_BLOCK.asItem()) {
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -701,68 +257,20 @@ public class NeutroniumCompressorTickProcedure {
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_blockEntity != null)
-						_blockEntity.getPersistentData().putDouble("process", (new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "process") + new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 0)));
+						_blockEntity.getPersistentData().putDouble("process", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "process") + itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).getCount()));
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
 				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 					int _slotid = 0;
 					ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-					_stk.shrink(new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).getCount();
-							}
-							return 0;
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 0));
+					_stk.shrink(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).getCount());
 					_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 				}
 			}
 		}
-		if ((new Object() {
-			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getString(tag);
-				return "";
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "material")).equals("Diamond") || (new Object() {
-			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getString(tag);
-				return "";
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "material")).equals("")) {
-			if ((new Object() {
-				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-					if (world instanceof ILevelExtension _ext) {
-						IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-						if (_itemHandler != null)
-							return _itemHandler.getStackInSlot(slotid).copy();
-					}
-					return ItemStack.EMPTY;
-				}
-			}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == Blocks.DIAMOND_BLOCK.asItem()) {
+		if ((getBlockNBTString(world, BlockPos.containing(x, y, z), "material")).equals("Diamond") || (getBlockNBTString(world, BlockPos.containing(x, y, z), "material")).equals("")) {
+			if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == Blocks.DIAMOND_BLOCK.asItem()) {
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -777,95 +285,22 @@ public class NeutroniumCompressorTickProcedure {
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_blockEntity != null)
-						_blockEntity.getPersistentData().putDouble("process", (new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "process") + new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 0)));
+						_blockEntity.getPersistentData().putDouble("process", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "process") + itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).getCount()));
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
 				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 					int _slotid = 0;
 					ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-					_stk.shrink(new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).getCount();
-							}
-							return 0;
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 0));
+					_stk.shrink(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).getCount());
 					_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 				}
 			}
 		}
-		if ((new Object() {
-			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getString(tag);
-				return "";
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "material")).equals("Copper") || (new Object() {
-			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getString(tag);
-				return "";
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "material")).equals("")) {
-			if ((new Object() {
-				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-					if (world instanceof ILevelExtension _ext) {
-						IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-						if (_itemHandler != null)
-							return _itemHandler.getStackInSlot(slotid).copy();
-					}
-					return ItemStack.EMPTY;
-				}
-			}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == Blocks.COPPER_BLOCK.asItem() || (new Object() {
-				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-					if (world instanceof ILevelExtension _ext) {
-						IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-						if (_itemHandler != null)
-							return _itemHandler.getStackInSlot(slotid).copy();
-					}
-					return ItemStack.EMPTY;
-				}
-			}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == Blocks.EXPOSED_COPPER.asItem() || (new Object() {
-				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-					if (world instanceof ILevelExtension _ext) {
-						IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-						if (_itemHandler != null)
-							return _itemHandler.getStackInSlot(slotid).copy();
-					}
-					return ItemStack.EMPTY;
-				}
-			}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == Blocks.WEATHERED_COPPER.asItem() || (new Object() {
-				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-					if (world instanceof ILevelExtension _ext) {
-						IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-						if (_itemHandler != null)
-							return _itemHandler.getStackInSlot(slotid).copy();
-					}
-					return ItemStack.EMPTY;
-				}
-			}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == Blocks.OXIDIZED_COPPER.asItem()) {
+		if ((getBlockNBTString(world, BlockPos.containing(x, y, z), "material")).equals("Copper") || (getBlockNBTString(world, BlockPos.containing(x, y, z), "material")).equals("")) {
+			if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == Blocks.COPPER_BLOCK.asItem() || (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == Blocks.EXPOSED_COPPER.asItem()
+					|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == Blocks.WEATHERED_COPPER.asItem()
+					|| (itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == Blocks.OXIDIZED_COPPER.asItem()) {
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -880,68 +315,20 @@ public class NeutroniumCompressorTickProcedure {
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_blockEntity != null)
-						_blockEntity.getPersistentData().putDouble("process", (new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "process") + new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 0)));
+						_blockEntity.getPersistentData().putDouble("process", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "process") + itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).getCount()));
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
 				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 					int _slotid = 0;
 					ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-					_stk.shrink(new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).getCount();
-							}
-							return 0;
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 0));
+					_stk.shrink(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).getCount());
 					_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 				}
 			}
 		}
-		if ((new Object() {
-			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getString(tag);
-				return "";
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "material")).equals("Amethyst") || (new Object() {
-			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getString(tag);
-				return "";
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "material")).equals("")) {
-			if ((new Object() {
-				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-					if (world instanceof ILevelExtension _ext) {
-						IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-						if (_itemHandler != null)
-							return _itemHandler.getStackInSlot(slotid).copy();
-					}
-					return ItemStack.EMPTY;
-				}
-			}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == Blocks.AMETHYST_BLOCK.asItem()) {
+		if ((getBlockNBTString(world, BlockPos.containing(x, y, z), "material")).equals("Amethyst") || (getBlockNBTString(world, BlockPos.containing(x, y, z), "material")).equals("")) {
+			if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == Blocks.AMETHYST_BLOCK.asItem()) {
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -956,68 +343,20 @@ public class NeutroniumCompressorTickProcedure {
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_blockEntity != null)
-						_blockEntity.getPersistentData().putDouble("process", (new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "process") + new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 0)));
+						_blockEntity.getPersistentData().putDouble("process", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "process") + itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).getCount()));
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
 				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 					int _slotid = 0;
 					ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-					_stk.shrink(new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).getCount();
-							}
-							return 0;
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 0));
+					_stk.shrink(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).getCount());
 					_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 				}
 			}
 		}
-		if ((new Object() {
-			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getString(tag);
-				return "";
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "material")).equals("Netherite") || (new Object() {
-			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getString(tag);
-				return "";
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "material")).equals("")) {
-			if ((new Object() {
-				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-					if (world instanceof ILevelExtension _ext) {
-						IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-						if (_itemHandler != null)
-							return _itemHandler.getStackInSlot(slotid).copy();
-					}
-					return ItemStack.EMPTY;
-				}
-			}.getItemStack(world, BlockPos.containing(x, y, z), 0)).getItem() == Blocks.NETHERITE_BLOCK.asItem()) {
+		if ((getBlockNBTString(world, BlockPos.containing(x, y, z), "material")).equals("Netherite") || (getBlockNBTString(world, BlockPos.containing(x, y, z), "material")).equals("")) {
+			if ((itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy()).getItem() == Blocks.NETHERITE_BLOCK.asItem()) {
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -1032,42 +371,40 @@ public class NeutroniumCompressorTickProcedure {
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_blockEntity != null)
-						_blockEntity.getPersistentData().putDouble("process", (new Object() {
-							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getDouble(tag);
-								return -1;
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "process") + new Object() {
-							public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).getCount();
-								}
-								return 0;
-							}
-						}.getAmount(world, BlockPos.containing(x, y, z), 0)));
+						_blockEntity.getPersistentData().putDouble("process", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "process") + itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).getCount()));
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
 				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 					int _slotid = 0;
 					ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-					_stk.shrink(new Object() {
-						public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).getCount();
-							}
-							return 0;
-						}
-					}.getAmount(world, BlockPos.containing(x, y, z), 0));
+					_stk.shrink(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).getCount());
 					_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 				}
 			}
 		}
+	}
+
+	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getDouble(tag);
+		return -1;
+	}
+
+	private static String getBlockNBTString(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getString(tag);
+		return "";
+	}
+
+	private static ItemStack itemFromBlockInventory(LevelAccessor world, BlockPos pos, int slot) {
+		if (world instanceof ILevelExtension ext) {
+			IItemHandler itemHandler = ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+			if (itemHandler != null)
+				return itemHandler.getStackInSlot(slot);
+		}
+		return ItemStack.EMPTY;
 	}
 }

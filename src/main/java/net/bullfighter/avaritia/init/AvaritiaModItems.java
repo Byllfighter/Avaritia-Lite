@@ -1,4 +1,3 @@
-
 /*
  *    MCreator note: This file will be REGENERATED on each build.
  */
@@ -7,7 +6,7 @@ package net.bullfighter.avaritia.init;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.client.event.RegisterRangeSelectItemModelPropertyEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.OnlyIn;
@@ -17,10 +16,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.item.ItemProperties;
 
-import net.bullfighter.avaritia.procedures.LongbowoftheHeavensPullPropertyValueProviderProcedure;
-import net.bullfighter.avaritia.procedures.LongbowoftheHeavensPropertyValueProviderProcedure;
 import net.bullfighter.avaritia.item.WorldBreakerItem;
 import net.bullfighter.avaritia.item.WorldBreakerHammerItem;
 import net.bullfighter.avaritia.item.UltimateStewItem;
@@ -55,69 +51,75 @@ import net.bullfighter.avaritia.item.BlackHoleItemItem;
 import net.bullfighter.avaritia.item.AmethystSingularityItem;
 import net.bullfighter.avaritia.AvaritiaMod;
 
+import java.util.function.Function;
+
 public class AvaritiaModItems {
 	public static final DeferredRegister.Items REGISTRY = DeferredRegister.createItems(AvaritiaMod.MODID);
-	public static final DeferredItem<Item> DIAMOND_LATTICE = REGISTRY.register("diamond_lattice", DiamondLatticeItem::new);
-	public static final DeferredItem<Item> INFINITY_CATALYST = REGISTRY.register("infinity_catalyst", InfinityCatalystItem::new);
-	public static final DeferredItem<Item> CRYSTAL_MATRIX_INGOT = REGISTRY.register("crystal_matrix_ingot", CrystalMatrixIngotItem::new);
-	public static final DeferredItem<Item> PILEOF_NEUTRONS = REGISTRY.register("pileof_neutrons", PileofNeutronsItem::new);
+	public static final DeferredItem<Item> DIAMOND_LATTICE = register("diamond_lattice", DiamondLatticeItem::new);
+	public static final DeferredItem<Item> INFINITY_CATALYST = register("infinity_catalyst", InfinityCatalystItem::new);
+	public static final DeferredItem<Item> CRYSTAL_MATRIX_INGOT = register("crystal_matrix_ingot", CrystalMatrixIngotItem::new);
+	public static final DeferredItem<Item> PILEOF_NEUTRONS = register("pileof_neutrons", PileofNeutronsItem::new);
 	public static final DeferredItem<Item> NEUTRON_COLLECTOR = block(AvaritiaModBlocks.NEUTRON_COLLECTOR);
-	public static final DeferredItem<Item> NEUTRONIUM_NUGGET = REGISTRY.register("neutronium_nugget", NeutroniumNuggetItem::new);
-	public static final DeferredItem<Item> NEUTRONIUM_INGOT = REGISTRY.register("neutronium_ingot", NeutroniumIngotItem::new);
-	public static final DeferredItem<Item> INFINITY_INGOT = REGISTRY.register("infinity_ingot", InfinityIngotItem::new);
-	public static final DeferredItem<Item> RECORD_FRAGMENT = REGISTRY.register("record_fragment", RecordFragmentItem::new);
-	public static final DeferredItem<Item> IRON_SINGULARITY = REGISTRY.register("iron_singularity", IronSingularityItem::new);
-	public static final DeferredItem<Item> GOLDEN_SINGULARITY = REGISTRY.register("golden_singularity", GoldenSingularityItem::new);
-	public static final DeferredItem<Item> LAPIS_SINGULARITY = REGISTRY.register("lapis_singularity", LapisSingularityItem::new);
-	public static final DeferredItem<Item> REDSTONE_SINGULARITY = REGISTRY.register("redstone_singularity", RedstoneSingularityItem::new);
-	public static final DeferredItem<Item> NETHER_QUARTZ_SINGULARITY = REGISTRY.register("nether_quartz_singularity", NetherQuartzSingularityItem::new);
-	public static final DeferredItem<Item> DIAMOND_SINGULARITY = REGISTRY.register("diamond_singularity", DiamondSingularityItem::new);
-	public static final DeferredItem<Item> EMERALD_SINGULARITY = REGISTRY.register("emerald_singularity", EmeraldSingularityItem::new);
+	public static final DeferredItem<Item> NEUTRONIUM_NUGGET = register("neutronium_nugget", NeutroniumNuggetItem::new);
+	public static final DeferredItem<Item> NEUTRONIUM_INGOT = register("neutronium_ingot", NeutroniumIngotItem::new);
+	public static final DeferredItem<Item> INFINITY_INGOT = register("infinity_ingot", InfinityIngotItem::new);
+	public static final DeferredItem<Item> RECORD_FRAGMENT = register("record_fragment", RecordFragmentItem::new);
+	public static final DeferredItem<Item> IRON_SINGULARITY = register("iron_singularity", IronSingularityItem::new);
+	public static final DeferredItem<Item> GOLDEN_SINGULARITY = register("golden_singularity", GoldenSingularityItem::new);
+	public static final DeferredItem<Item> LAPIS_SINGULARITY = register("lapis_singularity", LapisSingularityItem::new);
+	public static final DeferredItem<Item> REDSTONE_SINGULARITY = register("redstone_singularity", RedstoneSingularityItem::new);
+	public static final DeferredItem<Item> NETHER_QUARTZ_SINGULARITY = register("nether_quartz_singularity", NetherQuartzSingularityItem::new);
+	public static final DeferredItem<Item> DIAMOND_SINGULARITY = register("diamond_singularity", DiamondSingularityItem::new);
+	public static final DeferredItem<Item> EMERALD_SINGULARITY = register("emerald_singularity", EmeraldSingularityItem::new);
 	public static final DeferredItem<Item> NEUTRONIUM_COMPRESSOR = block(AvaritiaModBlocks.NEUTRONIUM_COMPRESSOR);
-	public static final DeferredItem<Item> SWORDOFTHE_COSMOS = REGISTRY.register("swordofthe_cosmos", SwordoftheCosmosItem::new);
-	public static final DeferredItem<Item> PLANET_EATER = REGISTRY.register("planet_eater", PlanetEaterItem::new);
-	public static final DeferredItem<Item> NATURES_RUIN = REGISTRY.register("natures_ruin", NaturesRuinItem::new);
-	public static final DeferredItem<Item> HOEOFTHE_GREEN_EARTH = REGISTRY.register("hoeofthe_green_earth", HoeoftheGreenEarthItem::new);
-	public static final DeferredItem<Item> WORLD_BREAKER = REGISTRY.register("world_breaker", WorldBreakerItem::new);
-	public static final DeferredItem<Item> INFINITY_ARMOR_HELMET = REGISTRY.register("infinity_armor_helmet", InfinityArmorItem.Helmet::new);
-	public static final DeferredItem<Item> INFINITY_ARMOR_CHESTPLATE = REGISTRY.register("infinity_armor_chestplate", InfinityArmorItem.Chestplate::new);
-	public static final DeferredItem<Item> INFINITY_ARMOR_LEGGINGS = REGISTRY.register("infinity_armor_leggings", InfinityArmorItem.Leggings::new);
-	public static final DeferredItem<Item> INFINITY_ARMOR_BOOTS = REGISTRY.register("infinity_armor_boots", InfinityArmorItem.Boots::new);
-	public static final DeferredItem<Item> SKULLFIRE_SWORD = REGISTRY.register("skullfire_sword", SkullfireSwordItem::new);
+	public static final DeferredItem<Item> SWORDOFTHE_COSMOS = register("swordofthe_cosmos", SwordoftheCosmosItem::new);
+	public static final DeferredItem<Item> PLANET_EATER = register("planet_eater", PlanetEaterItem::new);
+	public static final DeferredItem<Item> NATURES_RUIN = register("natures_ruin", NaturesRuinItem::new);
+	public static final DeferredItem<Item> HOEOFTHE_GREEN_EARTH = register("hoeofthe_green_earth", HoeoftheGreenEarthItem::new);
+	public static final DeferredItem<Item> WORLD_BREAKER = register("world_breaker", WorldBreakerItem::new);
+	public static final DeferredItem<Item> INFINITY_ARMOR_HELMET = register("infinity_armor_helmet", InfinityArmorItem.Helmet::new);
+	public static final DeferredItem<Item> INFINITY_ARMOR_CHESTPLATE = register("infinity_armor_chestplate", InfinityArmorItem.Chestplate::new);
+	public static final DeferredItem<Item> INFINITY_ARMOR_LEGGINGS = register("infinity_armor_leggings", InfinityArmorItem.Leggings::new);
+	public static final DeferredItem<Item> INFINITY_ARMOR_BOOTS = register("infinity_armor_boots", InfinityArmorItem.Boots::new);
+	public static final DeferredItem<Item> SKULLFIRE_SWORD = register("skullfire_sword", SkullfireSwordItem::new);
 	public static final DeferredItem<Item> COMPRESSED_CRAFTING_TABLE = block(AvaritiaModBlocks.COMPRESSED_CRAFTING_TABLE);
 	public static final DeferredItem<Item> DOUBLE_COMPRESSED_CRAFTING_TABLE = block(AvaritiaModBlocks.DOUBLE_COMPRESSED_CRAFTING_TABLE);
 	public static final DeferredItem<Item> EXTREME_CRAFTING_TABLE = block(AvaritiaModBlocks.EXTREME_CRAFTING_TABLE);
 	public static final DeferredItem<Item> NEUTRONIUM_BLOCK = block(AvaritiaModBlocks.NEUTRONIUM_BLOCK);
 	public static final DeferredItem<Item> INFINITY_BLOCK = block(AvaritiaModBlocks.INFINITY_BLOCK);
 	public static final DeferredItem<Item> CRYSTAL_MATRIX = block(AvaritiaModBlocks.CRYSTAL_MATRIX);
-	public static final DeferredItem<Item> ULTIMATE_STEW = REGISTRY.register("ultimate_stew", UltimateStewItem::new);
-	public static final DeferredItem<Item> COSMIC_MEATBALLS = REGISTRY.register("cosmic_meatballs", CosmicMeatballsItem::new);
-	public static final DeferredItem<Item> BLACK_HOLE_ITEM = REGISTRY.register("black_hole_item", BlackHoleItemItem::new);
-	public static final DeferredItem<Item> LONGBOWOFTHE_HEAVENS = REGISTRY.register("longbowofthe_heavens", LongbowoftheHeavensItem::new);
-	public static final DeferredItem<Item> ENDEST_PEARL = REGISTRY.register("endest_pearl", EndestPearlItem::new);
-	public static final DeferredItem<Item> COPPER_SINGULARITY = REGISTRY.register("copper_singularity", CopperSingularityItem::new);
-	public static final DeferredItem<Item> AMETHYST_SINGULARITY = REGISTRY.register("amethyst_singularity", AmethystSingularityItem::new);
-	public static final DeferredItem<Item> NETHERITE_SINGULARITY = REGISTRY.register("netherite_singularity", NetheriteSingularityItem::new);
-	public static final DeferredItem<Item> WORLD_BREAKER_HAMMER = REGISTRY.register("world_breaker_hammer", WorldBreakerHammerItem::new);
-	public static final DeferredItem<Item> PLANET_EATER_DESTROYER = REGISTRY.register("planet_eater_destroyer", PlanetEaterDestroyerItem::new);
+	public static final DeferredItem<Item> ULTIMATE_STEW = register("ultimate_stew", UltimateStewItem::new);
+	public static final DeferredItem<Item> COSMIC_MEATBALLS = register("cosmic_meatballs", CosmicMeatballsItem::new);
+	public static final DeferredItem<Item> BLACK_HOLE_ITEM = register("black_hole_item", BlackHoleItemItem::new);
+	public static final DeferredItem<Item> LONGBOWOFTHE_HEAVENS = register("longbowofthe_heavens", LongbowoftheHeavensItem::new);
+	public static final DeferredItem<Item> ENDEST_PEARL = register("endest_pearl", EndestPearlItem::new);
+	public static final DeferredItem<Item> COPPER_SINGULARITY = register("copper_singularity", CopperSingularityItem::new);
+	public static final DeferredItem<Item> AMETHYST_SINGULARITY = register("amethyst_singularity", AmethystSingularityItem::new);
+	public static final DeferredItem<Item> NETHERITE_SINGULARITY = register("netherite_singularity", NetheriteSingularityItem::new);
+	public static final DeferredItem<Item> WORLD_BREAKER_HAMMER = register("world_breaker_hammer", WorldBreakerHammerItem::new);
+	public static final DeferredItem<Item> PLANET_EATER_DESTROYER = register("planet_eater_destroyer", PlanetEaterDestroyerItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items
+	private static <I extends Item> DeferredItem<I> register(String name, Function<Item.Properties, ? extends I> supplier) {
+		return REGISTRY.registerItem(name, supplier, new Item.Properties());
+	}
+
 	private static DeferredItem<Item> block(DeferredHolder<Block, Block> block) {
-		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
+		return block(block, new Item.Properties());
+	}
+
+	private static DeferredItem<Item> block(DeferredHolder<Block, Block> block, Item.Properties properties) {
+		return REGISTRY.registerItem(block.getId().getPath(), prop -> new BlockItem(block.get(), prop), properties);
 	}
 
 	@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ItemsClientSideHandler {
 		@SubscribeEvent
 		@OnlyIn(Dist.CLIENT)
-		public static void clientLoad(FMLClientSetupEvent event) {
-			event.enqueueWork(() -> {
-				ItemProperties.register(LONGBOWOFTHE_HEAVENS.get(), ResourceLocation.parse("avaritia:longbowofthe_heavens_pulling"),
-						(itemStackToRender, clientWorld, entity, itemEntityId) -> (float) LongbowoftheHeavensPropertyValueProviderProcedure.execute(entity, itemStackToRender));
-				ItemProperties.register(LONGBOWOFTHE_HEAVENS.get(), ResourceLocation.parse("avaritia:longbowofthe_heavens_pull"),
-						(itemStackToRender, clientWorld, entity, itemEntityId) -> (float) LongbowoftheHeavensPullPropertyValueProviderProcedure.execute(entity, itemStackToRender));
-			});
+		public static void registerItemModelProperties(RegisterRangeSelectItemModelPropertyEvent event) {
+			event.register(ResourceLocation.parse("avaritia:longbowofthe_heavens/pulling"), LongbowoftheHeavensItem.PullingProperty.MAP_CODEC);
+			event.register(ResourceLocation.parse("avaritia:longbowofthe_heavens/pull"), LongbowoftheHeavensItem.PullProperty.MAP_CODEC);
 		}
 	}
 }

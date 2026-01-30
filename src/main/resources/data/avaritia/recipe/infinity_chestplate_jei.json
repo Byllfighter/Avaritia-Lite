@@ -1,249 +1,87 @@
 {
   "type": "avaritia:extreme_crafting_table_jei",
   "ingredients": [
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:crystal_matrix"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    }
+    "#avaritia:jei_empty_tag",
+    "avaritia:neutronium_ingot",
+    "avaritia:neutronium_ingot",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "avaritia:neutronium_ingot",
+    "avaritia:neutronium_ingot",
+    "#avaritia:jei_empty_tag",
+    "avaritia:neutronium_ingot",
+    "avaritia:neutronium_ingot",
+    "avaritia:neutronium_ingot",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "avaritia:neutronium_ingot",
+    "avaritia:neutronium_ingot",
+    "avaritia:neutronium_ingot",
+    "avaritia:neutronium_ingot",
+    "avaritia:neutronium_ingot",
+    "avaritia:neutronium_ingot",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "avaritia:neutronium_ingot",
+    "avaritia:neutronium_ingot",
+    "avaritia:neutronium_ingot",
+    "#avaritia:jei_empty_tag",
+    "avaritia:neutronium_ingot",
+    "avaritia:infinity_ingot",
+    "avaritia:infinity_ingot",
+    "avaritia:infinity_ingot",
+    "avaritia:infinity_ingot",
+    "avaritia:infinity_ingot",
+    "avaritia:neutronium_ingot",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "avaritia:neutronium_ingot",
+    "avaritia:infinity_ingot",
+    "avaritia:infinity_ingot",
+    "avaritia:crystal_matrix",
+    "avaritia:infinity_ingot",
+    "avaritia:infinity_ingot",
+    "avaritia:neutronium_ingot",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "avaritia:neutronium_ingot",
+    "avaritia:infinity_ingot",
+    "avaritia:infinity_ingot",
+    "avaritia:infinity_ingot",
+    "avaritia:infinity_ingot",
+    "avaritia:infinity_ingot",
+    "avaritia:neutronium_ingot",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "avaritia:neutronium_ingot",
+    "avaritia:infinity_ingot",
+    "avaritia:infinity_ingot",
+    "avaritia:infinity_ingot",
+    "avaritia:infinity_ingot",
+    "avaritia:infinity_ingot",
+    "avaritia:neutronium_ingot",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "avaritia:neutronium_ingot",
+    "avaritia:infinity_ingot",
+    "avaritia:infinity_ingot",
+    "avaritia:infinity_ingot",
+    "avaritia:infinity_ingot",
+    "avaritia:infinity_ingot",
+    "avaritia:neutronium_ingot",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "avaritia:neutronium_ingot",
+    "avaritia:neutronium_ingot",
+    "avaritia:neutronium_ingot",
+    "avaritia:neutronium_ingot",
+    "avaritia:neutronium_ingot",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag"
   ],
   "output": {
     "id": "avaritia:infinity_armor_chestplate",

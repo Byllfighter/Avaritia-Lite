@@ -1,5 +1,5 @@
 {
-  "_fv": 69,
+  "_fv": 79,
   "_type": "tool",
   "definition": {
     "toolType": "Sword",
@@ -8,6 +8,7 @@
     "texture": "layer_3",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§cSword of the Cosmos§r",
     "specialInformation": {
       "fixedValue": []
@@ -20,8 +21,8 @@
     "efficiency": 0.0,
     "attackSpeed": 3.0,
     "enchantability": 100,
-    "damageVsEntity": 3.0,
-    "usageCount": 100,
+    "damageVsEntity": 7.0,
+    "usageCount": 5,
     "glowCondition": {
       "fixedValue": false
     },

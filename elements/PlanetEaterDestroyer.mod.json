@@ -1,5 +1,5 @@
 {
-  "_fv": 69,
+  "_fv": 79,
   "_type": "tool",
   "definition": {
     "toolType": "Spade",
@@ -8,6 +8,7 @@
     "texture": "infinity_shovel_destroyer",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§cPlanet Eater§r",
     "specialInformation": {
       "fixedValue": []
@@ -17,7 +18,7 @@
     "attackSpeed": 1.0,
     "enchantability": 100,
     "damageVsEntity": 9.0,
-    "usageCount": 100,
+    "usageCount": 5,
     "glowCondition": {
       "fixedValue": false
     },

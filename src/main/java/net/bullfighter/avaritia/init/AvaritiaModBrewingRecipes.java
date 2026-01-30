@@ -1,4 +1,3 @@
-
 package net.bullfighter.avaritia.init;
 
 import net.minecraft.world.item.Items;

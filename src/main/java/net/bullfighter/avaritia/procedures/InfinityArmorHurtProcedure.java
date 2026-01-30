@@ -12,6 +12,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.client.multiplayer.PlayerInfo;
 import net.minecraft.client.Minecraft;
 
 import net.bullfighter.avaritia.init.AvaritiaModItems;
@@ -20,83 +21,23 @@ public class InfinityArmorHurtProcedure {
 	public static void execute(LevelAccessor world, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
-		if (new Object() {
-			public boolean checkGamemode(Entity _ent) {
-				if (_ent instanceof ServerPlayer _serverPlayer) {
-					return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-				} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-					return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null && Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
-				}
-				return false;
-			}
-		}.checkGamemode(entity) || new Object() {
-			public boolean checkGamemode(Entity _ent) {
-				if (_ent instanceof ServerPlayer _serverPlayer) {
-					return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.ADVENTURE;
-				} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-					return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null && Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.ADVENTURE;
-				}
-				return false;
-			}
-		}.checkGamemode(entity)) {
+		if (getEntityGameType(entity) == GameType.SURVIVAL || getEntityGameType(entity) == GameType.ADVENTURE) {
 			if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == AvaritiaModItems.SWORDOFTHE_COSMOS.get()) {
-				if ((new Object() {
-					public ItemStack getItemStack(int sltid, Entity entity) {
-						if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandler) {
-							return _modHandler.getStackInSlot(sltid).copy();
-						}
-						return ItemStack.EMPTY;
-					}
-				}.getItemStack(103, entity)).getItem() == AvaritiaModItems.INFINITY_ARMOR_HELMET.get() && (new Object() {
-					public ItemStack getItemStack(int sltid, Entity entity) {
-						if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandler) {
-							return _modHandler.getStackInSlot(sltid).copy();
-						}
-						return ItemStack.EMPTY;
-					}
-				}.getItemStack(102, entity)).getItem() == AvaritiaModItems.INFINITY_ARMOR_CHESTPLATE.get() && (new Object() {
-					public ItemStack getItemStack(int sltid, Entity entity) {
-						if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandler) {
-							return _modHandler.getStackInSlot(sltid).copy();
-						}
-						return ItemStack.EMPTY;
-					}
-				}.getItemStack(101, entity)).getItem() == AvaritiaModItems.INFINITY_ARMOR_LEGGINGS.get() && (new Object() {
-					public ItemStack getItemStack(int sltid, Entity entity) {
-						if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandler) {
-							return _modHandler.getStackInSlot(sltid).copy();
-						}
-						return ItemStack.EMPTY;
-					}
-				}.getItemStack(100, entity)).getItem() == AvaritiaModItems.INFINITY_ARMOR_BOOTS.get() || (new Object() {
-					public ItemStack getItemStack(int sltid, Entity entity) {
-						if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandler) {
-							return _modHandler.getStackInSlot(sltid).copy();
-						}
-						return ItemStack.EMPTY;
-					}
-				}.getItemStack(39, entity)).getItem() == AvaritiaModItems.INFINITY_ARMOR_HELMET.get() && (new Object() {
-					public ItemStack getItemStack(int sltid, Entity entity) {
-						if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandler) {
-							return _modHandler.getStackInSlot(sltid).copy();
-						}
-						return ItemStack.EMPTY;
-					}
-				}.getItemStack(38, entity)).getItem() == AvaritiaModItems.INFINITY_ARMOR_CHESTPLATE.get() && (new Object() {
-					public ItemStack getItemStack(int sltid, Entity entity) {
-						if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandler) {
-							return _modHandler.getStackInSlot(sltid).copy();
-						}
-						return ItemStack.EMPTY;
-					}
-				}.getItemStack(37, entity)).getItem() == AvaritiaModItems.INFINITY_ARMOR_LEGGINGS.get() && (new Object() {
-					public ItemStack getItemStack(int sltid, Entity entity) {
-						if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandler) {
-							return _modHandler.getStackInSlot(sltid).copy();
-						}
-						return ItemStack.EMPTY;
-					}
-				}.getItemStack(36, entity)).getItem() == AvaritiaModItems.INFINITY_ARMOR_BOOTS.get()) {
+				if ((entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandler4 ? _modHandler4.getStackInSlot(103).copy() : ItemStack.EMPTY).getItem() == AvaritiaModItems.INFINITY_ARMOR_HELMET.get()
+						&& (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandler6 ? _modHandler6.getStackInSlot(102).copy() : ItemStack.EMPTY)
+								.getItem() == AvaritiaModItems.INFINITY_ARMOR_CHESTPLATE.get()
+						&& (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandler8 ? _modHandler8.getStackInSlot(101).copy() : ItemStack.EMPTY).getItem() == AvaritiaModItems.INFINITY_ARMOR_LEGGINGS
+								.get()
+						&& (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandler10 ? _modHandler10.getStackInSlot(100).copy() : ItemStack.EMPTY).getItem() == AvaritiaModItems.INFINITY_ARMOR_BOOTS
+								.get()
+						|| (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandler12 ? _modHandler12.getStackInSlot(39).copy() : ItemStack.EMPTY).getItem() == AvaritiaModItems.INFINITY_ARMOR_HELMET
+								.get()
+								&& (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandler14 ? _modHandler14.getStackInSlot(38).copy() : ItemStack.EMPTY)
+										.getItem() == AvaritiaModItems.INFINITY_ARMOR_CHESTPLATE.get()
+								&& (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandler16 ? _modHandler16.getStackInSlot(37).copy() : ItemStack.EMPTY)
+										.getItem() == AvaritiaModItems.INFINITY_ARMOR_LEGGINGS.get()
+								&& (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandler18 ? _modHandler18.getStackInSlot(36).copy() : ItemStack.EMPTY)
+										.getItem() == AvaritiaModItems.INFINITY_ARMOR_BOOTS.get()) {
 					if (entity instanceof Player _player) {
 						_player.getAbilities().invulnerable = false;
 						_player.onUpdateAbilities();
@@ -109,5 +50,16 @@ public class InfinityArmorHurtProcedure {
 				}
 			}
 		}
+	}
+
+	private static GameType getEntityGameType(Entity entity) {
+		if (entity instanceof ServerPlayer serverPlayer) {
+			return serverPlayer.gameMode.getGameModeForPlayer();
+		} else if (entity instanceof Player player && player.level().isClientSide()) {
+			PlayerInfo playerInfo = Minecraft.getInstance().getConnection().getPlayerInfo(player.getGameProfile().getId());
+			if (playerInfo != null)
+				return playerInfo.getGameMode();
+		}
+		return null;
 	}
 }

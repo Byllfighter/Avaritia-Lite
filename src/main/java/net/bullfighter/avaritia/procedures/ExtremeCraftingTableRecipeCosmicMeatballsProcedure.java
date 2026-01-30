@@ -1,5 +1,6 @@
 package net.bullfighter.avaritia.procedures;
 
+import net.bullfighter.avaritia.AvaritiaMod;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;

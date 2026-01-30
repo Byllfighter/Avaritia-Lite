@@ -6,6 +6,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.server.level.ServerLevel;
 
 import net.bullfighter.avaritia.network.AvaritiaModVariables;
 import net.bullfighter.avaritia.init.AvaritiaModGameRules;
@@ -24,7 +25,7 @@ public class MaxCompressorResourcesProcedure {
 	}
 
 	private static void execute(@Nullable Event event, LevelAccessor world) {
-		AvaritiaModVariables.MapVariables.get(world).MaxCompressorResources = (world.getLevelData().getGameRules().getInt(AvaritiaModGameRules.NEUTRONIUMCOMPRESSORAMOUNT));
+		AvaritiaModVariables.MapVariables.get(world).MaxCompressorResources = (world instanceof ServerLevel _serverLevelGR0 ? _serverLevelGR0.getGameRules().getInt(AvaritiaModGameRules.NEUTRONIUMCOMPRESSORAMOUNT) : 0);
 		AvaritiaModVariables.MapVariables.get(world).syncData(world);
 	}
 }

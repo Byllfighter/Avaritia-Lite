@@ -30,7 +30,6 @@ import net.minecraft.core.HolderLookup;
 import net.bullfighter.avaritia.AvaritiaMod;
 
 import java.util.function.Supplier;
-import java.util.ArrayList;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class AvaritiaModVariables {
@@ -230,26 +229,19 @@ public class AvaritiaModVariables {
 		}
 
 		public void syncPlayerVariables(Entity entity) {
-			if (!entity.level().isClientSide()) {
-				for (Entity entityiterator : new ArrayList<>(entity.level().players())) {
-					if (entityiterator instanceof ServerPlayer serverPlayer)
-						PacketDistributor.sendToPlayer(serverPlayer, new PlayerVariablesSyncMessage(this, entity.getId()));
-				}
-			}
+			if (entity instanceof ServerPlayer serverPlayer)
+				PacketDistributor.sendToPlayer(serverPlayer, new PlayerVariablesSyncMessage(this));
 		}
 	}
 
-	public record PlayerVariablesSyncMessage(PlayerVariables data, int target) implements CustomPacketPayload {
+	public record PlayerVariablesSyncMessage(PlayerVariables data) implements CustomPacketPayload {
 		public static final Type<PlayerVariablesSyncMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(AvaritiaMod.MODID, "player_variables_sync"));
-		public static final StreamCodec<RegistryFriendlyByteBuf, PlayerVariablesSyncMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, PlayerVariablesSyncMessage message) -> {
-			buffer.writeNbt(message.data().serializeNBT(buffer.registryAccess()));
-			buffer.writeInt(message.target()); // Write the entity ID to the buffer
-		}, (RegistryFriendlyByteBuf buffer) -> {
-			var nbt = buffer.readNbt();
-			PlayerVariablesSyncMessage message = new PlayerVariablesSyncMessage(new PlayerVariables(), buffer.readInt());
-			message.data.deserializeNBT(buffer.registryAccess(), nbt);
-			return message;
-		});
+		public static final StreamCodec<RegistryFriendlyByteBuf, PlayerVariablesSyncMessage> STREAM_CODEC = StreamCodec
+				.of((RegistryFriendlyByteBuf buffer, PlayerVariablesSyncMessage message) -> buffer.writeNbt(message.data().serializeNBT(buffer.registryAccess())), (RegistryFriendlyByteBuf buffer) -> {
+					PlayerVariablesSyncMessage message = new PlayerVariablesSyncMessage(new PlayerVariables());
+					message.data.deserializeNBT(buffer.registryAccess(), buffer.readNbt());
+					return message;
+				});
 
 		@Override
 		public Type<PlayerVariablesSyncMessage> type() {
@@ -258,11 +250,10 @@ public class AvaritiaModVariables {
 
 		public static void handleData(final PlayerVariablesSyncMessage message, final IPayloadContext context) {
 			if (context.flow() == PacketFlow.CLIENTBOUND && message.data != null) {
-				context.enqueueWork(() -> context.player().level().getEntity(message.target()).getData(PLAYER_VARIABLES).deserializeNBT(context.player().registryAccess(), message.data.serializeNBT(context.player().registryAccess())))
-						.exceptionally(e -> {
-							context.connection().disconnect(Component.literal(e.getMessage()));
-							return null;
-						});
+				context.enqueueWork(() -> context.player().getData(PLAYER_VARIABLES).deserializeNBT(context.player().registryAccess(), message.data.serializeNBT(context.player().registryAccess()))).exceptionally(e -> {
+					context.connection().disconnect(Component.literal(e.getMessage()));
+					return null;
+				});
 			}
 		}
 	}

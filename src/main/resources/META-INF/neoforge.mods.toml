@@ -4,7 +4,7 @@ license="Not specified"
 
 [[mods]]
 modId="avaritia"
-version="1.10.7"
+version="1.10.8"
 displayName="Avaritia Lite"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/avaritia-lite"
 logoFile="logo.png"
@@ -14,33 +14,25 @@ authors="Bullfighter, MCreator"
 # Start of user code block mod configuration
 # End of user code block mod configuration
 
+
+# Start of user code block custom mixins
+# End of user code block custom mixins
+
 [[dependencies.avaritia]]
     modId="neoforge"
     type="required"
-    versionRange="[21.1.65,)"
+    versionRange="[21.4.137,)"
     ordering="AFTER"
     side="BOTH"
 
 [[dependencies.avaritia]]
     modId="minecraft"
     type="required"
-    versionRange="[1.21.1]"
+    versionRange="[1.21.4]"
     ordering="AFTER"
     side="BOTH"
 
-[[dependencies.avaritia]]
-    modId="kleiders_custom_renderer"
-    type="required"
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
 
-[[dependencies.avaritia]]
-    modId="kleidersplayerrenderer"
-    type="optional"
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
 [[dependencies.avaritia]]
     modId="jei"
     type="optional"

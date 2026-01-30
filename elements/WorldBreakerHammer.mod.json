@@ -1,5 +1,5 @@
 {
-  "_fv": 69,
+  "_fv": 79,
   "_type": "tool",
   "definition": {
     "toolType": "Pickaxe",
@@ -8,16 +8,17 @@
     "texture": "infinity_pickaxe_hammer",
     "customModelName": "Normal",
     "blockingModelName": "Normal blocking",
+    "guiTexture": "",
     "name": "§cWorld Breaker§r",
     "specialInformation": {
       "fixedValue": []
     },
     "creativeTabs": [],
-    "efficiency": 99999.0,
+    "efficiency": 1000.0,
     "attackSpeed": 1.0,
     "enchantability": 99999,
     "damageVsEntity": 8.0,
-    "usageCount": 1000,
+    "usageCount": 100,
     "glowCondition": {
       "fixedValue": true,
       "name": "NeverGlow"

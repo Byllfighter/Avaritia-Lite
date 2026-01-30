@@ -1,18 +1,16 @@
-
 package net.bullfighter.avaritia.item;
 
-import net.minecraft.world.item.UseAnim;
-import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.ItemUseAnimation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 
 public class LapisSingularityItem extends Item {
-	public LapisSingularityItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON));
+	public LapisSingularityItem(Item.Properties properties) {
+		super(properties);
 	}
 
 	@Override
-	public UseAnim getUseAnimation(ItemStack itemstack) {
-		return UseAnim.EAT;
+	public ItemUseAnimation getUseAnimation(ItemStack itemstack) {
+		return ItemUseAnimation.EAT;
 	}
 }

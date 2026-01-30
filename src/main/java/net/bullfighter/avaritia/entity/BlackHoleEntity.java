@@ -1,4 +1,3 @@
-
 package net.bullfighter.avaritia.entity;
 
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
@@ -23,6 +22,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
 import net.bullfighter.avaritia.procedures.BlackHoleTickProcedure;
@@ -58,7 +58,7 @@ public class BlackHoleEntity extends PathfinderMob {
 	}
 
 	@Override
-	public boolean hurt(DamageSource damagesource, float amount) {
+	public boolean hurtServer(ServerLevel level, DamageSource damagesource, float amount) {
 		if (damagesource.is(DamageTypes.IN_FIRE))
 			return false;
 		if (damagesource.getDirectEntity() instanceof AbstractArrow)
@@ -85,7 +85,7 @@ public class BlackHoleEntity extends PathfinderMob {
 			return false;
 		if (damagesource.is(DamageTypes.WITHER) || damagesource.is(DamageTypes.WITHER_SKULL))
 			return false;
-		return super.hurt(damagesource, amount);
+		return super.hurtServer(level, damagesource, amount);
 	}
 
 	@Override

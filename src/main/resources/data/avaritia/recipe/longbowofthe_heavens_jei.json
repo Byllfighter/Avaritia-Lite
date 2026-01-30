@@ -1,249 +1,87 @@
 {
   "type": "avaritia:extreme_crafting_table_jei",
   "ingredients": [
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "minecraft:white_wool"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "minecraft:white_wool"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "minecraft:white_wool"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:crystal_matrix"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "minecraft:white_wool"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "minecraft:white_wool"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "minecraft:white_wool"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "minecraft:white_wool"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    }
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "avaritia:infinity_ingot",
+    "avaritia:infinity_ingot",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "avaritia:infinity_ingot",
+    "#avaritia:jei_empty_tag",
+    "minecraft:white_wool",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "avaritia:infinity_ingot",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "minecraft:white_wool",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "avaritia:infinity_ingot",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "minecraft:white_wool",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "avaritia:crystal_matrix",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "minecraft:white_wool",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "avaritia:infinity_ingot",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "minecraft:white_wool",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "avaritia:infinity_ingot",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "minecraft:white_wool",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "avaritia:infinity_ingot",
+    "#avaritia:jei_empty_tag",
+    "minecraft:white_wool",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "avaritia:infinity_ingot",
+    "avaritia:infinity_ingot",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag"
   ],
   "output": {
     "id": "avaritia:longbowofthe_heavens",

@@ -1,249 +1,87 @@
 {
   "type": "avaritia:extreme_crafting_table_jei",
   "ingredients": [
-    {
-      "item": "minecraft:iron_block"
-    },
-    {
-      "item": "minecraft:iron_block"
-    },
-    {
-      "item": "minecraft:iron_block"
-    },
-    {
-      "item": "minecraft:hopper"
-    },
-    {
-      "item": "minecraft:hopper"
-    },
-    {
-      "item": "minecraft:hopper"
-    },
-    {
-      "item": "minecraft:iron_block"
-    },
-    {
-      "item": "minecraft:iron_block"
-    },
-    {
-      "item": "minecraft:iron_block"
-    },
-    {
-      "item": "avaritia:crystal_matrix_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:crystal_matrix_ingot"
-    },
-    {
-      "item": "minecraft:iron_block"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "minecraft:iron_block"
-    },
-    {
-      "item": "avaritia:crystal_matrix_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:crystal_matrix_ingot"
-    },
-    {
-      "item": "minecraft:redstone_block"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:neutronium_block"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "item": "minecraft:redstone_block"
-    },
-    {
-      "item": "avaritia:crystal_matrix_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:crystal_matrix_ingot"
-    },
-    {
-      "item": "minecraft:iron_block"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "minecraft:iron_block"
-    },
-    {
-      "item": "avaritia:crystal_matrix_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:neutronium_ingot"
-    },
-    {
-      "tag": "avaritia:jei_empty_tag"
-    },
-    {
-      "item": "avaritia:crystal_matrix_ingot"
-    },
-    {
-      "item": "minecraft:iron_block"
-    },
-    {
-      "item": "minecraft:iron_block"
-    },
-    {
-      "item": "minecraft:iron_block"
-    },
-    {
-      "item": "avaritia:crystal_matrix_ingot"
-    },
-    {
-      "item": "minecraft:iron_block"
-    },
-    {
-      "item": "avaritia:crystal_matrix_ingot"
-    },
-    {
-      "item": "minecraft:iron_block"
-    },
-    {
-      "item": "minecraft:iron_block"
-    },
-    {
-      "item": "minecraft:iron_block"
-    }
+    "minecraft:iron_block",
+    "minecraft:iron_block",
+    "minecraft:iron_block",
+    "minecraft:hopper",
+    "minecraft:hopper",
+    "minecraft:hopper",
+    "minecraft:iron_block",
+    "minecraft:iron_block",
+    "minecraft:iron_block",
+    "avaritia:crystal_matrix_ingot",
+    "#avaritia:jei_empty_tag",
+    "avaritia:neutronium_ingot",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "avaritia:neutronium_ingot",
+    "#avaritia:jei_empty_tag",
+    "avaritia:crystal_matrix_ingot",
+    "minecraft:iron_block",
+    "#avaritia:jei_empty_tag",
+    "avaritia:neutronium_ingot",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "avaritia:neutronium_ingot",
+    "#avaritia:jei_empty_tag",
+    "minecraft:iron_block",
+    "avaritia:crystal_matrix_ingot",
+    "#avaritia:jei_empty_tag",
+    "avaritia:neutronium_ingot",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "avaritia:neutronium_ingot",
+    "#avaritia:jei_empty_tag",
+    "avaritia:crystal_matrix_ingot",
+    "minecraft:redstone_block",
+    "avaritia:neutronium_ingot",
+    "avaritia:neutronium_ingot",
+    "#avaritia:jei_empty_tag",
+    "avaritia:neutronium_block",
+    "#avaritia:jei_empty_tag",
+    "avaritia:neutronium_ingot",
+    "avaritia:neutronium_ingot",
+    "minecraft:redstone_block",
+    "avaritia:crystal_matrix_ingot",
+    "#avaritia:jei_empty_tag",
+    "avaritia:neutronium_ingot",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "avaritia:neutronium_ingot",
+    "#avaritia:jei_empty_tag",
+    "avaritia:crystal_matrix_ingot",
+    "minecraft:iron_block",
+    "#avaritia:jei_empty_tag",
+    "avaritia:neutronium_ingot",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "avaritia:neutronium_ingot",
+    "#avaritia:jei_empty_tag",
+    "minecraft:iron_block",
+    "avaritia:crystal_matrix_ingot",
+    "#avaritia:jei_empty_tag",
+    "avaritia:neutronium_ingot",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "#avaritia:jei_empty_tag",
+    "avaritia:neutronium_ingot",
+    "#avaritia:jei_empty_tag",
+    "avaritia:crystal_matrix_ingot",
+    "minecraft:iron_block",
+    "minecraft:iron_block",
+    "minecraft:iron_block",
+    "avaritia:crystal_matrix_ingot",
+    "minecraft:iron_block",
+    "avaritia:crystal_matrix_ingot",
+    "minecraft:iron_block",
+    "minecraft:iron_block",
+    "minecraft:iron_block"
   ],
   "output": {
     "id": "avaritia:neutronium_compressor",

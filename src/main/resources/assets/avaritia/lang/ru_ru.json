@@ -65,5 +65,13 @@
   "item_group.avaritia.avaritiatab": "Аварития",
   "block.avaritia.neutronium_block": "Блок Нейтрониума",
   "entity.avaritia.black_hole": "Чёрная Дыра",
-  "block.avaritia.infinity_block": "Бесконечный Блок"
+  "block.avaritia.infinity_block": "Бесконечный Блок",
+  "item.avaritia.neutron_collector": "Neutron Collector",
+  "item.avaritia.neutronium_compressor": "Neutronium Compressor",
+  "item.avaritia.compressed_crafting_table": "Compressed Crafting Table",
+  "item.avaritia.double_compressed_crafting_table": "Double Compressed Crafting Table",
+  "item.avaritia.extreme_crafting_table": "Extreme Crafting Table",
+  "item.avaritia.neutronium_block": "Neutronium Block",
+  "item.avaritia.infinity_block": "Infinity Block",
+  "item.avaritia.crystal_matrix": "Crystal Matrix"
 }

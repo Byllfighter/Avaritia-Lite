@@ -21,37 +21,14 @@ public class NeutronCollectorGeneratorProcedure {
 			BlockEntity _blockEntity = world.getBlockEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_blockEntity != null)
-				_blockEntity.getPersistentData().putDouble("process", (new Object() {
-					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-						BlockEntity blockEntity = world.getBlockEntity(pos);
-						if (blockEntity != null)
-							return blockEntity.getPersistentData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(world, BlockPos.containing(x, y, z), "process") + 0.5));
+				_blockEntity.getPersistentData().putDouble("process", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "process") + 0.5));
 			if (world instanceof Level _level)
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 		}
-		if (new Object() {
-			public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getDouble(tag);
-				return -1;
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "process") >= 100) {
+		if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "process") >= 100) {
 			if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 				ItemStack _setstack = new ItemStack(AvaritiaModItems.PILEOF_NEUTRONS.get()).copy();
-				_setstack.setCount((int) (new Object() {
-					public int getAmount(LevelAccessor world, BlockPos pos, int slotid) {
-						if (world instanceof ILevelExtension _ext) {
-							IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-							if (_itemHandler != null)
-								return _itemHandler.getStackInSlot(slotid).getCount();
-						}
-						return 0;
-					}
-				}.getAmount(world, BlockPos.containing(x, y, z), 0) + 1));
+				_setstack.setCount(itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).getCount() + 1);
 				_itemHandlerModifiable.setStackInSlot(0, _setstack);
 			}
 			if (!world.isClientSide()) {
@@ -59,17 +36,26 @@ public class NeutronCollectorGeneratorProcedure {
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putDouble("process", ((new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "process")) - 100));
+					_blockEntity.getPersistentData().putDouble("process", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "process") - 100));
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
 		}
+	}
+
+	private static double getBlockNBTNumber(LevelAccessor world, BlockPos pos, String tag) {
+		BlockEntity blockEntity = world.getBlockEntity(pos);
+		if (blockEntity != null)
+			return blockEntity.getPersistentData().getDouble(tag);
+		return -1;
+	}
+
+	private static ItemStack itemFromBlockInventory(LevelAccessor world, BlockPos pos, int slot) {
+		if (world instanceof ILevelExtension ext) {
+			IItemHandler itemHandler = ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+			if (itemHandler != null)
+				return itemHandler.getStackInSlot(slot);
+		}
+		return ItemStack.EMPTY;
 	}
 }

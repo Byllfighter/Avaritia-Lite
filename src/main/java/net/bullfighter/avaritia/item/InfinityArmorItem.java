@@ -1,58 +1,75 @@
-
 package net.bullfighter.avaritia.item;
 
-import net.neoforged.neoforge.registries.RegisterEvent;
+import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
+import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.equipment.EquipmentAssets;
+import net.minecraft.world.item.equipment.ArmorType;
+import net.minecraft.world.item.equipment.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.tags.TagKey;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.Holder;
-import net.minecraft.Util;
+import net.minecraft.client.resources.model.EquipmentClientInfo;
 
 import net.bullfighter.avaritia.procedures.MendProcedure;
+import net.bullfighter.avaritia.init.AvaritiaModItems;
 
-import java.util.List;
-import java.util.EnumMap;
+import java.util.Map;
 
 import com.google.common.collect.Iterables;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public abstract class InfinityArmorItem extends ArmorItem {
-	public static Holder<ArmorMaterial> ARMOR_MATERIAL = null;
+	public static ArmorMaterial ARMOR_MATERIAL = new ArmorMaterial(1024, Map.of(ArmorType.BOOTS, 1024, ArmorType.LEGGINGS, 1024, ArmorType.CHESTPLATE, 1024, ArmorType.HELMET, 1024, ArmorType.BODY, 1024), 100,
+			BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), 5f, 5f, TagKey.create(Registries.ITEM, ResourceLocation.parse("avaritia:infinity_armor_repair_items")),
+			ResourceKey.create(EquipmentAssets.ROOT_ID, ResourceLocation.parse("avaritia:infinity_armor")));
 
 	@SubscribeEvent
-	public static void registerArmorMaterial(RegisterEvent event) {
-		event.register(Registries.ARMOR_MATERIAL, registerHelper -> {
-			ArmorMaterial armorMaterial = new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
-				map.put(ArmorItem.Type.BOOTS, 1024);
-				map.put(ArmorItem.Type.LEGGINGS, 1024);
-				map.put(ArmorItem.Type.CHESTPLATE, 1024);
-				map.put(ArmorItem.Type.HELMET, 1024);
-				map.put(ArmorItem.Type.BODY, 1024);
-			}), 100, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), () -> Ingredient.of(), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("avaritia:infinity"))), 5f, 5f);
-			registerHelper.register(ResourceLocation.parse("avaritia:infinity_armor"), armorMaterial);
-			ARMOR_MATERIAL = BuiltInRegistries.ARMOR_MATERIAL.wrapAsHolder(armorMaterial);
-		});
+	public static void registerItemExtensions(RegisterClientExtensionsEvent event) {
+		event.registerItem(new IClientItemExtensions() {
+			@Override
+			public ResourceLocation getArmorTexture(ItemStack stack, EquipmentClientInfo.LayerType type, EquipmentClientInfo.Layer layer, ResourceLocation _default) {
+				return ResourceLocation.parse("avaritia:textures/models/armor/infinity_layer_1.png");
+			}
+		}, AvaritiaModItems.INFINITY_ARMOR_HELMET.get());
+		event.registerItem(new IClientItemExtensions() {
+			@Override
+			public ResourceLocation getArmorTexture(ItemStack stack, EquipmentClientInfo.LayerType type, EquipmentClientInfo.Layer layer, ResourceLocation _default) {
+				return ResourceLocation.parse("avaritia:textures/models/armor/infinity_layer_1.png");
+			}
+		}, AvaritiaModItems.INFINITY_ARMOR_CHESTPLATE.get());
+		event.registerItem(new IClientItemExtensions() {
+			@Override
+			public ResourceLocation getArmorTexture(ItemStack stack, EquipmentClientInfo.LayerType type, EquipmentClientInfo.Layer layer, ResourceLocation _default) {
+				return ResourceLocation.parse("avaritia:textures/models/armor/infinity_layer_2.png");
+			}
+		}, AvaritiaModItems.INFINITY_ARMOR_LEGGINGS.get());
+		event.registerItem(new IClientItemExtensions() {
+			@Override
+			public ResourceLocation getArmorTexture(ItemStack stack, EquipmentClientInfo.LayerType type, EquipmentClientInfo.Layer layer, ResourceLocation _default) {
+				return ResourceLocation.parse("avaritia:textures/models/armor/infinity_layer_1.png");
+			}
+		}, AvaritiaModItems.INFINITY_ARMOR_BOOTS.get());
 	}
 
-	public InfinityArmorItem(ArmorItem.Type type, Item.Properties properties) {
+	private InfinityArmorItem(ArmorType type, Item.Properties properties) {
 		super(ARMOR_MATERIAL, type, properties);
 	}
 
 	public static class Helmet extends InfinityArmorItem {
-		public Helmet() {
-			super(ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(1024)));
+		public Helmet(Item.Properties properties) {
+			super(ArmorType.HELMET, properties);
 		}
 
 		@Override
@@ -65,8 +82,8 @@ public abstract class InfinityArmorItem extends ArmorItem {
 	}
 
 	public static class Chestplate extends InfinityArmorItem {
-		public Chestplate() {
-			super(ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(1024)));
+		public Chestplate(Item.Properties properties) {
+			super(ArmorType.CHESTPLATE, properties);
 		}
 
 		@Override
@@ -79,8 +96,8 @@ public abstract class InfinityArmorItem extends ArmorItem {
 	}
 
 	public static class Leggings extends InfinityArmorItem {
-		public Leggings() {
-			super(ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(1024)));
+		public Leggings(Item.Properties properties) {
+			super(ArmorType.LEGGINGS, properties);
 		}
 
 		@Override
@@ -93,8 +110,8 @@ public abstract class InfinityArmorItem extends ArmorItem {
 	}
 
 	public static class Boots extends InfinityArmorItem {
-		public Boots() {
-			super(ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(1024)));
+		public Boots(Item.Properties properties) {
+			super(ArmorType.BOOTS, properties);
 		}
 
 		@Override

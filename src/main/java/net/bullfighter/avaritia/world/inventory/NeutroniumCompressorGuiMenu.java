@@ -1,4 +1,3 @@
-
 package net.bullfighter.avaritia.world.inventory;
 
 import net.neoforged.neoforge.items.wrapper.InvWrapper;
@@ -27,9 +26,17 @@ import net.bullfighter.avaritia.init.AvaritiaModMenus;
 import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.Collections;
 
-public class NeutroniumCompressorGuiMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
-	public final static HashMap<String, Object> guistate = new HashMap<>();
+public class NeutroniumCompressorGuiMenu extends AbstractContainerMenu implements AvaritiaModMenus.MenuAccessor {
+	public final Map<String, Object> menuState = new HashMap<>() {
+		@Override
+		public Object put(String key, Object value) {
+			if (!this.containsKey(key) && this.size() >= 6)
+				return null;
+			return super.put(key, value);
+		}
+	};
 	public final Level world;
 	public final Player entity;
 	public int x, y, z;
@@ -83,8 +90,15 @@ public class NeutroniumCompressorGuiMenu extends AbstractContainerMenu implement
 			}
 		}
 		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 61, 26) {
+			private final int slot = 0;
+			private int x = NeutroniumCompressorGuiMenu.this.x;
+			private int y = NeutroniumCompressorGuiMenu.this.y;
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 97, 26) {
+			private final int slot = 1;
+			private int x = NeutroniumCompressorGuiMenu.this.x;
+			private int y = NeutroniumCompressorGuiMenu.this.y;
+
 			@Override
 			public boolean mayPlace(ItemStack stack) {
 				return false;
@@ -131,12 +145,14 @@ public class NeutroniumCompressorGuiMenu extends AbstractContainerMenu implement
 				}
 				return ItemStack.EMPTY;
 			}
-			if (itemstack1.getCount() == 0)
-				slot.set(ItemStack.EMPTY);
-			else
+			if (itemstack1.isEmpty()) {
+				slot.setByPlayer(ItemStack.EMPTY);
+			} else {
 				slot.setChanged();
-			if (itemstack1.getCount() == itemstack.getCount())
+			}
+			if (itemstack1.getCount() == itemstack.getCount()) {
 				return ItemStack.EMPTY;
+			}
 			slot.onTake(playerIn, itemstack1);
 		}
 		return itemstack;
@@ -221,7 +237,13 @@ public class NeutroniumCompressorGuiMenu extends AbstractContainerMenu implement
 		}
 	}
 
-	public Map<Integer, Slot> get() {
-		return customSlots;
+	@Override
+	public Map<Integer, Slot> getSlots() {
+		return Collections.unmodifiableMap(customSlots);
+	}
+
+	@Override
+	public Map<String, Object> getMenuState() {
+		return menuState;
 	}
 }

@@ -14,7 +14,7 @@ public class PlanetEaterDestroyerRightclickedProcedure {
 			return;
 		ItemStack hammer = ItemStack.EMPTY;
 		if (entity.isShiftKeyDown()) {
-			hammer = new ItemStack(AvaritiaModItems.PLANET_EATER.get());
+			hammer = new ItemStack(AvaritiaModItems.PLANET_EATER.get()).copy();
 			hammer.applyComponents(itemstack.getComponents());
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == AvaritiaModItems.PLANET_EATER_DESTROYER.get()) {
 				if (entity instanceof LivingEntity _entity) {

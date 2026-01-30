@@ -1,4 +1,3 @@
-
 /*
  *	MCreator note: This file will be REGENERATED on each build.
  */
@@ -20,5 +19,9 @@ public class AvaritiaModScreens {
 		event.register(AvaritiaModMenus.NEUTRON_COLLECTOR_GUI.get(), NeutronCollectorGuiScreen::new);
 		event.register(AvaritiaModMenus.EXTREME_CRAFTING_TABLE_GUI.get(), ExtremeCraftingTableGuiScreen::new);
 		event.register(AvaritiaModMenus.NEUTRONIUM_COMPRESSOR_GUI.get(), NeutroniumCompressorGuiScreen::new);
+	}
+
+	public interface ScreenAccessor {
+		void updateMenuState(int elementType, String name, Object elementState);
 	}
 }

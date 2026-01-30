@@ -1,4 +1,3 @@
-
 package net.bullfighter.avaritia.entity;
 
 import net.neoforged.api.distmarker.OnlyIn;
@@ -7,6 +6,8 @@ import net.neoforged.api.distmarker.Dist;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ItemSupplier;
 import net.minecraft.world.entity.projectile.AbstractArrow;
@@ -17,6 +18,7 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
 
 import net.bullfighter.avaritia.procedures.LongbowoftheHeavensBulletHitsBlockProcedure;
@@ -36,10 +38,14 @@ public class LongbowoftheHeavensProjectileEntity extends AbstractArrow implement
 
 	public LongbowoftheHeavensProjectileEntity(EntityType<? extends LongbowoftheHeavensProjectileEntity> type, double x, double y, double z, Level world, @Nullable ItemStack firedFromWeapon) {
 		super(type, x, y, z, world, PROJECTILE_ITEM, firedFromWeapon);
+		if (firedFromWeapon != null)
+			setKnockback(EnchantmentHelper.getItemEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.KNOCKBACK), firedFromWeapon));
 	}
 
 	public LongbowoftheHeavensProjectileEntity(EntityType<? extends LongbowoftheHeavensProjectileEntity> type, LivingEntity entity, Level world, @Nullable ItemStack firedFromWeapon) {
 		super(type, entity, world, PROJECTILE_ITEM, firedFromWeapon);
+		if (firedFromWeapon != null)
+			setKnockback(EnchantmentHelper.getItemEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.KNOCKBACK), firedFromWeapon));
 	}
 
 	@Override
@@ -71,6 +77,8 @@ public class LongbowoftheHeavensProjectileEntity extends AbstractArrow implement
 			if (vec3.lengthSqr() > 0.0) {
 				livingEntity.push(vec3.x, 0.1, vec3.z);
 			}
+		} else { // knockback might be set by firedFromWeapon passed into constructor
+			super.doKnockback(livingEntity, damageSource);
 		}
 	}
 
@@ -83,7 +91,7 @@ public class LongbowoftheHeavensProjectileEntity extends AbstractArrow implement
 	@Override
 	public void tick() {
 		super.tick();
-		if (this.inGround)
+		if (this.isInGround())
 			this.discard();
 	}
 
@@ -103,7 +111,7 @@ public class LongbowoftheHeavensProjectileEntity extends AbstractArrow implement
 		entityarrow.setBaseDamage(damage);
 		entityarrow.setKnockback(knockback);
 		world.addFreshEntity(entityarrow);
-		world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.arrow.shoot")), SoundSource.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
+		world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("entity.arrow.shoot")), SoundSource.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
 		return entityarrow;
 	}
 
@@ -118,7 +126,7 @@ public class LongbowoftheHeavensProjectileEntity extends AbstractArrow implement
 		entityarrow.setKnockback(5);
 		entityarrow.setCritArrow(true);
 		entity.level().addFreshEntity(entityarrow);
-		entity.level().playSound(null, entity.getX(), entity.getY(), entity.getZ(), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.arrow.shoot")), SoundSource.PLAYERS, 1, 1f / (RandomSource.create().nextFloat() * 0.5f + 1));
+		entity.level().playSound(null, entity.getX(), entity.getY(), entity.getZ(), BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("entity.arrow.shoot")), SoundSource.PLAYERS, 1, 1f / (RandomSource.create().nextFloat() * 0.5f + 1));
 		return entityarrow;
 	}
 }

@@ -1,17 +1,3 @@
-/**
- * The code of this mod element is always locked.
- *
- * You can register new events in this class too.
- *
- * If you want to make a plain independent class, create it using
- * Project Browser -> New... and make sure to make the class
- * outside net.bullfighter.avaritia as this package is managed by MCreator.
- *
- * If you change workspace package, modid or prefix, you will need
- * to manually adapt this file to these changes or remake it.
- *
- * This class will be added in the mod root package.
-*/
 package net.bullfighter.avaritia;
 
 import net.minecraft.world.item.ItemStack;
@@ -19,104 +5,137 @@ import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 
+import java.util.*;
 import java.util.function.Supplier;
-import java.util.Map;
-import java.util.List;
-import java.util.HashSet;
-import java.util.Set;
 
 public class ExtremeCraftingTableRecipeShapeless {
     public static void execute(Entity entity, List<ItemStack> ingredients, ItemStack result) {
         if (entity == null) return;
 
-        // Mark slots that contain items for the recipe
-        Set<Integer> markedSlots = markSlots(entity, ingredients);
+        // Server-side only is recommended — container changes must be done server-side
+        if (entity.level().isClientSide) return;
 
-        // Check if there are any extra items in the crafting grid
-        boolean hasExtraItems = hasExtraItems(entity, markedSlots);
+        // Determine which slots (and how many from each) will satisfy the ingredients
+        Set<Integer> usedCounts = markSlots(entity, ingredients);
 
-        // If there are no extra items and all required items are present
-        if (!hasExtraItems && markedSlots.size() == ingredients.size()) {
-            if (getSlot(entity, 81).getItem().getCount() < (getSlot(entity, 81).getItem().getMaxStackSize() - result.getCount()) + 1) {
-                // Remove items from inventory
-                removeItems(entity, markedSlots);
+        // If markSlots returned empty map then recipe not satisfied
+        if (usedCounts.isEmpty()) return;
 
-                addItemToSlot(entity, result, 81);
-            }
-        }
+        // If there are extra items present that are not part of the recipe, bail out
+        if (hasExtraItems(entity, usedCounts)) return;
+
+        Slot out = getSlot(entity, 81);
+        if (out == null) return;
+
+        ItemStack outStack = out.getItem();
+
+        int existing = outStack.isEmpty() ? 0 : outStack.getCount();
+        int max = outStack.isEmpty()
+                ? result.getMaxStackSize()
+                : outStack.getMaxStackSize();
+
+        if (existing + result.getCount() > max) return;
+
+        // Remove items according to usedCounts
+        removeItems(entity, usedCounts);
+
+        // Add result to output slot
+        addItemToSlot(entity, result, 81);
     }
 
-	// Mark slots that contain items for the recipe
-	private static Set<Integer> markSlots(Entity entity, List<ItemStack> items) {
-		Set<Integer> markedSlots = new HashSet<>();
-        if (entity instanceof Player player &&
-        player.containerMenu instanceof Supplier current &&
-        current.get() instanceof Map slots) {
-            for (ItemStack item : items) {
-                int remainingAmount = item.getCount();
-                for (Object slotObj : slots.values()) {
-                    Slot slot = (Slot) slotObj;
-                    if (slot.hasItem() && ItemStack.isSameItem(slot.getItem(), item)) {
-                        int amountInSlot = slot.getItem().getCount();
-                        markedSlots.add(slot.index);
-                        if (remainingAmount == 0)
-                            break;
-                    }
+    /**
+     * Build a map slotIndex -> count taken from that slot. Returns empty map if recipe can't be fulfilled.
+     * NOTE: keys are real slot.index values (Slot.index).
+     */
+    private static Set<Integer> markSlots(Entity entity, List<ItemStack> ingredients) {
+        Set<Integer> usedSlots = new HashSet<>();
+        if (!(entity instanceof Player player)) return Set.of();
+
+        for (ItemStack ingredient : ingredients) {
+            boolean matched = false;
+
+            for (int i = 0; i < 81; i++) { // crafting grid only
+                if (usedSlots.contains(i)) continue;
+
+                Slot slot = player.containerMenu.slots.get(i);
+                if (!slot.hasItem()) continue;
+
+                ItemStack stack = slot.getItem();
+                if (stack.getItem() == ingredient.getItem()) {
+                    usedSlots.add(i);
+                    matched = true;
+                    break; // IMPORTANT: one ingredient = one slot
                 }
             }
-        }
-        return markedSlots;
-    }
 
-	// Check if there are any extra items in the crafting grid
-	private static boolean hasExtraItems(Entity entity, Set<Integer> markedSlots) {
-		if (entity instanceof Player player &&
-			player.containerMenu instanceof Supplier current &&
-			current.get() instanceof Map slots) {
-			for (Object slotObj : slots.values()) {
-				Slot slot = (Slot) slotObj;
-				if (!markedSlots.contains(slot.index) && slot.hasItem())
-					if (slot.index != 81)
-						return true; // Extra item found
-			}
-		}
-		return false; // No extra items
-	}
-
-
-    // Remove items from the inventory
-    private static void removeItems(Entity entity, Set<Integer> markedSlots) {
-        if (entity instanceof Player player &&
-            player.containerMenu instanceof Supplier current &&
-            current.get() instanceof Map slots) {
-            for (int slotIndex : markedSlots) {
-                ((Slot) slots.get(slotIndex)).remove(1);
+            if (!matched) {
+                return Set.of(); // recipe fails
             }
-            player.containerMenu.broadcastChanges();
         }
+
+        return usedSlots;
     }
 
-    // Add an item to the specified slot
+
+    // True if any non-output slot has items that we did not mark as used (extra items)
+    private static boolean hasExtraItems(Entity entity, Set<Integer> usedSlots) {
+        if (!(entity instanceof Player player)) return true;
+
+        for (int i = 0; i < 81; i++) {
+            Slot slot = player.containerMenu.slots.get(i);
+            if (slot.hasItem() && !usedSlots.contains(i))
+                return true;
+        }
+        return false;
+    }
+
+
+
+    // Remove amount specified in usedCounts from slots with those slot.index values
+    private static void removeItems(Entity entity, Set<Integer> usedSlots) {
+        if (!(entity instanceof Player player)) return;
+
+        for (int slotIndex : usedSlots) {
+            player.containerMenu.slots.get(slotIndex).remove(1);
+        }
+        player.containerMenu.broadcastChanges();
+    }
+
+
     private static void addItemToSlot(Entity entity, ItemStack item, int slotIndex) {
-        if (entity instanceof Player player &&
-            player.containerMenu instanceof Supplier current &&
-            current.get() instanceof Map slots) {
-            ItemStack existingStack = ((Slot) slots.get(slotIndex)).getItem();
-            if (existingStack.isEmpty()) {
-                ((Slot) slots.get(slotIndex)).set(item.copy());
-            } else {
-                existingStack.grow(item.getCount());
-            }
-            player.containerMenu.broadcastChanges();
+        if (!(entity instanceof Player player)) return;
+        List<Slot> slots = getSlotsList(player);
+        if (slots == null) return;
+        Slot slot = findSlotByIndex(slots, slotIndex);
+        if (slot == null) return;
+        ItemStack existing = slot.getItem();
+        if (existing.isEmpty()) {
+            ItemStack copy = item.copy();
+            slot.set(copy);
+        } else {
+            // grow modifies the stack instance already present in the slot
+            existing.grow(item.getCount());
+            slot.set(existing); // ensure the slot's content is set (some containers expect set())
         }
+        player.containerMenu.broadcastChanges();
     }
 
     private static Slot getSlot(Entity entity, int slotIndex) {
-        if (entity instanceof Player player &&
-            player.containerMenu instanceof Supplier current &&
-            current.get() instanceof Map slots) {
-                return ((Slot) slots.get(slotIndex));
+        if (!(entity instanceof Player player)) return null;
+        List<Slot> slots = getSlotsList(player);
+        if (slots == null) return null;
+        return findSlotByIndex(slots, slotIndex);
+    }
+
+    // Helper to find a slot by Slot.index
+    private static Slot findSlotByIndex(List<Slot> slots, int index) {
+        for (Slot s : slots) {
+            if (s.index == index) return s;
         }
         return null;
+    }
+
+    private static List<Slot> getSlotsList(Player player) {
+        return player.containerMenu.slots;
     }
 }

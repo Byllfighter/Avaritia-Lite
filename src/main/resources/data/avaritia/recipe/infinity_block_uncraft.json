@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "avaritia:infinity_block"
-    }
+    "avaritia:infinity_block"
   ],
   "result": {
     "id": "avaritia:infinity_ingot",
